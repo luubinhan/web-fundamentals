@@ -14,5 +14,6 @@ nav:
     - Content Security Policy: security/content-security-policy.md
     - Tại sao cần HTTPs: security/tai-sao-can-https.md
     - Những thuật ngữ bảo mật quan trọng: security/thuat-ngu-bao-mat-quan-trong.md
+    - Mixed content là gì: security/mixed-content-la-gi.md
 markdown_extensions:
   - codehilite
