@@ -90,7 +90,7 @@ Với `window.PointerEvent` nó sẽ gom tất cả các kiểu input của chu�
 `window.TouchEvent` thì tương ứng là `touchstart`, `touchmove`, `touchend`, `touchcancel`, và `mousedown`, `mousemove`, `mouseup` cho chuột.
 
 | Sự kiện | Giải thích           |
-| ------------- |:-------------:|
+| ------------- |-------------|
 | touchstart, mousedown, pointerdown | được gọi khi ngón tay lần đầu chạm vào một element or click và giữ chuột |
 | touchmove, mousemove, pointermove | Khi user trượt ngón tay trên màn hình, kéo rê chuột |
 | touchend, mouseup, pointerup | khi user bắt đầu bỏ ngón tay ra khỏi màn hình, hoặc bắt đầu bỏ rê chuột |
@@ -130,7 +130,7 @@ Nếu hình dung đang dùng chuột mà làm cách này có thể hơi vô lý,
 
 Điều đó sẽ được thực hiện bên trong hàm `handleGestureStart `
 
-```js{9-15}
+```js
 this.handleGestureStart = function(evt) {
    evt.preventDefault();
 
