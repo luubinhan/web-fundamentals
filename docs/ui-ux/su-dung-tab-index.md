@@ -1,4 +1,4 @@
-# Sử dụng tab index
+# Sử dụng tabindex
 
 `tabindex` có thể sử dụng trong bất kỳ thẻ html nào
 
