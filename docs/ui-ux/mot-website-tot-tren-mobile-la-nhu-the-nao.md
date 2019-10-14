@@ -12,7 +12,7 @@
 
 ![Điều gì nói một trang web có UX tốt trên mobile](https://developers.google.com/web/fundamentals/design-and-ux/principles/images/hpnav-cta-bad.png)
 
-🤬 Phung phí phần hiển thị đập vào mặt user đầu tiên bằng cái hình vớ vẩn, nút "Learn more" chả mấy tác dụng
+❌ Phung phí phần hiển thị đập vào mặt user đầu tiên bằng cái hình vớ vẩn, nút "Learn more" chả mấy tác dụng
 
 ## Giữ menu ít mà chất
 
@@ -34,7 +34,7 @@
 
 ![Điều gì nói một trang web có UX tốt trên mobile](https://developers.google.com/web/fundamentals/design-and-ux/principles/images/hpnav-promo-bad.png)
 
-🤬 Một trong những tính năng yêu thích của bọn marketing làm đau lòng user, popup, popup, popup
+❌ Một trong những tính năng yêu thích của bọn marketing làm đau lòng user, popup, popup, popup
 
 ## Tìm kiếm
 
@@ -45,7 +45,7 @@
 
 ![Điều gì nói một trang web có UX tốt trên mobile](https://developers.google.com/web/fundamentals/design-and-ux/principles/images/ss-search-bad.jpg)
 
-🤬 Ô search ẩn sâu trong menu collapse
+❌ Ô search ẩn sâu trong menu collapse
 
 ## Kết quả search
 
@@ -57,7 +57,7 @@ User không rảnh đi vòng vòng để kiểm tra kết quả tìm kiếm có 
 
 ![Điều gì nói một trang web có UX tốt trên mobile](https://developers.google.com/web/fundamentals/design-and-ux/principles/images/ss-relevant-bad.png)
 
-🤬 Có chữ "kid" là trả về hết
+❌ Có chữ "kid" là trả về hết
 
 ## Bộ lọc tìm kiếm
 
@@ -69,7 +69,7 @@ User rất cần bộ lọc để giới hạn lại kết quả cần tìm, fil
 
 ![Điều gì nói một trang web có UX tốt trên mobile](https://developers.google.com/web/fundamentals/design-and-ux/principles/images/ss-filters-bad.jpg)
 
-🤬 Ẩn luôn filter
+❌ Ẩn luôn filter
 
 
 ## Cho user xài trước khi ép user đăng ký
@@ -82,7 +82,7 @@ User rất khó chịu khi bị buộc phải đăng ký để sử dụng mà c
 
 ![Điều gì nói một trang web có UX tốt trên mobile](https://developers.google.com/web/fundamentals/design-and-ux/principles/images/cc-gates-bad.png)
 
-🤬 Ép user đăng ký mới cho đọc
+❌ Ép user đăng ký mới cho đọc
 
 ## Mua hàng như khách nặc danh
 
@@ -132,7 +132,7 @@ User được quyền biết tại sao chúng ta muốn lấy thông tin vị tr
 
 ![Điều gì nói một trang web có UX tốt trên mobile](https://developers.google.com/web/fundamentals/design-and-ux/principles/images/sw-navigation-bad.png)
 
-🤬 Vừa bay vào trang web đã bị đòi thông tin vị trí hiện tại
+❌ Vừa bay vào trang web đã bị đòi thông tin vị trí hiện tại
 
 
 
