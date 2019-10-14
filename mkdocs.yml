@@ -12,6 +12,7 @@ nav:
     - Aria: ui-ux/aria.md
     - Hiding update content: ui-ux/hiding-update-content.md
     - Layout responsive: ui-ux/responsive-pattern.md
+    - Responsive image: ui-ux/responsive-image.md
   - Tương tác:
     - Thêm touch cho website: interact/touch.md
   - Security:
