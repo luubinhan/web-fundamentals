@@ -4,6 +4,7 @@ theme:
 nav:
   - Home: index.md
   - UI/UX:
+    - Font chữ trên web: ui-ux/font.md
     - Một website tốt trên mobile là như thế nào: ui-ux/mot-website-tot-tren-mobile-la-nhu-the-nao.md
     - Focus: ui-ux/focus.md
     - DOM Order: ui-ux/dom-order.md
