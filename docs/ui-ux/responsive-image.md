@@ -66,7 +66,7 @@ Khách hàng luôn thích xem, sờ, ngắm thật kỹ sản phẩm muốn mua,
 
 ### Dùng javascript
 
-Kiểm tra độ phân giả của màn hình bằng `window.devicePixelRatio`, và thông tin mạng `navigator.connection` rồi quyết định load hình nào.
+Kiểm tra độ phân giải của màn hình bằng `window.devicePixelRatio`, và thông tin mạng `navigator.connection` rồi quyết định load hình nào.
 
 Nhược điểm của cách này là phải đợi javascript chạy xong mới load hình, bị delay một chút.
 
