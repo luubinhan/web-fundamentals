@@ -43,7 +43,7 @@ async function logFetch(url) {
 }
 ```
 
-Số lượng dòng code không đổi, nhưng không còn `callback`, code dễ đọc hơn, đặc biết với những ai chưa nắm cách hoạt động của promise.
+Số lượng dòng code không đổi, nhưng không còn `callback`, code dễ đọc hơn, đặc biệt với những ai chưa nắm cách hoạt động của promise.
 
 
 ## Giá trị trả về của async
@@ -167,7 +167,7 @@ storage.getAvatar('jaffathecake').then(…);
 
 ## Cẩn thận
 
-Nhìn code bây giờ sẽ rất **step-by-step**, nhưng bạn có thể bỏ qua cơ hội chạy song song nhiều code cùng lúc
+Code bây giờ sẽ rất **step-by-step**, nhưng bạn có thể bỏ qua cơ hội chạy song song nhiều code cùng lúc
 
 ```js
 async function series() {
@@ -209,7 +209,7 @@ function logInOrder(urls) {
 }
 ```
 
-Chúng ta đang dùng `reduce` để nối một chuỗi các promise với nhau. Chúng ta quá thông mình rồi. Tuy code thông minh quá như vậy rất khó bảo trì.
+Chúng ta đang dùng `reduce` để nối một chuỗi các promise với nhau. Chúng ta quá thông minh rồi. Tuy code thông minh quá như vậy rất khó bảo trì.
 
 Nếu bạn code lại bằng async, bạn sẽ nghĩ liền tới giải pháp
 
