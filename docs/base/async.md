@@ -1,6 +1,6 @@
-# Hàm Async
+# Hàm async
 
-Hàm `async` được hỗ trợ từ phiên bản Chrome 55, cho phép chúng ta viết code như promise, một cách tuần tự, không ảnh hưởng đến main thread.
+Hàm `async` được hỗ trợ từ phiên bản Chrome 55, cho phép chúng ta viết code một cách tuần tự nhưng chạy bất tuần tự như Promise, không ảnh hưởng đến main thread.
 
 ```js
 async function myFirstAsyncFunction() {
@@ -15,7 +15,7 @@ async function myFirstAsyncFunction() {
 
 _Lưu ý: nếu chưa biết promise, bạn cần đọc và nắm rõ promise trước_
 
-Ví dụ, với đoạn code viết bằng Promise, fetch một dữ liệu từ API
+Doạn code sử dung Promise để fetch một dữ liệu từ API
 
 ```js
 function logFetch(url) {
@@ -29,7 +29,7 @@ function logFetch(url) {
 }
 ```
 
-Nếu viết bằng hàm `async`
+Viết lại hàm trên thành hàm `async`
 
 ```js
 async function logFetch(url) {
@@ -43,15 +43,16 @@ async function logFetch(url) {
 }
 ```
 
-Số lượng dòng code không đổi, nhưng không còn `callback`, code dễ đọc hơn, đặc biệt với những ai chưa nắm cách hoạt động của promise.
-
+Số lượng dòng code không đổi, nhưng không còn `callback`, code dễ hình dung hơn, đặc biệt với những ai chưa nắm cách hoạt động của `Promise`.
 
 ## Giá trị trả về của async
 
-Hàm `async` luôn trả về về Promise, dù bên trong có await hay không. Promise này sẽ được `resolve` khi hàm có `return` hoặc `reject` khi hàm `throw` một error
+Hàm `async` luôn trả về `Promise`, dù bên trong có `await` hay không.
+
+`Promise` này sẽ được `resolve` khi hàm có `return` hoặc `reject` khi hàm `throw` một error.
 
 ```js
-// wait ms milliseconds
+// đợi trong mili giây
 function wait(ms) {
   return new Promise(r => setTimeout(r, ms));
 }
@@ -71,11 +72,11 @@ async function foo() {
 }
 ```
 
-Gọi `foo()` trả về một promise với `reject` bằng `Error('bar')`
+Gọi `foo()` trả về một `Promise` với `reject` bằng `Error('bar')`
 
 ## Streaming một response
 
-Lợi ích của hàm `async` thấy rõ hơn trong các ứng dụng phức tạp hơn. Ví dụ như chúng ta truyền đi một response trong khi log lại từng kết quả nhỏ, và trả về kích thước cuối cùng
+Lợi ích của hàm `async` thấy rõ hơn khi ứng dụng vào các tình huống phức tạp hơn. Ví dụ như chúng ta streaming một response, tính ra kích thước cuối cùng của toàn bộ streaming
 
 ```js
 function getResponseSize(url) {
@@ -96,7 +97,7 @@ function getResponseSize(url) {
 }
 ```
 
-Nếu bạn không biết closure như những lập trình viên thông minh khác, bạn sẽ khó để *nuốt* được đoạn code trên.
+Nếu bạn không biết closure như những lập trình viên *thông minh khác*, bạn sẽ khó để *nuốt* được đoạn code trên.
 
 Viết lại với hàm `async`
 
@@ -111,7 +112,7 @@ async function getResponseSize(url) {
     const value = result.value;
     total += value.length;
     console.log('Received chunk', value);
-    // get the next result
+    // lấy kết quả tiếp theo
     result = await reader.read();
   }
 
@@ -119,7 +120,7 @@ async function getResponseSize(url) {
 }
 ```
 
-Cảm giác là người thông minh nhất quả đất không còn khi viết bằng `async`, code quá trực quan ngay cả người nào mới học code cũng hiểu.
+Cảm giác là người *thông minh nhất quả đất* không còn khi viết bằng `async`, code quá trực quan ngay cả sinh viên mới ra trường cũng hiểu.
 
 ## Một số cú pháp viết hàm async khác
 
