@@ -15,7 +15,7 @@ async function myFirstAsyncFunction() {
 
 _Lưu ý: nếu chưa biết promise, bạn cần đọc và nắm rõ promise trước_
 
-Doạn code sử dung Promise để fetch một dữ liệu từ API
+Đoạn code sử dụng Promise để fetch một dữ liệu từ API
 
 ```js
 function logFetch(url) {
