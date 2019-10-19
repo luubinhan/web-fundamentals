@@ -15,6 +15,7 @@ nav:
     - Responsive image: ui-ux/responsive-image.md
   - Tương tác:
     - Thêm touch cho website: interact/touch.md
+    - Thiết kế form thật ngầu: interact/form.md
   - Security:
     - Content Security Policy: security/content-security-policy.md
     - Tại sao cần HTTPs: security/tai-sao-can-https.md
