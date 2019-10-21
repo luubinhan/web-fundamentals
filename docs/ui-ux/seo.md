@@ -8,11 +8,11 @@ Website không chỉ được *ghé thăm* bởi người thật (user), lâu l�
 
 Có nhiều cách để đưa dữ liệu đến người dùng trên các thiết bị khác nhau. Các phương pháp phổ biến nhất là:
 
-1. Resposive web design: sử dùng cùng một HTML, một URL và thẻ media của CSS để tối ưu hiển thị trên nhiều thiết bị khác nhau. Trên Desktop và Mobile đều là `http://example.com`
-2. Tách mobile site ra riêng: đưa user về trang dành riêng cho mobile, tùy thuộc vào user đang sử dụng thiết bị gì. Desktop là `http://example.com`, mobile là `http://m.example.com`
+1. Responsive web design: sử dụng cùng một HTML, một URL và thẻ media của CSS để tối ưu hiển thị trên nhiều thiết bị khác nhau. Trên Desktop và Mobile đều là `http://example.com`
+2. Tách mobile site: đưa user về trang dành riêng cho mobile, tùy thuộc vào user đang sử dụng thiết bị gì. Desktop là `http://example.com`, mobile là `http://m.example.com`
 3. Tùy vào thiết bị, server sẽ kiểm tra và trả về một HTML riêng cho từng loại thiết bị. Desktop và mobile dùng chung `http://example.com`
 
-Cách làm được ưu chuộn nhất hiện này là responsive web design
+Cách làm được ưa chuộng nhất hiện nay là responsive web design
 
 
 ### Sử dụng `link[rel=canonical]` và `link[rel=alternate]` khi chọn kiểu tách riêng URL
@@ -73,7 +73,7 @@ Bạn có thể dùng [Công cụ web master tool](https://www.google.com/webmas
 
 ### Thiết đặt index bằng thẻ meta
 
-Nếu bạn không muốn trang xuất hiện trên kết quả tìm kiếm, `robots.txt` khôn gphair là giải pháp. Chúng ta dùng `noindex`
+Nếu bạn không muốn trang xuất hiện trên kết quả tìm kiếm, `robots.txt` không phải là giải pháp. Chúng ta dùng `noindex`
 
 ```html
 <meta name="robots" content="noindex" />
@@ -120,3 +120,7 @@ Nếu muốn xóa một URL đã được search engine index, chúng ta lên c�
 - https://www.google.com/webmasters/tools/url-removal
 - https://www.bing.com/toolbox/webmaster/
 - https://webmaster.yandex.com/site/tools/del-url/
+
+
+
+https://developers.google.com/web/fundamentals/discovery/search-optimization
