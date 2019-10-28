@@ -23,7 +23,9 @@ nav:
     - Những thuật ngữ bảo mật quan trọng: security/thuat-ngu-bao-mat-quan-trong.md
     - Mixed content là gì: security/mixed-content-la-gi.md
   - Audit:
+    - Giới thiệu: audit/overview.md
     - Kiểm tra bảo mật: audit/check-site-security.md
+    - Công cụ đánh giá: audit/cong-cu-danh-gia.md
   - Kỹ thuật nền tảng:
     - Hàm async: base/async.md
 markdown_extensions:
