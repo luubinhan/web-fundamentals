@@ -1,6 +1,6 @@
 ## CSS
 
-Nếu user click hoặc chạm vào một đối tượng trên website, nguyên tắc chung là chúng ta phải với trả lời user " u cơ, em đã nhận được yêu cầu"
+Nếu user click hoặc chạm vào một đối tượng trên website, nguyên tắc chung là chúng ta phải với trả lời user "u cơ, em đã nhận được yêu cầu"
 
 Việc đó được thực hiện bằng cách css cho đối tượng được chạm vào
 
