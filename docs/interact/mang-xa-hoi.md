@@ -1,3 +1,5 @@
+# Tương tác với mạng xã hội
+
 Để cung cấp các thông tin sẽ hiển thị khi trang web được chia sẻ trên các trang xã hội, người sử dụng sẽ có xu hướng click vào những đường link với thông tin đầy đủ và họ cảm thấy liên quan
 
 ![](https://developers.google.com/web/fundamentals/discovery/social-discovery/imgs/gplus-snippet-2.png)
