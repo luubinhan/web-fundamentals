@@ -1,0 +1,1162 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Thiết kế form thật ngầu - Kiến thức nền tảng của Web</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#thiet-ke-form-that-ngau" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Kiến thức nền tảng của Web" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Kiến thức nền tảng của Web
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Thiết kế form thật ngầu
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Kiến thức nền tảng của Web" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Kiến thức nền tảng của Web
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      UI/UX
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        UI/UX
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ui-ux/font/" title="Font chữ trên web" class="md-nav__link">
+      Font chữ trên web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ui-ux/mot-website-tot-tren-mobile-la-nhu-the-nao/" title="Một website tốt trên mobile là như thế nào" class="md-nav__link">
+      Một website tốt trên mobile là như thế nào
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ui-ux/focus/" title="Focus" class="md-nav__link">
+      Focus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ui-ux/dom-order/" title="DOM Order" class="md-nav__link">
+      DOM Order
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ui-ux/su-dung-tab-index/" title="Tab Index" class="md-nav__link">
+      Tab Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ui-ux/aria/" title="Aria" class="md-nav__link">
+      Aria
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ui-ux/seo/" title="SEO" class="md-nav__link">
+      SEO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ui-ux/hiding-update-content/" title="Hiding update content" class="md-nav__link">
+      Hiding update content
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ui-ux/responsive-pattern/" title="Layout responsive" class="md-nav__link">
+      Layout responsive
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ui-ux/responsive-image/" title="Responsive image" class="md-nav__link">
+      Responsive image
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ui-ux/add-to-homescreen/" title="Thêm nút Add to Homescreen" class="md-nav__link">
+      Thêm nút Add to Homescreen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ui-ux/install-pwa/" title="Gợi ý cài đặt PWA" class="md-nav__link">
+      Gợi ý cài đặt PWA
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Tương tác
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Tương tác
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../touch/" title="Thêm touch cho website" class="md-nav__link">
+      Thêm touch cho website
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Thiết kế form thật ngầu
+      </label>
+    
+    <a href="./" title="Thiết kế form thật ngầu" class="md-nav__link md-nav__link--active">
+      Thiết kế form thật ngầu
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tranh-lap-lai" class="md-nav__link">
+    Tránh lặp lại
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toi-ang-ung-o-buoc-nao" class="md-nav__link">
+    Tôi đang đứng ở bước nào?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gia-tri-ngay-thang" class="md-nav__link">
+    Giá trị ngày tháng
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#su-dung-input-type-phu-hop" class="md-nav__link">
+    Sử dụng input type phù hợp
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typeurl" class="md-nav__link">
+    type='url'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typetel" class="md-nav__link">
+    type='tel'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typeemail" class="md-nav__link">
+    type='email'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesearch" class="md-nav__link">
+    type='search'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typenumber" class="md-nav__link">
+    type='number'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typerange" class="md-nav__link">
+    type='range'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedatetime-local" class="md-nav__link">
+    type='datetime-local'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedatetime" class="md-nav__link">
+    type='datetime'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typetime" class="md-nav__link">
+    type='time'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typeweek" class="md-nav__link">
+    type='week'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typemonth" class="md-nav__link">
+    type='month'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typecolor" class="md-nav__link">
+    type='color'
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goi-y-thong-qua-truong-datalist" class="md-nav__link">
+    Gợi ý thông qua trường datalist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-focus-khi-can-thiet" class="md-nav__link">
+    auto focus khi cần thiết
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hay-tin-tuong-vao-trinh-duyet" class="md-nav__link">
+    Hãy tin tưởng vào trình duyệt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-form-voi-html5" class="md-nav__link">
+    Validate form với HTML5
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mang-xa-hoi/" title="Tương tác với mạng xã hội" class="md-nav__link">
+      Tương tác với mạng xã hội
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Security
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Security
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../security/content-security-policy/" title="Content Security Policy" class="md-nav__link">
+      Content Security Policy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../security/tai-sao-can-https/" title="Tại sao cần HTTPs" class="md-nav__link">
+      Tại sao cần HTTPs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../security/thuat-ngu-bao-mat-quan-trong/" title="Những thuật ngữ bảo mật quan trọng" class="md-nav__link">
+      Những thuật ngữ bảo mật quan trọng
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../security/mixed-content-la-gi/" title="Mixed content là gì" class="md-nav__link">
+      Mixed content là gì
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Audit
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Audit
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../audit/overview/" title="Giới thiệu" class="md-nav__link">
+      Giới thiệu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../audit/check-site-security/" title="Kiểm tra bảo mật" class="md-nav__link">
+      Kiểm tra bảo mật
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../audit/cong-cu-danh-gia/" title="Công cụ đánh giá" class="md-nav__link">
+      Công cụ đánh giá
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Kỹ thuật nền tảng
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Kỹ thuật nền tảng
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../base/app-shell/" title="Mô hình vỏ ứng dụng" class="md-nav__link">
+      Mô hình vỏ ứng dụng
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../base/async/" title="Hàm async" class="md-nav__link">
+      Hàm async
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tranh-lap-lai" class="md-nav__link">
+    Tránh lặp lại
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toi-ang-ung-o-buoc-nao" class="md-nav__link">
+    Tôi đang đứng ở bước nào?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gia-tri-ngay-thang" class="md-nav__link">
+    Giá trị ngày tháng
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#su-dung-input-type-phu-hop" class="md-nav__link">
+    Sử dụng input type phù hợp
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typeurl" class="md-nav__link">
+    type='url'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typetel" class="md-nav__link">
+    type='tel'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typeemail" class="md-nav__link">
+    type='email'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesearch" class="md-nav__link">
+    type='search'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typenumber" class="md-nav__link">
+    type='number'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typerange" class="md-nav__link">
+    type='range'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedatetime-local" class="md-nav__link">
+    type='datetime-local'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedatetime" class="md-nav__link">
+    type='datetime'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typetime" class="md-nav__link">
+    type='time'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typeweek" class="md-nav__link">
+    type='week'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typemonth" class="md-nav__link">
+    type='month'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typecolor" class="md-nav__link">
+    type='color'
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goi-y-thong-qua-truong-datalist" class="md-nav__link">
+    Gợi ý thông qua trường datalist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-focus-khi-can-thiet" class="md-nav__link">
+    auto focus khi cần thiết
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hay-tin-tuong-vao-trinh-duyet" class="md-nav__link">
+    Hãy tin tưởng vào trình duyệt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-form-voi-html5" class="md-nav__link">
+    Validate form với HTML5
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="thiet-ke-form-that-ngau">Thiết kế form thật ngầu</h1>
+<p>Thiết kế form cần tránh việc bắt user làm tới làm lui, đòi hỏi nhiều thông tin hơn cần thiết, hay cảm giác bị lạc lối giữa một cái form quá dài quá nhiều step</p>
+<p><strong>Nguyên tắc chung</strong></p>
+<ul>
+<li>Bật autofill trên form đề trình duyệt của user có thể tự điền các field đã biết, hiển thị lại những giá trị mà user đã nhập</li>
+<li>Label rõ ràng để user biết mình đang nhập cái gì, ở đâu.</li>
+</ul>
+<h2 id="tranh-lap-lai">Tránh lặp lại</h2>
+<p><img alt="Một số gợi ý khi thiết kế form" src="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/imgs/forms-multipart-good.png" /></p>
+<p>Ví dụ trên trang đăng ký nếu chúng ta đã cho user nhập first name và last name, có thể cho generate tự động ra một giá trị cho field nickname để đăng nhập. Hoặc trường hợp trên trang checkout, cho phép lưu lại địa chỉ giao hàng cho lần checkout sau.</p>
+<p>Để tiết kiệm thời gian tiền bạc cho user, khai thác tính năng <strong>autocomplete</strong> có sẵn của trình duyệt.</p>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&quot;address-line1&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+
+
+<p>Ta muốn autocomplete giá trị gì thì báo với trình duyệt luôn, hoặc dùng giá trị <code>name='giá trị name chuẩn'</code>, hoặc <code>autocomplete='giá trị autocomplete chuẩn'</code></p>
+<p>Chuẩn này đã được <a href="https://html.spec.whatwg.org/multipage/forms.html#autofill">WHATWG HTML Standard.</a> đặt ra ko phải mình</p>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Giá trị name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>name fname mname lname</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>email</td>
+</tr>
+<tr>
+<td>Address</td>
+<td>address city region province state zip zip2 postal country</td>
+</tr>
+<tr>
+<td>Phone</td>
+<td>phone mobile country-code area-code exchange suffix ext</td>
+</tr>
+<tr>
+<td>Credit Card</td>
+<td>ccname cardnumber cvc ccmonth ccyear exp-date card-type</td>
+</tr>
+<tr>
+<td>Usernames</td>
+<td>username</td>
+</tr>
+<tr>
+<td>Passwords</td>
+<td>password</td>
+</tr>
+</tbody>
+</table>
+<h2 id="toi-ang-ung-o-buoc-nao">Tôi đang đứng ở bước nào?</h2>
+<p>Với các form được chia làm nhiều step trước khi submit, một thanh trạng thái cho user biết mình đang đến bước nào là bắt buộc.</p>
+<p><img alt="Một số gợi ý khi thiết kế form" src="https://designmodo.com/wp-content/uploads/2016/10/Checkout-Form.jpg" /></p>
+<h2 id="gia-tri-ngay-thang">Giá trị ngày tháng</h2>
+<p>Trường ngày tháng để user chọn từ lịch, không tách ra thành các input độc lập dạng ngày-tháng-năm, user không cần phải mở một ứng dụng calendar khác đó trên điện thoại, trên máy tính để kiểm tra ngày trước khi chọn.</p>
+<p><img alt="Một số gợi ý khi thiết kế form" src="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/imgs/forms-calendar-good.png" /></p>
+<h2 id="su-dung-input-type-phu-hop">Sử dụng input type phù hợp</h2>
+<p>HTML5 hỗ trợ khá nhiều kiểu input, khi cung cấp giá trị <code>type</code> rõ ràng cho input, trình duyệt sẽ biết và hiển thị kiểu keyboard nào cho phù hợp trên điện thoại, cũng như có những validation tích hợp sẵn</p>
+<h3 id="typeurl"><code>type='url'</code></h3>
+<p>Chuỗi bắt đầu phải là 'http://', 'ftp://', 'mailto:'</p>
+<p><img alt="Một số gợi ý khi thiết kế form" src="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/imgs/url-ios.png" /></p>
+<h3 id="typetel"><code>type='tel'</code></h3>
+<p>Ko có ép một syntax hay validation nào cả, giúp hiện thì bàn phím điện thoại trên mobile</p>
+<p><img alt="ko có ép một syntax hay validation nào cả, giúp hiện thì bàn phím điện thoại trên mobile" src="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/imgs/tel-android.png" /></p>
+<h3 id="typeemail"><code>type='email'</code></h3>
+<p>Trên mobile nó sẽ hiện sẵn phím @</p>
+<p><img alt="Một số gợi ý khi thiết kế form" src="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/imgs/email-android.png" /></p>
+<h3 id="typesearch"><code>type='search'</code></h3>
+<p>Bàn phím search chuẩn trên từng thiết bị</p>
+<p><img alt="Một số gợi ý khi thiết kế form" src="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/imgs/plain-ios.png" /></p>
+<h3 id="typenumber"><code>type='number'</code></h3>
+<p>iOS yêu cầu có thêm <code>pattern='\d*'</code> để hiển thị bàn phím số</p>
+<p><img alt="Một số gợi ý khi thiết kế form" src="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/imgs/number-android.png" /></p>
+<h3 id="typerange"><code>type='range'</code></h3>
+<p>Hiển thị kiếu slider control</p>
+<p><img alt="Một số gợi ý khi thiết kế form" src="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/imgs/range-ios.png" /></p>
+<h3 id="typedatetime-local"><code>type='datetime-local'</code></h3>
+<p>Giá trị ngày tháng có timezone</p>
+<p><img alt="Một số gợi ý khi thiết kế form" src="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/imgs/datetime-local-ios.png" /></p>
+<h3 id="typedatetime"><code>type='datetime'</code></h3>
+<p>Giá trị ngày tháng ko có timezone</p>
+<p><img alt="Một số gợi ý khi thiết kế form" src="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/imgs/date-android.png" /></p>
+<h3 id="typetime"><code>type='time'</code></h3>
+<p>Chỉ có giá trị giờ</p>
+<p><img alt="Một số gợi ý khi thiết kế form" src="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/imgs/time-ios.png" /></p>
+<h3 id="typeweek"><code>type='week'</code></h3>
+<p>Chỉ có giá trị tuần</p>
+<p><img alt="Một số gợi ý khi thiết kế form" src="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/imgs/week-android.png" /></p>
+<h3 id="typemonth"><code>type='month'</code></h3>
+<p>Chỉ có giá trị tháng</p>
+<p><img alt="Một số gợi ý khi thiết kế form" src="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/imgs/month-ios.png" /></p>
+<h3 id="typecolor"><code>type='color'</code></h3>
+<p>Bảng màu để chọn</p>
+<p><img alt="Một số gợi ý khi thiết kế form" src="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/imgs/color-android.png" /></p>
+<h2 id="goi-y-thong-qua-truong-datalist">Gợi ý thông qua trường <code>datalist</code></h2>
+<p><code>&lt;datalist /&gt;</code> là element cho phép chúng ta cung cấp các giá trị <strong>gợi ý</strong> với một <code>&lt;input /&gt;</code></p>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;frmFavChocolate&quot;</span><span class="p">&gt;</span>Favorite Type of Chocolate<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span>
+<span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span>
+<span class="na">name</span><span class="o">=</span><span class="s">&quot;fav-choc&quot;</span>
+<span class="na">id</span><span class="o">=</span><span class="s">&quot;frmFavChocolate&quot;</span>
+<span class="na">list</span><span class="o">=</span><span class="s">&quot;chocType&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">datalist</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;chocType&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;milk&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;dark&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">datalist</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<div class="note">User không bắt buộc phải chọn các giá trị trong datalist, chỉ là gợi ý thích thì chọn</div>
+
+<p><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html">Xem một form đã hiện thực</a></p>
+<h2 id="auto-focus-khi-can-thiet">auto focus khi cần thiết</h2>
+<p>Trên thẻ input, nếu muốn input được focus ngay lập tức khi vừa vào trang, như login, focus vào ô username. Thuộc tính <code>autofocus</code> này sẽ tự động bị ignore trên mobile để tránh xuất hiện bàn phím ko cần thiết.</p>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">autofocus</span> <span class="err">...</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<h2 id="hay-tin-tuong-vao-trinh-duyet">Hãy tin tưởng vào trình duyệt</h2>
+<p>Rất nhiều trường hợp vì customize theo ý design mà tính năng autofill của Chrome không còn chạy đúng, nguyên nhân có thể là</p>
+<p><strong>Không sử dụng input chuẩn</strong></p>
+<p>Lỗi thường thấy khi phải customize cái dropdown theo design mà không thể dùng thẻ <code>&lt;select /&gt;</code></p>
+<p><strong>Dùng placeholder giả</strong></p>
+<p>Placeholder giả là gì? Thay vì dùng attribute placeholder, dùng <code>value="First Name"</code> rồi viết javascript để khi focus xóa giá trị này đi.</p>
+<p><strong>Tự động copy shipping address vào billing address</strong></p>
+<p>Cơ bản thì Autofill của Chrome KO thể chạy được nữa nếu chúng ta cho copy dữ liệu từ shipping address qua billing address bằng javascript</p>
+<h2 id="validate-form-voi-html5">Validate form với HTML5</h2>
+<p>Bài này đọc <a href="http://vuilaptrinh.com/2018-11-02-validate-form-voi-html-5">ở đây trang cá nhân của mình</a></p>
+<p><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html" target="_blank" rel="noopener noreferrer">Sample</a></p>
+<p><a href="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/" target="_blank" rel="noopener noreferrer">Create Amazing Forms</a></p>
+<p><a href="https://developers.google.com/web/updates/2015/06/checkout-faster-with-autofill" target="_blank" rel="noopener noreferrer">Help users checkout faster with Autofill</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../touch/" title="Thêm touch cho website" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Thêm touch cho website
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../mang-xa-hoi/" title="Tương tác với mạng xã hội" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Tương tác với mạng xã hội
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
