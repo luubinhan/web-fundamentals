@@ -36,7 +36,7 @@
     
     
       
-        <title>Tại sao cần HTTPs - Kiến thức nền tảng của Web</title>
+        <title>Mô hình vỏ ứng dụng - Kiến thức nền tảng của Web</title>
       
     
     
@@ -75,6 +75,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#mo-hinh-vo-ung-dung" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -97,7 +101,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Tại sao cần HTTPs
+                Mô hình vỏ ứng dụng
               
             </span>
           
@@ -404,12 +408,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Security
@@ -427,7 +429,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../content-security-policy/" title="Content Security Policy" class="md-nav__link">
+    <a href="../../security/content-security-policy/" title="Content Security Policy" class="md-nav__link">
       Content Security Policy
     </a>
   </li>
@@ -437,18 +439,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Tại sao cần HTTPs" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../security/tai-sao-can-https/" title="Tại sao cần HTTPs" class="md-nav__link">
       Tại sao cần HTTPs
     </a>
-    
   </li>
 
         
@@ -458,7 +453,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../thuat-ngu-bao-mat-quan-trong/" title="Những thuật ngữ bảo mật quan trọng" class="md-nav__link">
+    <a href="../../security/thuat-ngu-bao-mat-quan-trong/" title="Những thuật ngữ bảo mật quan trọng" class="md-nav__link">
       Những thuật ngữ bảo mật quan trọng
     </a>
   </li>
@@ -470,7 +465,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../mixed-content-la-gi/" title="Mixed content là gì" class="md-nav__link">
+    <a href="../../security/mixed-content-la-gi/" title="Mixed content là gì" class="md-nav__link">
       Mixed content là gì
     </a>
   </li>
@@ -545,10 +540,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
       Kỹ thuật nền tảng
@@ -564,11 +561,56 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../base/app-shell/" title="Mô hình vỏ ứng dụng" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Mô hình vỏ ứng dụng
+      </label>
+    
+    <a href="./" title="Mô hình vỏ ứng dụng" class="md-nav__link md-nav__link--active">
       Mô hình vỏ ứng dụng
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#loi-ich" class="md-nav__link">
+    Lợi ích
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xay-dung" class="md-nav__link">
+    Xây dựng
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -578,7 +620,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../base/async/" title="Hàm async" class="md-nav__link">
+    <a href="../async/" title="Hàm async" class="md-nav__link">
       Hàm async
     </a>
   </li>
@@ -596,18 +638,142 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#loi-ich" class="md-nav__link">
+    Lợi ích
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xay-dung" class="md-nav__link">
+    Xây dựng
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Tại sao cần HTTPs</h1>
-                
-                <p>Nếu được sử dụng HTTPs trong mọi trường hợp sẽ không chỉ bảo vệ dữ liệu gửi lên của người dùng, tăng cường bảo mật cho site, HTTPs còn là giao thức bắt buộc cho những tính năng mới như <strong>progressive web apps</strong></p>
-<p>Trong lúc <em>vận chuyển</em> thông tin qua lại giữa website, nguy cơ bị thêm bớt, cắt xén dữ liệu là vô cùng cao, các nhà cung cấp mạng, các trạm wifi miễn phí của quán cafe, khách sạn, sân bay dễ dàng thêm code độc để lấy cấp thông tin.</p>
-<p>HTTPs có thể ngăn chặn những hành động lén lút đó, một trong nhiều đều mọi người hay lầm là HTTPS chỉ phù hợp với các site có sử dụng các thông tin nhạy cảm như ngân hàng. Tất cả mọi website đều cần HTTPs ngay cả những trang đăng tải nội dung dạng tin tức.</p>
-<p>Những <em>khả năng</em> mới của web như chụp ảnh, thu âm, chạy offline bằng service worker đều cần HTTPs, các API trước đây như <code>geolocation</code> cũng bắt đầu cập nhập và yêu cầu dùng HTTPs mới được hỗ trợ.</p>
+                <h1 id="mo-hinh-vo-ung-dung">Mô hình vỏ ứng dụng</h1>
+<p><strong>Mô hình vỏ ứng dụng</strong> (app shell model) là một phương pháp tiếp cận để xây dựng Progressive Web App, giống như những gì bạn thấy trên một ứng dụng mobile native, <strong>bộ khung sườn</strong> (vò) đã có sẵn khi bạn cài app, phần <strong>thịt</strong> sẽ được đắp theo thời điểm user mở app.</p>
+<p><strong>Khung sườn</strong> ở đây là HTML, CSS, Javascript căn bản nhất của ứng dụng, những thành phần không đổi theo thời gian sẽ được cache lại bên dưới client để có thể mở ứng dụng nhanh hơn cho các lần truy cập tiếp theo.</p>
+<p>Với các ứng dụng SPA (Single Page App), đây là phương pháp tiếp cận phải làm. Cách làm này sử dụng service worker để cache cái <strong>sườn</strong> lại.</p>
+<p><img alt="Application Shell architecture" src="https://developers.google.com/web/fundamentals/architecture/images/appshell.png" /></p>
+<p>Nói một cách khác, nó giống như toàn bộ bundle của của native app. Toàn bộ phần khung sẽ nằm đó, còn dữ liệu sẽ <code>fetch</code> khi chạy app.</p>
+<h2 id="loi-ich">Lợi ích</h2>
+<ul>
+<li><strong>Nhanh</strong>: với những lần truy cập tiếp theo của user, tốc độ sẽ được cải thiện đáng kể.</li>
+<li><strong>Gần giống với Native App</strong>: tương tác sẽ gần giống như những ứng dụng chạy offline</li>
+<li><strong>Dữ liệu được sử dụng hợp lý</strong>: với tốc độ mạng ì ạch, việc tiết kiệm dữ liệu truyền tải là điều đáng quan tâm.</li>
+</ul>
+<h2 id="xay-dung">Xây dựng</h2>
+<p>Dựng cấu trúc cho app một cách rõ ràng giữa đâu là <strong>sườn</strong> đâu là <strong>thịt</strong></p>
+<p>Ví dụ như bên dưới là ứng dụng Wikipedia, bên trái là phần <strong>sườn</strong>, hình giữa là sao khi đã đắp thêm <em>thịt</em></p>
+<p><img alt="Offline Wikipedia app using an application shell with content caching" src="https://developers.google.com/web/fundamentals/architecture/images/wikipedia.jpg" /></p>
+<p>Ví dụ đây là một sườn HTML chưa đắp <em>thịt</em></p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>App Shell<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;manifest&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/manifest.json&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;styles/inline.css&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;header&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;header__title&quot;</span><span class="p">&gt;</span>App Shell<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav&quot;</span><span class="p">&gt;</span>
+  ...
+  <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;main&quot;</span><span class="p">&gt;</span>
+  ...
+  <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;dialog-container&quot;</span><span class="p">&gt;</span>
+  ...
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;loader&quot;</span><span class="p">&gt;</span>
+    <span class="c">&lt;!-- Show a spinner or placeholders for content --&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;app.js&quot;</span> <span class="na">async</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="s1">&#39;serviceWorker&#39;</span> <span class="k">in</span> <span class="nx">navigator</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">navigator</span><span class="p">.</span><span class="nx">serviceWorker</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="s1">&#39;/sw.js&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">registration</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Registration was successful</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;ServiceWorker registration successful with scope: &#39;</span><span class="p">,</span> <span class="nx">registration</span><span class="p">.</span><span class="nx">scope</span><span class="p">);</span>
+    <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// registration failed :(</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;ServiceWorker registration failed: &#39;</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>Một đoạn code ví dụ sử dụng service worker để cache</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">cacheName</span> <span class="o">=</span> <span class="s1">&#39;shell-content&#39;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">filesToCache</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s1">&#39;/css/styles.css&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;/js/scripts.js&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;/images/logo.svg&#39;</span><span class="p">,</span>
+
+  <span class="s1">&#39;/offline.html&#39;</span><span class="p">,</span>
+
+  <span class="s1">&#39;/&#39;</span><span class="p">,</span>
+<span class="p">];</span>
+
+<span class="nx">self</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;install&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[ServiceWorker] Install&#39;</span><span class="p">);</span>
+  <span class="nx">e</span><span class="p">.</span><span class="nx">waitUntil</span><span class="p">(</span>
+    <span class="nx">caches</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">cacheName</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">cache</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[ServiceWorker] Caching app shell&#39;</span><span class="p">);</span>
+      <span class="k">return</span> <span class="nx">cache</span><span class="p">.</span><span class="nx">addAll</span><span class="p">(</span><span class="nx">filesToCache</span><span class="p">);</span>
+    <span class="p">})</span>
+  <span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<p>Xem thêm phần hướng dẫn chi tiết ở <a href="http://vuilaptrinh.com/2018-10-16-huong-dan-progressive-web-app-cho-nguoi-moi-bat-dau/">blog Làm Progressive Web App cho người mới</a></p>
+<p><a href="https://developers.google.com/web/fundamentals/architecture/app-shell">https://developers.google.com/web/fundamentals/architecture/app-shell</a></p>
                 
                   
                 
@@ -628,7 +794,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../content-security-policy/" title="Content Security Policy" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../audit/cong-cu-danh-gia/" title="Công cụ đánh giá" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -637,19 +803,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Content Security Policy
+                Công cụ đánh giá
               </span>
             </div>
           </a>
         
         
-          <a href="../thuat-ngu-bao-mat-quan-trong/" title="Những thuật ngữ bảo mật quan trọng" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../async/" title="Hàm async" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Những thuật ngữ bảo mật quan trọng
+                Hàm async
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

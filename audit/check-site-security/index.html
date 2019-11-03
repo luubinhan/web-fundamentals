@@ -36,7 +36,7 @@
     
     
       
-        <title>Tại sao cần HTTPs - Kiến thức nền tảng của Web</title>
+        <title>Kiểm tra bảo mật - Kiến thức nền tảng của Web</title>
       
     
     
@@ -97,7 +97,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Tại sao cần HTTPs
+                Kiểm tra bảo mật
               
             </span>
           
@@ -404,12 +404,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Security
@@ -427,7 +425,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../content-security-policy/" title="Content Security Policy" class="md-nav__link">
+    <a href="../../security/content-security-policy/" title="Content Security Policy" class="md-nav__link">
       Content Security Policy
     </a>
   </li>
@@ -437,18 +435,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Tại sao cần HTTPs" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../security/tai-sao-can-https/" title="Tại sao cần HTTPs" class="md-nav__link">
       Tại sao cần HTTPs
     </a>
-    
   </li>
 
         
@@ -458,7 +449,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../thuat-ngu-bao-mat-quan-trong/" title="Những thuật ngữ bảo mật quan trọng" class="md-nav__link">
+    <a href="../../security/thuat-ngu-bao-mat-quan-trong/" title="Những thuật ngữ bảo mật quan trọng" class="md-nav__link">
       Những thuật ngữ bảo mật quan trọng
     </a>
   </li>
@@ -470,7 +461,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../mixed-content-la-gi/" title="Mixed content là gì" class="md-nav__link">
+    <a href="../../security/mixed-content-la-gi/" title="Mixed content là gì" class="md-nav__link">
       Mixed content là gì
     </a>
   </li>
@@ -485,10 +476,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Audit
@@ -506,7 +499,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../audit/overview/" title="Giới thiệu" class="md-nav__link">
+    <a href="../overview/" title="Giới thiệu" class="md-nav__link">
       Giới thiệu
     </a>
   </li>
@@ -516,11 +509,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../audit/check-site-security/" title="Kiểm tra bảo mật" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Kiểm tra bảo mật" class="md-nav__link md-nav__link--active">
       Kiểm tra bảo mật
     </a>
+    
   </li>
 
         
@@ -530,7 +530,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../audit/cong-cu-danh-gia/" title="Công cụ đánh giá" class="md-nav__link">
+    <a href="../cong-cu-danh-gia/" title="Công cụ đánh giá" class="md-nav__link">
       Công cụ đánh giá
     </a>
   </li>
@@ -602,12 +602,16 @@
               
                 
                 
-                  <h1>Tại sao cần HTTPs</h1>
+                  <h1>Kiểm tra bảo mật</h1>
                 
-                <p>Nếu được sử dụng HTTPs trong mọi trường hợp sẽ không chỉ bảo vệ dữ liệu gửi lên của người dùng, tăng cường bảo mật cho site, HTTPs còn là giao thức bắt buộc cho những tính năng mới như <strong>progressive web apps</strong></p>
-<p>Trong lúc <em>vận chuyển</em> thông tin qua lại giữa website, nguy cơ bị thêm bớt, cắt xén dữ liệu là vô cùng cao, các nhà cung cấp mạng, các trạm wifi miễn phí của quán cafe, khách sạn, sân bay dễ dàng thêm code độc để lấy cấp thông tin.</p>
-<p>HTTPs có thể ngăn chặn những hành động lén lút đó, một trong nhiều đều mọi người hay lầm là HTTPS chỉ phù hợp với các site có sử dụng các thông tin nhạy cảm như ngân hàng. Tất cả mọi website đều cần HTTPs ngay cả những trang đăng tải nội dung dạng tin tức.</p>
-<p>Những <em>khả năng</em> mới của web như chụp ảnh, thu âm, chạy offline bằng service worker đều cần HTTPs, các API trước đây như <code>geolocation</code> cũng bắt đầu cập nhập và yêu cầu dùng HTTPs mới được hỗ trợ.</p>
+                <p>Bạn không thể tạo trang PWA mà không dùng https</p>
+<p>HTTPS là nền tảng bảo mật của website, rất nhiều API khác sẽ không thể chạy nếu không dùng HTTPS. Bạn có thể đọc lại <a href="security/tai-sao-can-https">Tại sao cần HTTPS</a></p>
+<p><img alt="Từ Chrome 68" src="https://developers.google.com/web/fundamentals/performance/audit/images/not-secure.png" />
+Từ phiên bản Chrome 68, thanh address sẽ thông báo nếu site bạn không chạy trên nền HTTPS</p>
+<p>HTTPS cần được chạy ở mọi nơi, không phải chỉ ở trang đăng nhập, đăng ký, mua hàng. Tất cả những tài nguyên nào không dùng HTTPS cũng là cơ hội cho hacker tấn công.</p>
+<p>Để kiểm tra, dùng DevTools của Chrome, mở cửa sổ <strong>Security</strong></p>
+<p>Site bên dưới không bảo mật tốt, một số file được truyền qua HTTP</p>
+<p><img alt="" src="https://developers.google.com/web/fundamentals/performance/audit/images/devtools-security-1000.png" /></p>
                 
                   
                 
@@ -628,7 +632,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../content-security-policy/" title="Content Security Policy" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../overview/" title="Giới thiệu" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -637,19 +641,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Content Security Policy
+                Giới thiệu
               </span>
             </div>
           </a>
         
         
-          <a href="../thuat-ngu-bao-mat-quan-trong/" title="Những thuật ngữ bảo mật quan trọng" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../cong-cu-danh-gia/" title="Công cụ đánh giá" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Những thuật ngữ bảo mật quan trọng
+                Công cụ đánh giá
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
