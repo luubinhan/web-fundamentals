@@ -19,6 +19,7 @@ nav:
   - Tương tác:
     - Thêm touch cho website: interact/touch.md
     - Thiết kế form thật ngầu: interact/form.md
+    - Lấy thông tin vị trí của user: interact/user-location.md
     - Web App Manifest: interact/web-app-manifest.md
     - Tương tác với mạng xã hội: interact/mang-xa-hoi.md
   - Security:
