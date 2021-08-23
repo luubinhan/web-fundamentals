@@ -23,7 +23,9 @@ nav:
     - Web App Manifest: interact/web-app-manifest.md
     - Tương tác với mạng xã hội: interact/mang-xa-hoi.md
   - Security:
+    - Phân biệt same site và same origin: security/phan-biet-same-site-same-origin.md
     - Content Security Policy: security/content-security-policy.md
+    - Phòng tránh XSS bằng CSP: security/bao-ve-xss-bang-content-security-policy.md
     - Tại sao cần HTTPs: security/tai-sao-can-https.md
     - Những thuật ngữ bảo mật quan trọng: security/thuat-ngu-bao-mat-quan-trong.md
     - Mixed content là gì: security/mixed-content-la-gi.md
