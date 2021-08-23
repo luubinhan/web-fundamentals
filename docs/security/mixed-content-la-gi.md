@@ -6,9 +6,9 @@ Khi đó trình duyệt sẽ báo với user, quá trình chuyển *hàng* của
 
 Giao hàng bằng xe tải, hàng hóa đảm bảo khó hư hao hơn (ít nhất là vậy), trong khi bạn tưởng tượng, giao cái tủ mà một phần cái tủ được giao bằng xe tải, phần kính chở xe máy tới, thì giao hàng bằng xe tải cũng chẳng còn ý nghĩa gì nữa.
 
-![](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/imgs/image-gallery-warning.png)
+![](https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/Y7b4EWAbSL6BgI07FdQq.jpg?auto=format&w=964)
 
-![Chrome block các request ở dạng mixed content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/imgs/simple-mixed-content-error.png)
+![Chrome block các request ở dạng mixed content](https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/KafrfEz1adCP2eUHQEWy.jpg?auto=format&w=964)
 
 Việc *chuyển hàng* bằng phương pháp nữa nạt-nữa mở này, trình duyệt như Chrome tuyệt đối nghiêm cấm. Tuy nhiên do có quá nhiều website hiện tại dính vào tình trạng này, nên Chrome có nhân nhượng ở thời điểm hiện tại, chỉ chặn một số loại mà đã xác định được là nguy hiểm.
 
@@ -18,9 +18,9 @@ Việc *chuyển hàng* bằng phương pháp nữa nạt-nữa mở này, trìn
 
 Để biết trang web của mình có bị mixed content không, đơn giản là mở trang web bằng trình duyệt Chrome, mở cửa sổ DevTools lên xem có thông báo nào ở console không
 
-![](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/imgs/passive-mixed-content-warnings.png)
+![](https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/HNxoomaHi2ksvYHGuNiE.jpg?auto=format&w=964)
 
-![](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/imgs/active-mixed-content-errors.png)
+![Chrome block các request ở dạng mixed content](https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/xRG5zpKLr0Z3OwfYpn2H.jpg?auto=format&w=964)
 
 Một cách để tìm trong source code, search toàn bộ source nào có đoạn `http://` không.
 
