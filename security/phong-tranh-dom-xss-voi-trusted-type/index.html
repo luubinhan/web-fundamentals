@@ -14,7 +14,7 @@
     
     
       
-        <title>Content Security Policy - Kiến thức nền tảng của Web</title>
+        <title>Phòng tránh XSS bằng Trusted Type - Kiến thức nền tảng của Web</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#whitelist" class="md-skip">
+        <a href="#lam-sao-su-dung-trusted-types" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Content Security Policy
+              Phòng tránh XSS bằng Trusted Type
             
           </span>
         </div>
@@ -499,68 +499,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Content Security Policy
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../content-security-policy/" class="md-nav__link">
         Content Security Policy
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#whitelist" class="md-nav__link">
-    Whitelist
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inline-code-vo-cung-nguy-hiem" class="md-nav__link">
-    Inline code vô cùng nguy hiểm
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#eval" class="md-nav__link">
-    Eval
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#to-cao" class="md-nav__link">
-    Tố cáo
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -580,11 +523,74 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../phong-tranh-dom-xss-voi-trusted-type/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Phòng tránh XSS bằng Trusted Type
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Phòng tránh XSS bằng Trusted Type
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lam-sao-su-dung-trusted-types" class="md-nav__link">
+    Làm sao sử dụng Trusted Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Làm sao sử dụng Trusted Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dompurify" class="md-nav__link">
+    DOMPurify
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tu-tao-trusted-type-policy" class="md-nav__link">
+    Tự tạo Trusted Type policy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-policy" class="md-nav__link">
+    Default Policy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -763,30 +769,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#whitelist" class="md-nav__link">
-    Whitelist
+  <a href="#lam-sao-su-dung-trusted-types" class="md-nav__link">
+    Làm sao sử dụng Trusted Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Làm sao sử dụng Trusted Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dompurify" class="md-nav__link">
+    DOMPurify
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#inline-code-vo-cung-nguy-hiem" class="md-nav__link">
-    Inline code vô cùng nguy hiểm
+        
+          <li class="md-nav__item">
+  <a href="#tu-tao-trusted-type-policy" class="md-nav__link">
+    Tự tạo Trusted Type policy
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#eval" class="md-nav__link">
-    Eval
+        
+          <li class="md-nav__item">
+  <a href="#default-policy" class="md-nav__link">
+    Default Policy
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#to-cao" class="md-nav__link">
-    Tố cáo
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -803,111 +815,124 @@
               
                 
                 
-                  <h1>Content Security Policy</h1>
+                  <h1>Phòng tránh XSS bằng Trusted Type</h1>
                 
-                <p>Mô hình bảo mật của web luôn xoay quanh quy định <strong>same-origin</strong>, <em>đèn nhà ai nhà đó sáng</em>. Code từ trang <code>vuilaptrinh.com</code> không được phép lấy gì từ <code>google.com</code> nếu ko được cấp giấy xét nhà</p>
-<p>Tấn công theo cách <strong>Cross-site scripting</strong> (XSS) để qua mặt câu hỏi <strong>nhà anh ở đâu thế</strong>, dùng một tên <em>nội gián</em> (một đoạn script) gài vào nhà đó, rồi tuồn thông tin nội bộ từ nhà này ra <em>thế giới</em>, một khi nội gián đã nằm trong nhà bạn, thì xem như game over.</p>
-<p>Để giảm thiểu tối đa nguy cơ bị dính <em>nội gián</em> này, các trình duyệt <em>hiện đại</em> sử dụng một phương pháp khác <strong>same-origin</strong> gọi là Content Security Policy (<strong>CSP</strong>)</p>
-<h2 id="whitelist">Whitelist</h2>
-<p>Ví dụ nút like của Google, khi user click vào nút này code đặt ở nhà bạn, nhưng nó sẽ chạy đưa thông tin tới  <code>api.google.com</code>, câu hỏi là làm sao chúng ta có thể cho phép những đoạn code gửi thông tin tới <code>api.google.com</code> mà không cho tới trang <code>evil.com</code></p>
-<p>Chúng ta cấp <em>giấy chứng nhận an toàn vệ sinh thực phẩm</em> <strong>CSP</strong> (trong HTTP Header), để báo với browser là: "Ê, mấy trang này là tao tin tưởng, mày có thể cho code chạy thoải mái"</p>
-<div class="codehilite"><pre><span></span><code>Content-Security-Policy: script-src &#39;self&#39; https://apis.google.com
-</code></pre></div>
-
-<p>Đoạn trên có nghĩa là chúng ta tin tưởng và cho phép thực thi những đoạn script từ nhà chúng ta, và từ nhà google</p>
-<p><code>script-src</code> được gọi là <strong>directive</strong>, có thể hình dung nó như những biển báo giao thông ngoài đường, đây là đường một chiều, chỉ cho phép xe máy, cấm xe ba gác.</p>
-<p>Nếu <em>kẻ xấu</em> muốn load và thực thi một đoạn script ở một nhà không ai quen biết, nó sẽ bị chặn lại ngay lập tức bởi trình duyệt.</p>
-<p><img alt="Không cho chạy code ở trang không nằm trong whitelist" src="https://developers.google.com/web/fundamentals/security/csp/images/csp-error.png" /></p>
-<p>Danh sách <strong>directive</strong> khá nhiều, đang được khai báo thêm, chi tiết có thể xem tại <a href="https://www.w3.org/TR/CSP3/">https://www.w3.org/TR/CSP3/</a></p>
-<p><strong>Sử dụng thẻ meta để thiết đặt CSP</strong></p>
-<p>CSP được khuyến khích cung cấp thông qua HTTP header, hoặc có thể thông qua thẻ <code>&lt;meta/&gt;</code> với thuộc tính <code>http-equiv</code></p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span>
-<span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Security-Policy&quot;</span>
-<span class="na">content</span><span class="o">=</span><span class="s">&quot;default-src https://cdn.example.net; child-src &#39;none&#39;; object-src &#39;none&#39;&quot;</span>
-<span class="p">&gt;</span>
-</code></pre></div>
-
-<p>Không được phép dùng thẻ meta với các thuộc tính <code>frame-ancestors</code>, <code>report-uri</code>, <code>sandbox</code></p>
-<h2 id="inline-code-vo-cung-nguy-hiem">Inline code vô cùng nguy hiểm</h2>
-<p>CSP sử dụng một các khai báo trong whitelist để thông báo với trình duyệt <em>đâu là bạn, đâu là thù</em>, trong khi cơ chế <strong>same-origin</strong> ko giải quyết được con nội gián <strong>XSS</strong>. Ví dụ bên trong source code trả về có đoạn code <code>&lt;script&gt;sendMyDataToEvilDotCom();&lt;/script&gt;</code> trình duyệt không có cơ chế để phân biệt được bạn-thù ở đây.</p>
-<p>Với CSP nó mặc định cấm hết các script inline như vậy. Ko chỉ những đoạn inline code bên trong thẻ <code>script</code>, bạn cũng phải bỏ hết những đoạn code <code>onclick</code></p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
-  <span class="kd">function</span> <span class="nx">doAmazingThings</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;YOU AM AMAZING!&#39;</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="o">&lt;</span><span class="err">/script&gt;</span>
-<span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onclick</span><span class="o">=</span><span class="s1">&#39;doAmazingThings();&#39;</span><span class="o">&gt;</span><span class="nx">Am</span> <span class="nx">I</span> <span class="nx">amazing</span><span class="o">?&lt;</span><span class="err">/button&gt;</span>
-</code></pre></div>
-
-<p>Thay thế nó bằng</p>
-<div class="codehilite"><pre><span></span><code><span class="c">&lt;!-- amazing.html --&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;amazing.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;amazing&#39;</span><span class="p">&gt;</span>Am I amazing?<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="c1">// amazing.js</span>
-<span class="kd">function</span> <span class="nx">doAmazingThings</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;YOU AM AMAZING!&#39;</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;amazing&#39;</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">doAmazingThings</span><span class="p">);</span>
-<span class="p">});</span>
-</code></pre></div>
-
-<p>Đoạn code bên dưới sẽ được <strong>CSP</strong> cấp giấy chứng nhận hành nghề, có thể hoạt động kinh doanh bình thường.</p>
-<p>Sau khi bị càm ràm là có nhiều trường hợp buộc dùng inline code, <strong>CSP</strong> phiên bản 2 được đưa ra với bổ sung khả năng cho chạy inline code, nhưng phải thêm 2 bước</p>
-<ol>
-<li>Khai báo id cho đoạn code muốn chạy inline</li>
-</ol>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">nonce</span><span class="o">=</span><span class="s">&quot;EDNnf03nceIOfn39fn3e9h3sdfa&quot;</span><span class="p">&gt;</span>
-  <span class="c1">// Some inline code I can&#39;t remove yet, but need to asap.</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div>
-
-<ol>
-<li>Bổ sung id đó vào whitelist</li>
-</ol>
-<div class="codehilite"><pre><span></span><code>Content-Security-Policy: script-src &#39;nonce-EDNnf03nceIOfn39fn3e9h3sdfa&#39;
-</code></pre></div>
-
-<h2 id="eval">Eval</h2>
-<p>Ngay cả khi không thể inject script trực tiếp, bọn <em>ác ôn</em> còn có thể dụ dỗ ứng dụng của chúng ta convert một đoạn text (bị nhúng) thành javascript rồi chạy nó bằng <code>eval()</code>, <code>new Function()</code>, <code>setTimeout([string],...)</code> và <code>setInterval([string],...)</code>. CSP cũng block toàn bộ những dạng này.</p>
-<p>Nó sẽ ảnh hướng cách chúng ta xây dựng ứng dụng:</p>
+                <p>Phòng tránh kiểu tấn công DOM XSS với Trusted Type</p>
+<p><a href="https://github.com/w3c/webappsec-trusted-types">Trusted Types</a> là một công cụ ra đời để xử lý DOM XSS, được hỗ trợ từ Chrome 83, với các trình duyệt chưa hỗ trợ, có thể dùng <a href="https://github.com/w3c/webappsec-trusted-types#polyfill">polyfill này</a> </p>
+<blockquote>
+<p>DOM cross-site scripting xảy ra khi hacker có thể chèn script độc ẩn trong DOM và execute nó (như <code>eval</code>, <code>.innerHTML</code>)</p>
+</blockquote>
+<p>Với DOM XSS có thể gom thành 2 loại, từ phía server và từ phía client</p>
+<p>Để chặn Server-side XXS, không tạo HTML bằng cách nối string, sử dụng các thư viện đã được kiểm tra để tự động <code>escape</code></p>
+<blockquote>
+<p>escape là thuật ngữ ám chỉ việc xóa đi các ký tự đặc biệt trong lập trình, kết quả là có một string thuần túy</p>
+</blockquote>
+<p>Phía client, trình duyệt sử dụng Trusted Types để xử lý</p>
+<p>Trusted Types sẽ lock toàn bộ những function nguy hiểm sau</p>
 <ul>
-<li>Trong ta phải parse JSON thông qua hàm <code>JSON.parse</code> và không dùng <code>eval()</code></li>
-<li>Viết lại những hàm <code>setTimeout</code> hoặc <code>setInterval</code> bạn đang viết inline. Ví dụ</li>
+<li>manipulation script: <code>&lt;script src /&gt;</code> và set text content của thẻ <code>&lt;script /&gt;</code></li>
+<li>Generate HTML từ string: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML"><code>innerHTML</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/outerHTML"><code>outerHTML</code></a>,<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML"><code>insertAdjacentHTML</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-srcdoc"><code>srcdoc</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/write"><code>document.write</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/writeln"><code>document.writeln</code></a>, và <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser#DOMParser.parseFromString"><code>DOMParser.parseFromString</code></a></li>
+<li>Execute content plugin: <code>&lt;embed src&gt;</code>, <code>&lt;object data&gt;</code> và <code>&lt;object codebase&gt;</code></li>
+<li>Chạy code js: <code>eval</code>, <code>setTimeout</code>, <code>setInterval</code>, <code>new Function()</code></li>
 </ul>
-<p><em>viết thế này méo cho chạy đâu</em></p>
-<div class="codehilite"><pre><span></span><code><span class="nx">setTimeout</span><span class="p">(</span><span class="s2">&quot;document.querySelector(&#39;a&#39;).style.display = &#39;none&#39;;&quot;</span><span class="p">,</span> <span class="mf">10</span><span class="p">);</span>
+<p>Trước khi truyền dữ liệu vào các function trên, Trusted Types buộc chúng ta phải xử lý dữ liệu, nếu chỉ là một string sẽ không được chấp nhận vì trình duyệt không thể xác định được có nguy hiểm không</p>
+<p>☠️Không được phép</p>
+<div class="codehilite"><pre><span></span><code><span class="nx">anElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">location</span><span class="p">.</span><span class="nx">href</span>
 </code></pre></div>
 
-<p>viết bình thường thôi</p>
-<div class="codehilite"><pre><span></span><code><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span>
-<span class="p">},</span> <span class="mf">10</span><span class="p">);</span>
+<p>Nó sẽ throw <code>TypeError</code> khi chúng ta viết như vậy</p>
+<p>✅ Nên</p>
+<div class="codehilite"><pre><span></span><code><span class="nx">anElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">aTrustedHTML</span><span class="p">;</span>
 </code></pre></div>
 
-<h2 id="to-cao">Tố cáo</h2>
-<p>Ngoài việc chặn không cho thực thi những hành vi nguy hiểm ở client, nếu phát hiện chúng ta hãy <em>tố cáo</em> nó lên server để xác định những thành viên của tổ chức áo đen này và cho luôn vào blacklist</p>
-<p>Config CSP như thế này để nó tố cáo</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">Content-Security-Policy</span><span class="o">:</span> <span class="nt">default-src</span> <span class="s1">&#39;self&#39;</span><span class="o">;</span> <span class="o">...;</span> <span class="nt">report-uri</span> <span class="o">/</span><span class="nt">my_amazing_csp_report_parser</span><span class="o">;</span>
+<p>Browser chấp nhận <code>TrustedHTML</code>, <code>TrustedScript</code>, <code>TrustedScriptUrl</code> khi sử dụng với các function kể trên.</p>
+<h2 id="lam-sao-su-dung-trusted-types">Làm sao sử dụng Trusted Types</h2>
+<blockquote>
+<p>Công cụ hỗ trở đánh giá Content Security Policy <a href="https://github.com/jacobbednarz/go-csp-collector">go-csp-collector</a></p>
+</blockquote>
+<p>Có thể debug nhanh bằng trình duyệt</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;securitypolicyviolation&#39;</span><span class="p">,</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">console</span><span class="p">))</span>
 </code></pre></div>
 
-<p>Kết quả report nó sẽ dạng như thế này</p>
+<p>Thêm vào trong header của HTTP Response muốn migrate sang Trusted Types</p>
+<div class="codehilite"><pre><span></span><code>Content-Security-Policy-Report-Only: require-trusted-types-for <span class="s1">&#39;script&#39;</span><span class="p">;</span> report-uri //my-csp-endpoint.example
+</code></pre></div>
+
+<p>Những gì không hợp lệ sẽ được report đến <code>//my-csp-endpoint.example</code></p>
+<blockquote>
+<p>Trusted Types chỉ hoạt động trên HTTPS và localhost</p>
+</blockquote>
+<p>Ví dụ khi đưa một string cho <code>innerHTML</code>, trình duyệt sẽ gửi report như sau</p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;csp-report&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;document-uri&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.org/page.html&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;referrer&quot;</span><span class="p">:</span> <span class="s2">&quot;http://evil.example.com/&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;blocked-uri&quot;</span><span class="p">:</span> <span class="s2">&quot;http://evil.example.com/evil.js&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;violated-directive&quot;</span><span class="p">:</span> <span class="s2">&quot;script-src &#39;self&#39; https://apis.google.com&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;original-policy&quot;</span><span class="p">:</span> <span class="s2">&quot;script-src &#39;self&#39; https://apis.google.com; report-uri http://example.org/my_amazing_csp_report_parser&quot;</span>
-  <span class="p">}</span>
+<span class="s2">&quot;csp-report&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;document-uri&quot;</span><span class="o">:</span> <span class="s2">&quot;https://my.url.example&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;violated-directive&quot;</span><span class="o">:</span> <span class="s2">&quot;require-trusted-types-for&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;disposition&quot;</span><span class="o">:</span> <span class="s2">&quot;report&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;blocked-uri&quot;</span><span class="o">:</span> <span class="s2">&quot;trusted-types-sink</span>
+<span class="s2">    // highlight-next-line</span>
+<span class="s2">    &quot;</span><span class="nx">line</span><span class="o">-</span><span class="nx">number</span><span class="s2">&quot;: 39,</span>
+<span class="s2">    &quot;</span><span class="nx">column</span><span class="o">-</span><span class="nx">number</span><span class="s2">&quot;: 12,</span>
+<span class="s2">    // highlight-next-line</span>
+<span class="s2">    &quot;</span><span class="nx">source</span><span class="o">-</span><span class="nx">file</span><span class="s2">&quot;: &quot;</span><span class="nx">https</span><span class="o">:</span><span class="c1">//my.url.example/script.js&quot;,</span>
+    <span class="s2">&quot;status-code&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+    <span class="c1">// highlight-next-line</span>
+    <span class="s2">&quot;script-sample&quot;</span><span class="o">:</span> <span class="s2">&quot;Element innerHTML &lt;img src=x&quot;</span>
+<span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 
-<p>Chứng chỉ hành nghề <strong>CSP</strong> 1 được sử dụng rộng rãi trong Chrome, Safari, Firefox, chưa hỗ trợ đầy đủ trong IE10. Những ông lớn hiện nay như Twitter và Facebook có đã áp dụng vào thực tiễn, đọc thêm <a href="https://blog.twitter.com/engineering/en_us/a/2011/improving-browser-security-with-csp.html">Case study của Twitter</a></p>
-<p><a href="https://developers.google.com/web/fundamentals/security/csp">https://developers.google.com/web/fundamentals/security/csp</a></p>
+<p>Kết quả cho thấy, dòng 39 của file <code>https://my.url.example/script.js</code> được gọi với một string bắt đầu bằng <code>&lt;img src=x</code></p>
+<blockquote>
+<p>Sử dụng plugin của eslint để tự động nhắc chúng ta, <a href="https://github.com/mozilla/eslint-plugin-no-unsanitized">eslint plugin</a></p>
+</blockquote>
+<p>Để fix chúng ta có thể dùng 3 cách</p>
+<h3 id="dompurify">DOMPurify</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">import</span> <span class="nx">DOMPurify</span> <span class="kr">from</span> <span class="s1">&#39;dompurify&#39;</span><span class="p">;</span>
+<span class="nx">el</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">sanitize</span><span class="p">(</span><span class="nx">html</span><span class="p">,</span> <span class="p">{</span> <span class="nx">RETURN_TRUSTED_TYPE</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+</code></pre></div>
+
+<p>DOMPurify sẽ senitize HTML, sau đó wrap trong object <code>TrustedHTML</code></p>
+<p>☠️Không được phép</p>
+<div class="codehilite"><pre><span></span><code><span class="nx">el</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;&lt;img src=xyz.jpg&gt;&#39;</span><span class="p">;</span>
+</code></pre></div>
+
+<p>✅ Nên</p>
+<div class="codehilite"><pre><span></span><code><span class="nx">el</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">img</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;img&#39;</span><span class="p">);</span>
+<span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;xyz.jpg&#39;</span><span class="p">;</span>
+<span class="nx">el</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">img</span><span class="p">);</span>
+</code></pre></div>
+
+<h3 id="tu-tao-trusted-type-policy">Tự tạo Trusted Type policy</h3>
+<p>Trong trường hợp không thể xóa tính năng đó, và không thể dùng thư viện, thì chúng ta phải tự viết object Trusted Type</p>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">trustedTypes</span> <span class="o">&amp;&amp;</span> <span class="nx">trustedTypes</span><span class="p">.</span><span class="nx">createPolicy</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Feature testing</span>
+  <span class="kd">const</span> <span class="nx">escapeHTMLPolicy</span> <span class="o">=</span> <span class="nx">trustedTypes</span><span class="p">.</span><span class="nx">createPolicy</span><span class="p">(</span><span class="s1">&#39;myEscapePolicy&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">createHTML</span><span class="o">:</span> <span class="nx">string</span> <span class="p">=&gt;</span> <span class="nx">string</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\&lt;/g</span><span class="p">,</span> <span class="s1">&#39;&amp;lt;&#39;</span><span class="p">)</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Đoạn code này tạo ra một policy gọi là <code>myEscapePolicy</code> có thể trả về một object <code>TrustedHTML</code>  thông qua hàm <code>createHTML()</code>, hàm này bản chất sẽ remove hết tất cả ký tự <code>&lt;</code> trong string</p>
+<p>Sử dụng như sau</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">const</span> <span class="nx">escaped</span> <span class="o">=</span> <span class="nx">escapeHTMLPolicy</span><span class="p">.</span><span class="nx">createHTML</span><span class="p">(</span><span class="s1">&#39;&lt;img src=x onerror=alert(1)&gt;&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">escaped</span> <span class="ow">instanceof</span> <span class="nx">TrustedHTML</span><span class="p">);</span>  <span class="c1">// true</span>
+<span class="nx">el</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">escaped</span><span class="p">;</span>  <span class="c1">// &#39;&amp;lt;img src=x onerror=alert(1)&gt;&#39;</span>
+</code></pre></div>
+
+<h3 id="default-policy">Default Policy</h3>
+<p>Nếu đoạn code không hợp lệ nằm trong thư viện ngoài, load từ CDN, chúng ta không sửa được thì có thể dùng default policy</p>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">trustedTypes</span> <span class="o">&amp;&amp;</span> <span class="nx">trustedTypes</span><span class="p">.</span><span class="nx">createPolicy</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Feature testing</span>
+  <span class="nx">trustedTypes</span><span class="p">.</span><span class="nx">createPolicy</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">createHTML</span><span class="o">:</span> <span class="p">(</span><span class="nx">string</span><span class="p">,</span> <span class="nx">sink</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">sanitize</span><span class="p">(</span><span class="nx">string</span><span class="p">,</span> <span class="p">{</span><span class="nx">RETURN_TRUSTED_TYPE</span><span class="o">:</span> <span class="kc">true</span><span class="p">})</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Bất kỳ khi nào một string được sử dụng cho các function đã liệt kê, nó sẽ sử dụng policy <code>default</code></p>
+<blockquote>
+<p>Hạn chế sử dụng default policy, tốt hơn nên refactor lại codebase</p>
+</blockquote>
                 
               
               
@@ -927,7 +952,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../phan-biet-same-site-same-origin/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Phân biệt same site và same origin" rel="prev">
+        <a href="../bao-ve-xss-bang-content-security-policy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Phòng tránh XSS bằng CSP" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -936,20 +961,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Phân biệt same site và same origin
+              Phòng tránh XSS bằng CSP
             </div>
           </div>
         </a>
       
       
         
-        <a href="../bao-ve-xss-bang-content-security-policy/" class="md-footer__link md-footer__link--next" aria-label="Next: Phòng tránh XSS bằng CSP" rel="next">
+        <a href="../tai-sao-can-https/" class="md-footer__link md-footer__link--next" aria-label="Next: Tại sao cần HTTPs" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Phòng tránh XSS bằng CSP
+              Tại sao cần HTTPs
             </div>
           </div>
           <div class="md-footer__button md-icon">

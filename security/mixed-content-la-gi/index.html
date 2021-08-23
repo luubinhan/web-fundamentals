@@ -477,6 +477,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../thuat-ngu-bao-mat-quan-trong/" class="md-nav__link">
+        Những thuật ngữ bảo mật quan trọng
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../phan-biet-same-site-same-origin/" class="md-nav__link">
         Phân biệt same site và same origin
       </a>
@@ -513,8 +525,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../tai-sao-can-https/" class="md-nav__link">
-        Tại sao cần HTTPs
+      <a href="../phong-tranh-dom-xss-voi-trusted-type/" class="md-nav__link">
+        Phòng tránh XSS bằng Trusted Type
       </a>
     </li>
   
@@ -525,8 +537,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../thuat-ngu-bao-mat-quan-trong/" class="md-nav__link">
-        Những thuật ngữ bảo mật quan trọng
+      <a href="../tai-sao-can-https/" class="md-nav__link">
+        Tại sao cần HTTPs
       </a>
     </li>
   
@@ -769,14 +781,14 @@
 <p><strong>Mixed content</strong> xảy ra khi HTML và được truyền qua HTTPs, mà có những thằng khác như video, stylesheet, image lại truyền qua HTTP. Tức là nội dung gửi tới user là sự <strong>kết hợp</strong> giữa anh giao hàng bằng xe tải và anh giao hàng bằng xe máy.</p>
 <p>Khi đó trình duyệt sẽ báo với user, quá trình chuyển <em>hàng</em> của trang này không an toàn.</p>
 <p>Giao hàng bằng xe tải, hàng hóa đảm bảo khó hư hao hơn (ít nhất là vậy), trong khi bạn tưởng tượng, giao cái tủ mà một phần cái tủ được giao bằng xe tải, phần kính chở xe máy tới, thì giao hàng bằng xe tải cũng chẳng còn ý nghĩa gì nữa.</p>
-<p><img alt="" src="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/imgs/image-gallery-warning.png" /></p>
-<p><img alt="Chrome block các request ở dạng mixed content" src="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/imgs/simple-mixed-content-error.png" /></p>
+<p><img alt="" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/Y7b4EWAbSL6BgI07FdQq.jpg?auto=format&amp;w=964" /></p>
+<p><img alt="Chrome block các request ở dạng mixed content" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/KafrfEz1adCP2eUHQEWy.jpg?auto=format&amp;w=964" /></p>
 <p>Việc <em>chuyển hàng</em> bằng phương pháp nữa nạt-nữa mở này, trình duyệt như Chrome tuyệt đối nghiêm cấm. Tuy nhiên do có quá nhiều website hiện tại dính vào tình trạng này, nên Chrome có nhân nhượng ở thời điểm hiện tại, chỉ chặn một số loại mà đã xác định được là nguy hiểm.</p>
 <p>Điều chúng ta cần nhớ là mỗi trình duyệt lại <em>hành xử</em> với mixed content khác nhau, trong trường hợp tệ nhất, trình duyệt không block gì hết, thông tin user gửi đi ở mức <em>dễ tổn thương</em></p>
 <h2 id="ngan-chan-mixed-content-nhu-the-nao">Ngăn chặn Mixed content như thế nào</h2>
 <p>Để biết trang web của mình có bị mixed content không, đơn giản là mở trang web bằng trình duyệt Chrome, mở cửa sổ DevTools lên xem có thông báo nào ở console không</p>
-<p><img alt="" src="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/imgs/passive-mixed-content-warnings.png" /></p>
-<p><img alt="" src="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/imgs/active-mixed-content-errors.png" /></p>
+<p><img alt="" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/HNxoomaHi2ksvYHGuNiE.jpg?auto=format&amp;w=964" /></p>
+<p><img alt="Chrome block các request ở dạng mixed content" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/xRG5zpKLr0Z3OwfYpn2H.jpg?auto=format&amp;w=964" /></p>
 <p>Một cách để tìm trong source code, search toàn bộ source nào có đoạn <code>http://</code> không.</p>
 <p>Có thể chặn mixed content bằng thiết đặt <strong>CSP</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="nt">Content-Security-Policy-Report-Only</span><span class="o">:</span> <span class="nt">default-src</span> <span class="nt">https</span><span class="o">:</span> <span class="s1">&#39;unsafe-inline&#39;</span> <span class="s1">&#39;unsafe-eval&#39;</span><span class="o">;</span> <span class="nt">report-uri</span> <span class="nt">https</span><span class="o">://</span><span class="nt">example</span><span class="p">.</span><span class="nc">com</span><span class="o">/</span><span class="nt">reportingEndpoint</span>
@@ -807,7 +819,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../thuat-ngu-bao-mat-quan-trong/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Những thuật ngữ bảo mật quan trọng" rel="prev">
+        <a href="../tai-sao-can-https/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tại sao cần HTTPs" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -816,7 +828,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Những thuật ngữ bảo mật quan trọng
+              Tại sao cần HTTPs
             </div>
           </div>
         </a>
