@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -698,6 +700,69 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -839,57 +904,59 @@
 <li>Tất cả thành viên tự tạo CA riêng, không chia sẻ và dùng chung</li>
 </ul>
 <h3 id="cai-at">Cài đặt</h3>
-<ol>
-<li>Trên window dùng <a href="https://chocolatey.org/">[Chocolatey](https://chocolatey.org/)</a></li>
-</ol>
-<p><code>bash
-   choco install mkcert</code></p>
-<ol>
-<li>Thêm vào local root CA</li>
-</ol>
-<p><code>bash
-   mkcert -install</code></p>
-<ol>
+<ul>
+<li>
+<p>Trên window dùng <a href="https://chocolatey.org/">Chocolatey</a>
+<div class="highlight"><pre><span></span><code>choco install mkcert
+</code></pre></div></p>
+</li>
+<li>
+<p>Thêm vào local root CA</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>mkcert -install
+</code></pre></div>
+<ul>
 <li>Tạo certificate, sign bằng mkcert, mở thư mục gốc của site</li>
-</ol>
-<p><code>bash
-   mkcert localhost</code></p>
+</ul>
+<div class="highlight"><pre><span></span><code>mkcert localhost
+</code></pre></div>
 <p>Nếu muốn sử dụng tên miền <code>mysite.example</code></p>
-<p><code>bash
-   mkcert mysite.example</code></p>
-<ol>
+<div class="highlight"><pre><span></span><code>mkcert mysite.example
+</code></pre></div>
+<ul>
 <li>Cấu hình server để sử dụng certificate vừa tạo, ví dụ với node</li>
-</ol>
-<p><code>js
-   const https = require('https');
-   const fs = require('fs');
-   const options = {
-     key: fs.readFileSync('{PATH/TO/CERTIFICATE-KEY-FILENAME}.pem'),
-     cert: fs.readFileSync('{PATH/TO/CERTIFICATE-FILENAME}.pem'),
-   };
-   https
-     .createServer(options, function (req, res) {
-       // server code
-     })
-     .listen({PORT});</code></p>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">https</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;https&#39;</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">key</span><span class="o">:</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;{PATH/TO/CERTIFICATE-KEY-FILENAME}.pem&#39;</span><span class="p">),</span>
+  <span class="nx">cert</span><span class="o">:</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;{PATH/TO/CERTIFICATE-FILENAME}.pem&#39;</span><span class="p">),</span>
+<span class="p">};</span>
+<span class="nx">https</span>
+  <span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// server code</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">listen</span><span class="p">({</span><span class="nx">PORT</span><span class="p">});</span>
+</code></pre></div>
 <p>với http-server</p>
-<p><code>bash
-   http-server -S -C {PATH/TO/CERTIFICATE-FILENAME}.pem -K {PATH/TO/CERTIFICATE-KEY-FILENAME}.pem</code></p>
+<div class="highlight"><pre><span></span><code>http-server -S -C <span class="o">{</span>PATH/TO/CERTIFICATE-FILENAME<span class="o">}</span>.pem -K <span class="o">{</span>PATH/TO/CERTIFICATE-KEY-FILENAME<span class="o">}</span>.pem
+</code></pre></div>
 <p>với React, file <code>package.json</code></p>
-<p><code>json
-   "scripts": {
-   "start": "HTTPS=true SSL_CRT_FILE={PATH/TO/CERTIFICATE-FILENAME}.pem SSL_KEY_FILE={PATH/TO/CERTIFICATE-KEY-FILENAME}.pem react-scripts start"</code></p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTPS=true SSL_CRT_FILE={PATH/TO/CERTIFICATE-FILENAME}.pem SSL_KEY_FILE={PATH/TO/CERTIFICATE-KEY-FILENAME}.pem react-scripts start&quot;</span>
+</code></pre></div>
 <p>Ví dụ bạn lưu file CA trong thư mục</p>
-<p><code>bash
-   |-- my-react-app
-       |-- package.json
-       |-- localhost.pem
-       |-- localhost-key.pem
-       |--...</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">|</span>-- my-react-app
+    <span class="p">|</span>-- package.json
+    <span class="p">|</span>-- localhost.pem
+    <span class="p">|</span>-- localhost-key.pem
+    <span class="p">|</span>--...
+</code></pre></div>
 <p>Script sẽ update như sau</p>
-<p><code>json
-   "scripts": {
-       "start": "HTTPS=true SSL_CRT_FILE=localhost.pem SSL_KEY_FILE=localhost-key.pem react-scripts start"</code></p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTPS=true SSL_CRT_FILE=localhost.pem SSL_KEY_FILE=localhost-key.pem react-scripts start&quot;</span>
+</code></pre></div>
                 
               
               
@@ -964,6 +1031,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

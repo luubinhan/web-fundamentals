@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -717,6 +719,69 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -879,7 +944,7 @@
 <h2 id="khong-ep-buoc-user">Không ép buộc user</h2>
 <p>Khi yêu cầu lấy địa chỉ, tránh trường hợp ép buộc user hoặc nhắc đi nhắc lại yêu cầu. Cách làm đề nghị</p>
 <p>Để kiểm tra trình duyệt có hỗ trợ API không</p>
-<div class="codehilite"><pre><span></span><code><span class="c1">// check for Geolocation support</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// check for Geolocation support</span>
 <span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Geolocation is supported!&#39;</span><span class="p">);</span>
 <span class="p">}</span>
@@ -887,9 +952,8 @@
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Geolocation is not supported for this Browser/OS.&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Xác định vị trí hiện tại</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">startPos</span><span class="p">;</span>
   <span class="kd">var</span> <span class="nx">geoSuccess</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">startPos</span> <span class="o">=</span> <span class="nx">position</span><span class="p">;</span>
@@ -899,16 +963,14 @@
   <span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">(</span><span class="nx">geoSuccess</span><span class="p">);</span>
 <span class="p">};</span>
 </code></pre></div>
-
 <h2 id="theo-doi-vi-tri-user">Theo dõi vị trí user</h2>
 <p>Khi dùng <code>getCurrentPosition()</code> chúng ta chỉ lấy được vị trí lúc user cho phép, nếu muốn theo dõi vị trí user khi user di chuyển, sử dụng <code>watchPosition()</code></p>
-<div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">watchId</span> <span class="o">=</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">watchPosition</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;currentLat&#39;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span><span class="p">;</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;currentLon&#39;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">;</span> <span class="p">});</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">watchId</span> <span class="o">=</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">watchPosition</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;currentLat&#39;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span><span class="p">;</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;currentLon&#39;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">;</span> <span class="p">});</span>
 </code></pre></div>
-
 <h2 id="mot-vai-kinh-nghiem-uc-ket">Một vài kinh nghiệm đúc kết</h2>
 <p>Việc sử dụng vị trí vật lý của user không phải miễn phí, để có thể theo dõi vị trí hiện tại, thiết bị của user phải tiêu tốn tài nguyên để xử lý, cũng như pin, do đó sau khi ko còn cần thông tin này nữa, luôn nhớ <code>clearWatch</code> để hủy đăng ký.</p>
 <p>Có rất nhiều tình huống dẫn đến việc không lấy được thông tin vị trí, việc xuất hiện lỗi là rất thường xảy ra, bên dưới là cách để xử lý khi gặp lỗi.</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">startPos</span><span class="p">;</span>
   <span class="kd">var</span> <span class="nx">geoSuccess</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">startPos</span> <span class="o">=</span> <span class="nx">position</span><span class="p">;</span>
@@ -926,9 +988,8 @@
   <span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">(</span><span class="nx">geoSuccess</span><span class="p">,</span> <span class="nx">geoError</span><span class="p">);</span>
 <span class="p">};</span>
 </code></pre></div>
-
 <p>Có nhiều trường hợp, như sử dụng trên máy tình bàn, vị trí user không thay đổi nhiều, chúng ta có thể giảm số lần yêu cầu thông tin này bằng việc dùng lại thông tin cũ trước đó, thêm <code>maximumAge</code> để cache lại giá trị này</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">startPos</span><span class="p">;</span>
   <span class="kd">var</span> <span class="nx">geoOptions</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">maximumAge</span><span class="o">:</span> <span class="mf">5</span> <span class="o">*</span> <span class="mf">60</span> <span class="o">*</span> <span class="mf">1000</span><span class="p">,</span>
@@ -951,9 +1012,8 @@
   <span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">(</span><span class="nx">geoSuccess</span><span class="p">,</span> <span class="nx">geoError</span><span class="p">,</span> <span class="nx">geoOptions</span><span class="p">);</span>
 <span class="p">};</span>
 </code></pre></div>
-
 <p>Nếu không có giá trị <code>timeout</code>, yêu cầu lấy thông tin cũng sẽ không bao giờ dừng lại nếu chưa nhận được giá trị return</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">startPos</span><span class="p">;</span>
   <span class="kd">var</span> <span class="nx">geoOptions</span> <span class="o">=</span> <span class="p">{</span>
      <span class="nx">timeout</span><span class="o">:</span> <span class="mf">10</span> <span class="o">*</span> <span class="mf">1000</span>
@@ -976,9 +1036,8 @@
   <span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">(</span><span class="nx">geoSuccess</span><span class="p">,</span> <span class="nx">geoError</span><span class="p">,</span> <span class="nx">geoOptions</span><span class="p">);</span>
 <span class="p">};</span>
 </code></pre></div>
-
 <p>Theo mặc định, API chỉ trả về vị trí tương đối của user, ví dụ trong trường hợp bạn cần lấy thông tin vị trí chính xác hơn để tìm các cửa hàng gần nhất cho user, chúng ta có thể dùng tùy chọn <code>enableHighAccuracy</code></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">startPos</span><span class="p">;</span>
   <span class="kd">var</span> <span class="nx">geoOptions</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">enableHighAccuracy</span><span class="o">:</span> <span class="kc">true</span>
@@ -1001,7 +1060,6 @@
   <span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">(</span><span class="nx">geoSuccess</span><span class="p">,</span> <span class="nx">geoError</span><span class="p">,</span> <span class="nx">geoOptions</span><span class="p">);</span>
 <span class="p">};</span>
 </code></pre></div>
-
 <p>Giả lập location bằng Chrome DevTools</p>
 <p>Mở <strong>Console Drawer</strong>, chọn vào menu <strong>Console Drawer</strong>, click <strong>Sensors</strong></p>
 <p><img alt="" src="https://developers.google.com/web/tools/chrome-devtools/customize/images/more-drawer-tabs.svg" /></p>
@@ -1081,6 +1139,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

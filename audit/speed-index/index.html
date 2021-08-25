@@ -14,7 +14,7 @@
     
     
       
-        <title>Kiểm tra bảo mật - Kiến thức nền tảng của Web</title>
+        <title>Speed Index - Kiến thức nền tảng của Web</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kiểm tra bảo mật
+              Speed Index
             
           </span>
         </div>
@@ -625,19 +625,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../check-site-security/" class="md-nav__link">
         Kiểm tra bảo mật
       </a>
-      
     </li>
   
 
@@ -657,12 +649,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" checked>
       
       <label class="md-nav__link" for="__nav_6_4">
         Kiểm tra tốc độ
@@ -702,11 +696,19 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../speed-index/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Speed Index
       </a>
+      
     </li>
   
 
@@ -790,16 +792,41 @@
               
                 
                 
-                  <h1>Kiểm tra bảo mật</h1>
+                  <h1>Speed Index</h1>
                 
-                <p>Bạn không thể tạo trang PWA mà không dùng https</p>
-<p>HTTPS là nền tảng bảo mật của website, rất nhiều API khác sẽ không thể chạy nếu không dùng HTTPS. Bạn có thể đọc lại <a href="security/tai-sao-can-https">Tại sao cần HTTPS</a></p>
-<p><img alt="Từ Chrome 68" src="https://developers.google.com/web/fundamentals/performance/audit/images/not-secure.png" />
-Từ phiên bản Chrome 68, thanh address sẽ thông báo nếu site bạn không chạy trên nền HTTPS</p>
-<p>HTTPS cần được chạy ở mọi nơi, không phải chỉ ở trang đăng nhập, đăng ký, mua hàng. Tất cả những tài nguyên nào không dùng HTTPS cũng là cơ hội cho hacker tấn công.</p>
-<p>Để kiểm tra, dùng DevTools của Chrome, mở cửa sổ <strong>Security</strong></p>
-<p>Site bên dưới không bảo mật tốt, một số file được truyền qua HTTP</p>
-<p><img alt="" src="https://developers.google.com/web/fundamentals/performance/audit/images/devtools-security-1000.png" /></p>
+                <p><img alt="" src="https://web-dev.imgix.net/image/MtjnObpuceYe3ijODN3a79WrxLU2/LFN6FPQ2uQ4LnwcHiZWq.png?auto=format&amp;w=845" /></p>
+<blockquote>
+<p>Speed Index thể hiện tốc độ hiện thị nội dung trong lúc page load.</p>
+</blockquote>
+<p>Nguyên lý speed index được khởi xướng bởi <a href="https://github.com/WPO-Foundation/webpagetest-docs/blob/main/src/metrics/SpeedIndex.md">WebpageTest.org</a></p>
+<table>
+<thead>
+<tr>
+<th>Speed Index (s)</th>
+<th>Màu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0-3.4</td>
+<td>Green - nhanh</td>
+</tr>
+<tr>
+<td>3.4-5.8</td>
+<td>Cam - trung bình</td>
+</tr>
+<tr>
+<td>Trên 5.8</td>
+<td>Đỏ - chậm</td>
+</tr>
+</tbody>
+</table>
+<p>Để cải thiện Speed Index, tham khảo các bài viết sau</p>
+<ul>
+<li><a href="https://web.dev/mainthread-work-breakdown">Minimize main thread work</a></li>
+<li><a href="https://web.dev/bootup-time">Reduce JavaScript execution time</a></li>
+<li><a href="https://web.dev/font-display">Ensure text remains visible during webfont load</a></li>
+</ul>
                 
               
               
@@ -819,7 +846,7 @@ Từ phiên bản Chrome 68, thanh address sẽ thông báo nếu site bạn kh�
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Giới thiệu" rel="prev">
+        <a href="../first-contentful-paint/" class="md-footer__link md-footer__link--prev" aria-label="Previous: First Contentful Paint" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -828,20 +855,20 @@ Từ phiên bản Chrome 68, thanh address sẽ thông báo nếu site bạn kh�
               <span class="md-footer__direction">
                 Previous
               </span>
-              Giới thiệu
+              First Contentful Paint
             </div>
           </div>
         </a>
       
       
         
-        <a href="../cong-cu-danh-gia/" class="md-footer__link md-footer__link--next" aria-label="Next: Công cụ đánh giá" rel="next">
+        <a href="../../base/app-shell/" class="md-footer__link md-footer__link--next" aria-label="Next: Mô hình vỏ ứng dụng" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Công cụ đánh giá
+              Mô hình vỏ ứng dụng
             </div>
           </div>
           <div class="md-footer__button md-icon">

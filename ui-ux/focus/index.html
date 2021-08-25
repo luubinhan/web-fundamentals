@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -652,6 +654,69 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -743,22 +808,19 @@
 <p>Thử mở trang <a href="http://udacity.github.io/ud891/lesson2-focus/01-basic-form/">airline site mockup page</a> và tab thử qua các element, trên trang này đang tắt hết các sự kiện mouse input.</p>
 <p>Một tình huống cũng hay xảy ra, là ko biết focus đang nằm đâu, đang tab ngon lành, bỗng dưng mất tiêu focus ring, không thấy xuất hiện nữa, tab thêm vài cái nữa thì nó lại xuất hiện.</p>
 <p>Nguyên nhân là có element focusable đang bị ẩn đi, không nằm trên màn hình, mặc dù nó có tồn tại, để xác định được element nào đang focus, có thể dùng javascript <code>document.activeElement</code></p>
-<div class="codehilite"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">activeElement</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">activeElement</span><span class="p">)</span>
 </code></pre></div>
-
 <p>Đã thấy công dụng của vòng focus, nếu bạn design không thích vòng focus mặc định của trình duyệt, dễ dàng bỏ đi bằng thuộc tính <code>outline</code></p>
-<div class="codehilite"><pre><span></span><code><span class="p">:</span><span class="nd">hover</span><span class="o">,</span> <span class="p">:</span><span class="nd">focus</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">:</span><span class="nd">hover</span><span class="o">,</span> <span class="p">:</span><span class="nd">focus</span> <span class="p">{</span>
     <span class="k">outline</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span> <span class="err">//</span> <span class="err">hoặc</span> <span class="err">0</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p><img alt="Giới thiệu focus trên web" src="https://developers.google.com/web/fundamentals/accessibility/imgs/focus-ring.png" /></p>
 <p>Bạn hãy cho nó một cách hiển thị khác, để user biết được đang focus vào element nào</p>
-<div class="codehilite"><pre><span></span><code><span class="p">:</span><span class="nd">hover</span><span class="o">,</span> <span class="p">:</span><span class="nd">focus</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">:</span><span class="nd">hover</span><span class="o">,</span> <span class="p">:</span><span class="nd">focus</span> <span class="p">{</span>
     <span class="k">background</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p><a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/web/fundamentals/accessibility/focus/">📜 Introduction to Focus</a></p>
 <p><a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/web/fundamentals/accessibility/accessible-styles">📜 Styling focus</a></p>
                 
@@ -835,6 +897,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

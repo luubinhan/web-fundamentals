@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -760,6 +762,69 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -942,22 +1007,20 @@
                 
                 <h2 id="aria-la-gi"><code>aria</code> là gì</h2>
 <p>ARIA (Accessible Rich Internet Applications) là một attribute trên thẻ HTML, chúng ta gắn thẻ nào cũng được, nội dung này thông tin và tác dụng của thẻ element đó. Với user bình thường thì nó sẽ không có ý nghĩa mấy, nhưng với người sử dụng web thông qua một thiết bị đọc màn hình (cho những người khiếm khuyết) thì nó vô cùng quan trọng.</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;button click me&quot;</span><span class="p">&gt;</span>Click Me<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;button click me&quot;</span><span class="p">&gt;</span>Click Me<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <h2 id="mot-vai-aria-pho-bien">Một vài <code>aria</code> phổ biến</h2>
 <h3 id="aria-label-va-aria-labelledby"><code>aria-label</code> và <code>aria-labelledby</code></h3>
 <p>Chức năng tương tự như attribute <code>alt</code> của thẻ <code>&lt;img/&gt;</code>, nhưng có thể gắn cho bất kỳ element nào.</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span>
     <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;menu&quot;</span>
     <span class="na">class</span><span class="o">=</span><span class="s">&quot;hamburger&quot;</span>
 <span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Thay vì thêm <code>aria-label</code> trực tiếp, <code>aria-labelledby</code> trỏ đến id một element khác để làm label</p>
 <p><img alt="aria-label" src="https://developers.google.com/web/fundamentals/accessibility/semantics-aria/imgs/aria-label.jpg" /></p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;rg-label&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;rg-label&quot;</span><span class="p">&gt;</span>
     Drink options
 <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;radiogroup&quot;</span>
@@ -966,7 +1029,6 @@
     ...
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p><img alt="aria-labeledby" src="https://developers.google.com/web/fundamentals/accessibility/semantics-aria/imgs/aria-labelledby.jpg" /></p>
 <h3 id="role">role</h3>
 <p>Không bắt đầu bằng <code>aria</code>, dùng để khai báo công dụng của từng element</p>
@@ -981,9 +1043,8 @@
 <li>dialog</li>
 <li>link</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;questionmark.png&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;tooltip&quot;</span> <span class="p">/&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;questionmark.png&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;tooltip&quot;</span> <span class="p">/&gt;</span>
 </code></pre></div>
-
 <h3 id="aria-live">aria-live</h3>
 <p>Thông báo đến user ngay khi nội dung bên trong element gắn thuộc tính này có thay đổi.</p>
 <p>Có 2 giá trị có thể thêm cho thuộc tính <code>aria-live</code>: <strong>polite</strong>, <strong>assertive</strong></p>
@@ -993,7 +1054,7 @@
 </ul>
 <h2 id="aria-owns">aria-owns</h2>
 <p>Nó cung cấp thông tin "tui là ba của đứa bé". Trường hợp nào chúng ta cần dùng? Ví dụ cái submenu, vì lý do nào đó không đặt nó trong cấu trúc lồng ghép được, phải tách riêng ra, ta khai báo để screen reader biết được ai là ba đứa bé</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;menu&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;menu&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;menuitem&quot;</span>
         <span class="na">aria-haspopup</span><span class="o">=</span><span class="s">&quot;true&quot;</span>
     <span class="p">&gt;</span>
@@ -1007,28 +1068,24 @@
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;menuitem&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p><img alt="aria-owns" src="https://developers.google.com/web/fundamentals/accessibility/semantics-aria/imgs/aria-owns.jpg" /></p>
 <h3 id="aria-activedescendant">aria-activedescendant</h3>
 <p>Thuộc tính này dùng trong cái dropdown, khi cái dropdown được focus, chứa giá trị thằng nào đang được chọn</p>
 <p><img alt="aria-activedescendant" src="https://developers.google.com/web/fundamentals/accessibility/semantics-aria/imgs/aria-activedescendant.jpg" /></p>
 <h3 id="aria-pressed">aria-pressed</h3>
 <p>Thông tin về trạng thái "bị nhấn" của một element</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">aria-pressed</span><span class="o">=</span><span class="s">&quot;true&quot;</span><span class="p">&gt;</span>Save<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">aria-pressed</span><span class="o">=</span><span class="s">&quot;true&quot;</span><span class="p">&gt;</span>Save<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Để định dạng cho theo từng giá trị của <code>aria</code>, lấy ví như cái <code>pressed</code> này, chúng ta dùng css selector</p>
-<div class="codehilite"><pre><span></span><code><span class="p">.</span><span class="nc">button</span><span class="o">[</span><span class="nt">aria-pressed</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="o">]</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">button</span><span class="o">[</span><span class="nt">aria-pressed</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="o">]</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
 </code></pre></div>
-
 <h3 id="aria-hidden">aria-hidden</h3>
 <p>Nếu chúng ta muốn bỏ qua những element khỏi "ánh mắt dòm ngó" của screen reader, dùng <code>aria-hidden</code>, ngoài ra nếu các element này được định dạng là <code>visibility: hidden</code>, <code>display: none</code> hay <code>hidden</code> thì nó cũng sẽ bị bỏ qua</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">hidden</span><span class="p">&gt;</span>Ko thấy đâu<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">hidden</span><span class="p">&gt;</span>Ko thấy đâu<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&quot;true&quot;</span><span class="p">&gt;</span>Vấn thấy, nhưng screen reader ko đọc<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Còn có nhưng element không được hiển thị cho user thấy, những vẫn được dòm ngó bởi screen reader, kỹ thuật css sẽ làm điều đó</p>
-<div class="codehilite"><pre><span></span><code><span class="p">.</span><span class="nc">sr-only</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">sr-only</span> <span class="p">{</span>
   <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
   <span class="k">left</span><span class="p">:</span> <span class="mi">-10000</span><span class="kt">px</span><span class="p">;</span>
   <span class="k">width</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
@@ -1036,12 +1093,11 @@
   <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="them-aria-can-thiet-cho-trang-ecommerce">Thêm <code>aria</code> cần thiết cho trang ecommerce</h2>
 <p>Mockup ví dụ</p>
 <p><img alt="Sử dụng Aria trên site eCommerce, vấn đề accessibility cần quan tâm" src="https://cms-assets.tutsplus.com/uploads/users/1526/posts/31890/image/untitled_page.png" /></p>
 <p>Bổ sung cho cái mockup này với các attribute cần thiết</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&#39;main&#39;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&#39;main&#39;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">img</span>
             <span class="err">...</span>
@@ -1102,9 +1158,8 @@
 
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Nếu trang sản phẩm có các tab thông tin</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;tabs&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#39;comlementary&#39;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;Expanded Content Area&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;tabs&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#39;comlementary&#39;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;Expanded Content Area&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;tablist&quot;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">li</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;presentation&quot;</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">a</span>
@@ -1128,10 +1183,9 @@
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p><img alt="Sử dụng Aria trên site eCommerce, vấn đề accessibility cần quan tâm" src="https://cms-assets.tutsplus.com/uploads/users/769/posts/31890/image/untitled_page.png" /></p>
 <p>Menu phân trang</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&#39;navigation&#39;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#39;Pagination Links&#39;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&#39;navigation&#39;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#39;Pagination Links&#39;</span><span class="p">&gt;</span>
     1
     <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#39;product-listings&#39;</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#39;product-listings&#39;</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
@@ -1139,9 +1193,8 @@
     <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#39;product-listings&#39;</span><span class="p">&gt;</span>Last<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Danh sách sản phẩm</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&#39;main&#39;</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">&#39;polite&#39;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&#39;main&#39;</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">&#39;polite&#39;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;product-title&#39;</span><span class="p">&gt;</span>A Nice Bag<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;bag.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;A paper bag&quot;</span> <span class="p">/&gt;</span>
@@ -1150,7 +1203,6 @@
     ...
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Để test accessibility của trang thì có thể dùng <a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en">extention này của chrome</a></p>
 <p><a target="_blank" rel="noopener noreferrer" href="https://code.tutsplus.com/tutorials/hands-on-with-aria-ecommerce-implementations--cms-31890">📜 Hands-on With ARIA: Accessibility for eCommerce</a></p>
                 
@@ -1227,6 +1279,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

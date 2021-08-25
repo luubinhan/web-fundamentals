@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -710,6 +712,69 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -853,7 +918,7 @@
 <h2 id="them-nut-add-to-home-screen">Thêm nút Add to Home Screen</h2>
 <p><img alt="" src="https://developers.google.com/web/fundamentals/app-install-banners/images/a2hs-dialog-g.png" /></p>
 <p>Khi có sự kiện <code>beforeinstallprompt</code> bắn ra, chúng ta sẽ lưu tạm nó vào một biến để dành xài.</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">let</span> <span class="nx">deferredPrompt</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">deferredPrompt</span><span class="p">;</span>
 
 <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;beforeinstallprompt&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="c1">// lưu vào đây, chút nữa sẽ xài.</span>
@@ -861,7 +926,6 @@
   <span class="p">...</span>
 <span class="p">});</span>
 </code></pre></div>
-
 <p>Gợi ý cho user cài đặt ứng dụng PWA của chúng ta, xem thêm bài <a href="/ui-ux/install-pwa">Gợi ý cài đặt PWA</a> để biết đặt đâu cho <em>ngầu</em></p>
 <p>```js{5}
 window.addEventListener('beforeinstallprompt', (e) =&gt; {
@@ -869,28 +933,27 @@ window.addEventListener('beforeinstallprompt', (e) =&gt; {
   deferredPrompt = e;
   // cập nhập UI
   showInstallPromotion();
-});</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">Khi</span> <span class="nv">user</span> đã <span class="nv">th</span>ấ<span class="nv">y</span> <span class="o">*</span><span class="nv">h</span>ấ<span class="nv">p</span> <span class="nv">d</span>ẫ<span class="nv">n</span><span class="o">*</span> <span class="nv">b</span>ở<span class="nv">i</span> ứ<span class="nv">ng</span> <span class="nv">d</span>ụ<span class="nv">ng</span> <span class="nv">c</span>ủ<span class="nv">a</span> <span class="nv">ch</span>ú<span class="nv">ng</span> <span class="nv">ta</span> <span class="nv">v</span>à <span class="nv">mu</span>ố<span class="nv">n</span> <span class="nv">mang</span> <span class="nv">n</span>ó <span class="nv">ra</span> <span class="nv">trang</span> <span class="nv">ch</span>ủ đ<span class="nv">i</span>ệ<span class="nv">n</span> <span class="nv">tho</span>ạ<span class="nv">i</span>.
+});
+<div class="highlight"><pre><span></span><code>Khi user đã thấy *hấp dẫn* bởi ứng dụng của chúng ta và muốn mang nó ra trang chủ điện thoại.
 
-```<span class="nv">js</span>
-<span class="nv">btnAdd</span>.<span class="nv">addEventListener</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">click</span><span class="s1">&#39;</span>, <span class="ss">(</span><span class="nv">e</span><span class="ss">)</span> <span class="o">=&gt;</span> {
-  <span class="o">//</span> ấ<span class="nv">n</span> <span class="nv">n</span>ú<span class="nv">t</span> <span class="nv">D</span>ụ <span class="nv">d</span>ỗ <span class="nv">c</span>à<span class="nv">i</span> đặ<span class="nv">t</span> đ<span class="nv">i</span>
-  <span class="nv">btnAdd</span>.<span class="nv">style</span>.<span class="nv">display</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">none</span><span class="s1">&#39;</span><span class="c1">;</span>
-  <span class="o">//</span> <span class="nv">Hi</span>ệ<span class="nv">n</span> <span class="nv">th</span>ô<span class="nv">ng</span> <span class="nv">b</span>á<span class="nv">o</span> <span class="nv">x</span>á<span class="nv">c</span> <span class="nv">nh</span>ậ<span class="nv">n</span>
-  <span class="nv">deferredPrompt</span>.<span class="nv">prompt</span><span class="ss">()</span><span class="c1">;</span>
-  <span class="o">//</span> Đợ<span class="nv">i</span> <span class="nv">user</span> <span class="nv">tr</span>ả <span class="nv">l</span>ờ<span class="nv">i</span>
-  <span class="nv">deferredPrompt</span>.<span class="nv">userChoice</span>
-    .<span class="k">then</span><span class="ss">((</span><span class="nv">choiceResult</span><span class="ss">)</span> <span class="o">=&gt;</span> {
-      <span class="k">if</span> <span class="ss">(</span><span class="nv">choiceResult</span>.<span class="nv">outcome</span> <span class="o">===</span> <span class="s1">&#39;</span><span class="s">accepted</span><span class="s1">&#39;</span><span class="ss">)</span> {
-        <span class="nv">console</span>.<span class="nv">log</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">User accepted the A2HS prompt</span><span class="s1">&#39;</span><span class="ss">)</span><span class="c1">;</span>
-      } <span class="k">else</span> {
-        <span class="nv">console</span>.<span class="nv">log</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">User dismissed the A2HS prompt</span><span class="s1">&#39;</span><span class="ss">)</span><span class="c1">;</span>
+```js
+btnAdd.addEventListener(&#39;click&#39;, (e) =&gt; {
+  // ấn nút Dụ dỗ cài đặt đi
+  btnAdd.style.display = &#39;none&#39;;
+  // Hiện thông báo xác nhận
+  deferredPrompt.prompt();
+  // Đợi user trả lời
+  deferredPrompt.userChoice
+    .then((choiceResult) =&gt; {
+      if (choiceResult.outcome === &#39;accepted&#39;) {
+        console.log(&#39;User accepted the A2HS prompt&#39;);
+      } else {
+        console.log(&#39;User dismissed the A2HS prompt&#39;);
       }
-      <span class="nv">deferredPrompt</span> <span class="o">=</span> <span class="nv">null</span><span class="c1">;</span>
-    }<span class="ss">)</span><span class="c1">;</span>
-}<span class="ss">)</span><span class="c1">;</span>
-</code></pre></div>
-
+      deferredPrompt = null;
+    });
+});
+</code></pre></div></p>
 <h2 id="mini-info-bar">Mini-info bar</h2>
 <p>Đây là kỹ thuật hiển thị một thanh thông tin nhỏ nhỏ bên dưới để gợi ý cho user cài đặt PWA, nếu user đóng nó lại, 3 tháng sau nó mới hiện lại để hỏi user của muốn cài không, thời gian lâu như vậy là để tránh làm phiền user.</p>
 <p><img alt="" src="https://developers.google.com/web/updates/images/2018/06/a2hs-infobar-cropped.png" /></p>
@@ -901,34 +964,31 @@ window.addEventListener('beforeinstallprompt', (e) =&gt; {
   e.preventDefault();
   deferredPrompt = e;
   showInstallPromotion();
-});</p>
-<div class="codehilite"><pre><span></span><code><span class="c1">## Xác định app đã cài thành công chưa</span>
+});
+<div class="highlight"><pre><span></span><code>## Xác định app đã cài thành công chưa
 
-<span class="n">Để</span> <span class="n">biết</span> <span class="n">ứng</span> <span class="n">dụng</span> <span class="n">PWA</span> <span class="n">đã</span> <span class="n">cài</span> <span class="n">thành</span> <span class="n">công</span> <span class="n">chưa</span><span class="p">,</span> <span class="n">chúng</span> <span class="n">ta</span> <span class="n">có</span> <span class="n">thể</span> <span class="n">bắt</span> <span class="n">lấy</span> <span class="n">sự</span> <span class="n">kiện</span> <span class="n n-Quoted">`appinstalled`</span>
+Để biết ứng dụng PWA đã cài thành công chưa, chúng ta có thể bắt lấy sự kiện `appinstalled`
 
-<span class="n n-Quoted">`</span><span class="n n-Quoted n-Quoted-Escape">``</span><span class="n n-Quoted">js</span>
-<span class="n n-Quoted">window.addEventListener(&#39;appinstalled&#39;, (evt) =&gt; {</span>
-<span class="n n-Quoted">  console.log(&#39;a2hs installed&#39;);</span>
-<span class="n n-Quoted">});</span>
-</code></pre></div>
-
+```js
+window.addEventListener(&#39;appinstalled&#39;, (evt) =&gt; {
+  console.log(&#39;a2hs installed&#39;);
+});
+</code></pre></div></p>
 <h2 id="xac-inh-user-co-mo-ung-dung-web-tu-man-hinh-chinh-khong-khong-thong-qua-trinh-duyet">Xác định user có mở ứng dụng web từ màn hình chính không (không thông qua trình duyệt)</h2>
 <p>Sử dụng câu media <code>display-mode</code> để định dạng lại nếu cần thiết</p>
-<div class="codehilite"><pre><span></span><code><span class="p">@</span><span class="k">media</span> <span class="nt">all</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">display-mode</span><span class="o">:</span> <span class="nt">standalone</span><span class="o">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">media</span> <span class="nt">all</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">display-mode</span><span class="o">:</span> <span class="nt">standalone</span><span class="o">)</span> <span class="p">{</span>
   <span class="nt">body</span> <span class="p">{</span>
     <span class="k">background-color</span><span class="p">:</span> <span class="kc">yellow</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Chúng ta cũng xác định được <code>display-mode</code> bên trong javascript</p>
-<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span><span class="p">(</span><span class="s1">&#39;(display-mode: standalone)&#39;</span><span class="p">).</span><span class="nx">matches</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span><span class="p">(</span><span class="s1">&#39;(display-mode: standalone)&#39;</span><span class="p">).</span><span class="nx">matches</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;display-mode is standalone&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>với Safari chúng ta có cách xác định khác</p>
-<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">standalone</span> <span class="o">===</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">standalone</span> <span class="o">===</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;display-mode is standalone&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1006,6 +1066,8 @@ window.addEventListener('beforeinstallprompt', (e) =&gt; {
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

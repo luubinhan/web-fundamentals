@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -758,6 +760,69 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -945,26 +1010,23 @@
 </ul>
 <h2 id="kich-thuoc-phu-hop">Kích thước phù hợp</h2>
 <p>Chỉ định đơn vị <code>width</code> của hình phù hợp, tránh để nó lớn viewport.</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">img</span><span class="o">,</span> <span class="nt">embed</span><span class="o">,</span> <span class="nt">object</span><span class="o">,</span> <span class="nt">video</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="nt">img</span><span class="o">,</span> <span class="nt">embed</span><span class="o">,</span> <span class="nt">object</span><span class="o">,</span> <span class="nt">video</span> <span class="p">{</span>
   <span class="k">max-width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="su-dung-srcset-voi-thiet-bi-dpi-cao">Sử dụng <code>srcset</code> với thiết bị DPI cao</h2>
 <p>Với thuộc tính <code>srcset</code>, trình duyệt có thể quyết định load hình nào tùy theo thiết bị, ví dụ 2x trên màn hình retina, hoặc 1x trên màn hình retina khi mạng chậm</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;photo.png&quot;</span> <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;photo@2x.png 2x&quot;</span> <span class="p">/&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;photo.png&quot;</span> <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;photo@2x.png 2x&quot;</span> <span class="p">/&gt;</span>
 </code></pre></div>
-
 <p>Khi trình duyệt chưa hỗ trợ <code>srcset</code>, nó sẽ load hình trong thuộc tính <code>src</code></p>
 <h2 id="su-dung-the-picture">Sử dụng thẻ <code>&lt;picture /&gt;</code></h2>
 <p>Thẻ <code>&lt;picture /&gt;</code> sẽ cho khai báo nhiều hình khác nhau ứng với từng điều kiện như: kích thước, độ phân giải, chiều đứng hay ngang.</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">picture</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">picture</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">source</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;(min-width: 800px)&quot;</span> <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;head.jpg, head-2x.jpg 2x&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">source</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;(min-width: 450px)&quot;</span> <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;head-small.jpg, head-small-2x.jpg 2x&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;head-fb.jpg&quot;</span> <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;head-fb-2x.jpg 2x&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;a head carved out of wood&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">picture</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Xài thử <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/media.html">https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/media.html</a></p>
 <h2 id="thuoc-tinh-sizes">Thuộc tính <code>sizes</code></h2>
 <p>Đọc thêm bài <a href="http://vuilaptrinh.com/2018-07-30-huong-dan-tam-quan-trong-cua-thuoc-tinh-sizes-trong-the-img">Tầm quan trọng của thuộc tính sizes trong thẻ img</a></p>
@@ -981,20 +1043,18 @@
 <p>Nếu được thì xài SVG vì dung lượng nhỏ mà có võ, có thể nén bằng <a rel="noopener noreferrer" target="_blank" href="https://www.sarasoueidan.com/blog/svgo-tools/">công cụ này</a></p>
 <p><img alt="Một số nguyên tắc với hình ảnh responsive" src="https://developers.google.com/web/fundamentals/design-and-ux/responsive/img/html5.svg" /></p>
 <p>Sử dụng Data URI để encode Base64 file hình thành <code>string</code></p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;data:image/svg+xml;base64,[data]&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;data:image/svg+xml;base64,[data]&quot;</span><span class="p">&gt;</span>
 
 <span class="c">&lt;!-- Ví dụ --&gt;</span>
 <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiB</span>
 <span class="s">BZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW ...&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Để convert, thì có thể dùng <a href="http://jpillora.com/base64-encoder/">jpillora.com/base64-encoder</a></p>
 <p>string convert được cũng có thể xài với thuộc tính background trong css</p>
-<div class="codehilite"><pre><span></span><code><span class="p">.</span><span class="nc">element</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">element</span> <span class="p">{</span>
   <span class="k">background</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIi...</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Việc sử dụng background trong css có thể làm giảm số lượng HTTP request, bên cạnh đó là một số nhược điểm</p>
 <ul>
 <li>Trên mobile, Data URI hiển thị chậm hơn <code>&lt;img src="http://" /&gt;</code></li>
@@ -1004,7 +1064,7 @@
 <li>HTTP/2 giảm số lượng request không còn cần thiết</li>
 </ul>
 <p>Trong CSS có một thuộc tính để load hình như thẻ <code>&lt;picture /&gt;</code> là <code>image-set</code> (hiện tại hổ trợ bởi chrome và safari)</p>
-<div class="codehilite"><pre><span></span><code><span class="p">.</span><span class="nc">element</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">element</span> <span class="p">{</span>
   <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">icon1x.png</span><span class="p">);</span>
   <span class="k">background-image</span><span class="p">:</span> <span class="bp">-webkit-</span><span class="nf">image-set</span><span class="p">(</span>
     <span class="nb">url</span><span class="p">(</span><span class="sx">icon1x.png</span><span class="p">)</span> <span class="mi">1</span><span class="n">x</span><span class="p">,</span>
@@ -1016,9 +1076,8 @@
   <span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Với độ phân giải 2x, 1x</p>
-<div class="codehilite"><pre><span></span><code><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-resolution</span><span class="o">:</span> <span class="nt">2dppx</span><span class="o">),</span>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-resolution</span><span class="o">:</span> <span class="nt">2dppx</span><span class="o">),</span>
 <span class="o">(</span><span class="nt">-webkit-min-device-pixel-ratio</span><span class="o">:</span> <span class="nt">2</span><span class="o">)</span>  <span class="c">/* Dành riêng cho Safari và Android */</span>
 <span class="p">{</span>
   <span class="p">.</span><span class="nc">sample</span> <span class="p">{</span>
@@ -1027,7 +1086,6 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Các phương pháp như lựa chọn hình JPG, GIF, PNG, các phương pháp giảm kích thước file (mình hay dùng <a href="https://nikkhokkho.sourceforge.io/static.php?page=FileOptimizer">FileOptimizer</a>), <a href="https://www.w3schools.com/css/css_image_sprites.asp">image sprite</a>, <a href="https://css-tricks.com/native-lazy-loading/">lazy load</a> khá phổ biến nên mình không đề cập ở đây.</p>
 <p><a href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/images">Responsive Image</a></p>
                 
@@ -1104,6 +1162,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

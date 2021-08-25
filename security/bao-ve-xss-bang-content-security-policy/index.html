@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -712,6 +714,69 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -852,20 +917,18 @@
 <h2 id="strict-content-security-policy-la-gi">Strict Content Security Policy là gì?</h2>
 <p>Là một thiết đặt trên HTTP response header, khai báo bằng một trong những cách sau</p>
 <h3 id="dung-nonce">Dùng Nonce</h3>
-<div class="codehilite"><pre><span></span><code>Content-Security-Policy:
+<div class="highlight"><pre><span></span><code>Content-Security-Policy:
   script-src <span class="s1">&#39;nonce-{RANDOM}&#39;</span> <span class="s1">&#39;strict-dynamic&#39;</span><span class="p">;</span>
   object-src <span class="s1">&#39;none&#39;</span><span class="p">;</span>
   base-uri <span class="s1">&#39;none&#39;</span><span class="p">;</span>
 </code></pre></div>
-
 <p><img alt="" src="https://web-dev.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/er4BaGCJzBwDaESFKfZd.jpg?auto=format&amp;w=964" /></p>
 <h3 id="dung-hash">Dùng Hash</h3>
-<div class="codehilite"><pre><span></span><code>Content-Security-Policy:
+<div class="highlight"><pre><span></span><code>Content-Security-Policy:
   script-src <span class="s1">&#39;sha256-{HASHED_INLINE_SCRIPT}&#39;</span> <span class="s1">&#39;strict-dynamic&#39;</span><span class="p">;</span>
   object-src <span class="s1">&#39;none&#39;</span><span class="p">;</span>
   base-uri <span class="s1">&#39;none&#39;</span><span class="p">;</span>
 </code></pre></div>
-
 <p><em>Lưu ý đây chỉ là phiên bản rút gọn, cần tùy chỉnh để phù hợp với nhiều trình duyệt</em></p>
 <p>Khai báo trên có nghĩa là</p>
 <ul>
@@ -958,6 +1021,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

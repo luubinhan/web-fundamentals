@@ -14,7 +14,7 @@
     
     
       
-        <title>Kiểm tra bảo mật - Kiến thức nền tảng của Web</title>
+        <title>Hệ thống đánh giá của Lighthouse - Kiến thức nền tảng của Web</title>
       
     
     
@@ -88,7 +88,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kiểm tra bảo mật
+              Hệ thống đánh giá của Lighthouse
             
           </span>
         </div>
@@ -625,19 +625,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../check-site-security/" class="md-nav__link">
         Kiểm tra bảo mật
       </a>
-      
     </li>
   
 
@@ -657,12 +649,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" checked>
       
       <label class="md-nav__link" for="__nav_6_4">
         Kiểm tra tốc độ
@@ -678,11 +672,19 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../he-thong-danh-gia-lighthouse/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Hệ thống đánh giá của Lighthouse
       </a>
+      
     </li>
   
 
@@ -790,16 +792,54 @@
               
                 
                 
-                  <h1>Kiểm tra bảo mật</h1>
+                  <h1>Hệ thống đánh giá của Lighthouse</h1>
                 
-                <p>Bạn không thể tạo trang PWA mà không dùng https</p>
-<p>HTTPS là nền tảng bảo mật của website, rất nhiều API khác sẽ không thể chạy nếu không dùng HTTPS. Bạn có thể đọc lại <a href="security/tai-sao-can-https">Tại sao cần HTTPS</a></p>
-<p><img alt="Từ Chrome 68" src="https://developers.google.com/web/fundamentals/performance/audit/images/not-secure.png" />
-Từ phiên bản Chrome 68, thanh address sẽ thông báo nếu site bạn không chạy trên nền HTTPS</p>
-<p>HTTPS cần được chạy ở mọi nơi, không phải chỉ ở trang đăng nhập, đăng ký, mua hàng. Tất cả những tài nguyên nào không dùng HTTPS cũng là cơ hội cho hacker tấn công.</p>
-<p>Để kiểm tra, dùng DevTools của Chrome, mở cửa sổ <strong>Security</strong></p>
-<p>Site bên dưới không bảo mật tốt, một số file được truyền qua HTTP</p>
-<p><img alt="" src="https://developers.google.com/web/fundamentals/performance/audit/images/devtools-security-1000.png" /></p>
+                <p>Cơ chế đánh giá của Lighthouse dựa trên cách tính điểm số, và trọng số ứng với từng mục. Trọng số sẽ thay đổi theo thời gian, vì team lighthouse nghiên cứu và tổng hợp feedback từ phía người dùng để có nhận định đâu là yếu tố ảnh hưởng đến trải nghiệm người dùng lớn nhất</p>
+<p><img alt="" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/rLftIdSA8JJYruHOHrOn.png?auto=format&amp;w=650" /></p>
+<p>Hệ thống đánh giá của Lighthouse 8</p>
+<table>
+<thead>
+<tr>
+<th>Tiêu chí</th>
+<th>Trọng Số</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://web.dev/first-contentful-paint/">First Contentful Paint</a></td>
+<td>10%</td>
+</tr>
+<tr>
+<td><a href="https://web.dev/speed-index/">Speed Index</a></td>
+<td>10%</td>
+</tr>
+<tr>
+<td><a href="https://web.dev/lcp/">Largest Contentful Paint</a></td>
+<td>25%</td>
+</tr>
+<tr>
+<td><a href="https://web.dev/interactive/">Time to Interactive</a></td>
+<td>10%</td>
+</tr>
+<tr>
+<td><a href="https://web.dev/lighthouse-total-blocking-time/">Total Blocking Time</a></td>
+<td>30%</td>
+</tr>
+<tr>
+<td><a href="https://web.dev/cls/">Cumulative Layout Shift</a></td>
+<td>15%</td>
+</tr>
+</tbody>
+</table>
+<p>Dãy màu được quy định như sau</p>
+<ul>
+<li>0 đến 49: đỏ - tệ</li>
+<li>50 đến 89: cam - cần cải thiện</li>
+<li>90 đến 100: xanh - ổn</li>
+</ul>
+<p>Đạt được điểm số trong khoản 90 và 100 là tốt, không nhất thiệt phải đạt tuyệt đối 100.</p>
+<p>Công cụ <a href="https://googlechrome.github.io/lighthouse/scorecalc/">Lighthouse scoring calculator</a></p>
+<p>https://web.dev/performance-scoring/</p>
                 
               
               
@@ -819,7 +859,7 @@ Từ phiên bản Chrome 68, thanh address sẽ thông báo nếu site bạn kh�
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Giới thiệu" rel="prev">
+        <a href="../cong-cu-danh-gia/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Công cụ đánh giá" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -828,20 +868,20 @@ Từ phiên bản Chrome 68, thanh address sẽ thông báo nếu site bạn kh�
               <span class="md-footer__direction">
                 Previous
               </span>
-              Giới thiệu
+              Công cụ đánh giá
             </div>
           </div>
         </a>
       
       
         
-        <a href="../cong-cu-danh-gia/" class="md-footer__link md-footer__link--next" aria-label="Next: Công cụ đánh giá" rel="next">
+        <a href="../first-contentful-paint/" class="md-footer__link md-footer__link--next" aria-label="Next: First Contentful Paint" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Công cụ đánh giá
+              First Contentful Paint
             </div>
           </div>
           <div class="md-footer__button md-icon">

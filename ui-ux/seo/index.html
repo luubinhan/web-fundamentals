@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -743,6 +745,69 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -917,13 +982,11 @@
 <p>Cung cấp cùng một nội dung trên desktop và mobile nhưng trên hai URL khác nhau dễ gây bối rối cho user và trình duyệt.</p>
 <p>Khi 2 nội dung là hoàn toàn là giống nhau, chỉ khác nhau URL, chúng ta cần khai báo công cụ tìm kiếm việc đó</p>
 <p>Trên desktop, thêm thẻ <code>&lt;link rel="alternate" /&gt;</code> để báo có một phiên bản giống hệt như vậy trên mobile</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;alternate&quot;</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;only screen and (max-width: 640px)&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://m.example.com/&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;alternate&quot;</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;only screen and (max-width: 640px)&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://m.example.com/&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Trên mobile, chúng ta khai báo có một bản desktop như vậy nữa bằng <code>&lt;link rel="canonical" /&gt;</code></p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;canonical&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://www.example.com/&quot;</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;only screen and (max-width: 640px)&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;canonical&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://www.example.com/&quot;</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;only screen and (max-width: 640px)&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p><img alt="" src="https://developers.google.com/web/fundamentals/discovery/search-optimization/imgs/different_url.png" /></p>
 <h2 id="crawl-va-index-cua-search-engine">Crawl và index của search engine</h2>
 <p>Không phải lúc nào những gì đưa lên trên web cũng để cho công cụ tìm kiếm đọc được, như trang admin, trang cần quyền truy cập mới xem được, cần khai báo với công cụ tìm kiếm những trang không được vào xem như vậy</p>
@@ -935,33 +998,28 @@
 </ul>
 <h3 id="thiet-at-crawl-bang-robotstxt">Thiết đặt crawl bằng robots.txt</h3>
 <p>Robots.txt sẽ đặt ở thư mục gốc của website. Ví dụ, <code>http://example.com/robots.txt</code></p>
-<div class="codehilite"><pre><span></span><code>User-agent: *
+<div class="highlight"><pre><span></span><code>User-agent: *
 Disallow: /
 </code></pre></div>
-
 <p>Câu trên là để khai báo, không cho search engine crawl bất cứ thông tin gì từ trang</p>
-<div class="codehilite"><pre><span></span><code>User-agent: Googlebot
+<div class="highlight"><pre><span></span><code>User-agent: Googlebot
 Disallow: /nogooglebot/
 </code></pre></div>
-
 <p>Câu trên, không cho phép con bot của google crawl thông tin trong <code>nogooglebot</code></p>
 <p>Bạn có thể dùng <a href="https://www.google.com/webmasters/tools/robots-testing-tool">Công cụ web master tool</a> để kiểm tra file robots.txt của một site bất kỳ</p>
 <p><img alt="" src="https://developers.google.com/web/fundamentals/discovery/search-optimization/imgs/robots-txt-validator.png" /></p>
 <h3 id="thiet-at-index-bang-the-meta">Thiết đặt index bằng thẻ meta</h3>
 <p>Nếu bạn không muốn trang xuất hiện trên kết quả tìm kiếm, <code>robots.txt</code> không phải là giải pháp. Chúng ta dùng <code>noindex</code></p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;noindex&quot;</span> <span class="p">/&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;noindex&quot;</span> <span class="p">/&gt;</span>
 </code></pre></div>
-
 <p>Chỉ định riêng cho từng công cụ tìm kiếm</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;googlebot&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;noindex&quot;</span> <span class="p">/&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;googlebot&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;noindex&quot;</span> <span class="p">/&gt;</span>
 </code></pre></div>
-
 <p>Nếu bạn không muốn những resource như hình, stylesheet, script không được phép index, chúng ta cấu hình <code>X-Robots-Tag: noindex</code></p>
-<div class="codehilite"><pre><span></span><code>HTTP/1.1 <span class="m">200</span> OK
+<div class="highlight"><pre><span></span><code>HTTP/1.1 <span class="m">200</span> OK
 X-Robots-Tag: noindex
 Content-Type: text/html<span class="p">;</span> <span class="nv">charset</span><span class="o">=</span>UTF-8
 </code></pre></div>
-
 <h2 id="mot-vai-vi-du-su-dung">Một vài ví dụ sử dụng</h2>
 <p><strong>Cho phép mọi quyền index và crawl</strong></p>
 <ul>
@@ -1059,6 +1117,8 @@ Content-Type: text/html<span class="p">;</span> <span class="nv">charset</span><
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

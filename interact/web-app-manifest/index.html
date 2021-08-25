@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -696,6 +698,69 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -812,7 +877,7 @@
 <p>Web App Manifest là một file JSON báo với trình duyệt ứng dụng web của bạn có thể <em>cài đặt</em> trên điện thoại hoặc desktop như một ứng dụng offline. Khi có file này, trình duyệt Chrome sẽ hiển thị nút "Add to Home screen" khi truy cập vào trang.</p>
 <p>Một file Web App Manifest cơ bản nhất chứa đủ 3 thông tin <code>name</code>, <code>icons</code> và <code>start_url</code></p>
 <p>Đầy đủ hơn</p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Maps&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Google Maps&quot;</span><span class="p">,</span>
   <span class="nt">&quot;icons&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -834,18 +899,16 @@
   <span class="nt">&quot;theme_color&quot;</span><span class="p">:</span> <span class="s2">&quot;#3367D6&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>File json này chúng ta thêm nó vào đầu trang html bằng thẻ <code>link</code></p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;manifest&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/manifest.json&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;manifest&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/manifest.json&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Giải thích về các key được khai báo trong file JSON</p>
 <ul>
 <li><code>short_name</code> được sử dụng để hiển thị trên màn hình điện thoại</li>
 <li><code>name</code> là tên hiển thị trên popup gửi yêu cầu cài đặt</li>
 <li><code>icons</code> là một mảng object chứa kích thước, loại file, và đường dẫn đến file sẽ dùng làm icon trên màn hình</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="nt">&quot;icons&quot;</span><span class="p">:</span> <span class="p">[</span>
+<p><div class="highlight"><pre><span></span><code><span class="nt">&quot;icons&quot;</span><span class="p">:</span> <span class="p">[</span>
   <span class="p">{</span>
     <span class="nt">&quot;src&quot;</span><span class="p">:</span> <span class="s2">&quot;/images/icons-192.png&quot;</span><span class="p">,</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;image/png&quot;</span><span class="p">,</span>
@@ -858,21 +921,16 @@
   <span class="p">}</span>
 <span class="p">]</span>
 </code></pre></div>
-
-<ul>
-<li><code>start_url</code> là đường link sẽ mở khi vừa khởi chạy ứng dụng</li>
-<li><code>background_color</code> màu nền của splash screen</li>
-<li><code>display</code> giá trị để tùy biến UI khi chạy, có thể ẩn đi thanh address của trình duyệt<ul>
-<li><code>fullscreen</code> mở toàn màn hình, chỉ hiển thị nội dung trang web</li>
-<li><code>standalone</code> mở như ứng dụng native, không bao gồm các thành phần của trình duyệt</li>
-<li><code>minimal-ui</code> tương tự như <code>fullscreen</code>, nhưng có hiển thị cách thanh điều hướng, reload</li>
-<li><code>browser</code> giống như mở trang web bình thường với đầy đủ các control của trình duyệt</li>
-</ul>
-</li>
-<li><code>orientation</code> định hướng trang web sẽ mở theo chiều ngang hay đứng</li>
-<li><code>scope</code> những đường dẫn nào sẽ thuộc vào app, nghĩa là không mở bằng trình duyệt. Theo mặc định giá trị scope sẽ là toàn bộ những trang có đường dẫn nằm cùng và bên dưới file manifest</li>
-<li><code>theme_color</code> màu sắc chủ đạo của thanh toolbar</li>
-</ul>
+- <code>start_url</code> là đường link sẽ mở khi vừa khởi chạy ứng dụng
+- <code>background_color</code> màu nền của splash screen
+- <code>display</code> giá trị để tùy biến UI khi chạy, có thể ẩn đi thanh address của trình duyệt
+    - <code>fullscreen</code> mở toàn màn hình, chỉ hiển thị nội dung trang web
+    - <code>standalone</code> mở như ứng dụng native, không bao gồm các thành phần của trình duyệt
+    - <code>minimal-ui</code> tương tự như <code>fullscreen</code>, nhưng có hiển thị cách thanh điều hướng, reload
+    - <code>browser</code> giống như mở trang web bình thường với đầy đủ các control của trình duyệt
+- <code>orientation</code> định hướng trang web sẽ mở theo chiều ngang hay đứng
+- <code>scope</code> những đường dẫn nào sẽ thuộc vào app, nghĩa là không mở bằng trình duyệt. Theo mặc định giá trị scope sẽ là toàn bộ những trang có đường dẫn nằm cùng và bên dưới file manifest
+- <code>theme_color</code> màu sắc chủ đạo của thanh toolbar</p>
 <h2 id="splash-screen">Splash screen</h2>
 <p>Trình duyệt Chrome sẽ tự động kết hợp 3 giá trị <code>name</code>, <code>background_color</code>, <code>icons</code> để tạo ra splash screen cho ứng dụng</p>
 <p><img alt="background color" src="https://developers.google.com/web/fundamentals/web-app-manifest/images/background-color.gif" /></p>
@@ -955,6 +1013,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

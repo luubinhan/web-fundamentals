@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -647,6 +649,69 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -878,7 +943,7 @@
                 
                 <h1 id="ham-async">Hàm async</h1>
 <p>Hàm <code>async</code> được hỗ trợ từ phiên bản Chrome 55, cho phép chúng ta viết code một cách tuần tự nhưng chạy bất tuần tự như Promise, không ảnh hưởng đến main thread.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">myFirstAsyncFunction</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">myFirstAsyncFunction</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">try</span> <span class="p">{</span>
     <span class="kd">const</span> <span class="nx">fulfilledValue</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">promise</span><span class="p">;</span>
   <span class="p">}</span>
@@ -887,10 +952,9 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p><em>Lưu ý: nếu chưa biết promise, bạn cần đọc và nắm rõ promise trước</em></p>
 <p>Đoạn code sử dụng Promise để fetch một dữ liệu từ API</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">function</span> <span class="nx">logFetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">logFetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
     <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">())</span>
     <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">text</span> <span class="p">=&gt;</span> <span class="p">{</span>
@@ -900,9 +964,8 @@
     <span class="p">});</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Viết lại hàm trên thành hàm <code>async</code></p>
-<div class="codehilite"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">logFetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">logFetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">try</span> <span class="p">{</span>
     <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">());</span>
@@ -912,12 +975,11 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Số lượng dòng code không đổi, nhưng không còn <code>callback</code>, code dễ hình dung hơn, đặc biệt với những ai chưa nắm cách hoạt động của <code>Promise</code>.</p>
 <h2 id="gia-tri-tra-ve-cua-async">Giá trị trả về của async</h2>
 <p>Hàm <code>async</code> luôn trả về <code>Promise</code>, dù bên trong có <code>await</code> hay không.</p>
 <p><code>Promise</code> này sẽ được <code>resolve</code> khi hàm có <code>return</code> hoặc <code>reject</code> khi hàm <code>throw</code> một error.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1">// đợi trong mili giây</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// đợi trong mili giây</span>
 <span class="kd">function</span> <span class="nx">wait</span><span class="p">(</span><span class="nx">ms</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="ow">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">r</span> <span class="p">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span> <span class="nx">ms</span><span class="p">));</span>
 <span class="p">}</span>
@@ -927,18 +989,16 @@
   <span class="k">return</span> <span class="s1">&#39;world&#39;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Gọi <code>hello()</code> trả về một promise, với giá trị <code>world</code>.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">await</span> <span class="nx">wait</span><span class="p">(</span><span class="mf">500</span><span class="p">);</span>
   <span class="k">throw</span> <span class="ne">Error</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Gọi <code>foo()</code> trả về một <code>Promise</code> với <code>reject</code> bằng <code>Error('bar')</code></p>
 <h2 id="streaming-mot-response">Streaming một response</h2>
 <p>Lợi ích của hàm <code>async</code> thấy rõ hơn khi ứng dụng vào các tình huống phức tạp hơn. Ví dụ như chúng ta streaming một response, tính ra kích thước cuối cùng của toàn bộ streaming</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">function</span> <span class="nx">getResponseSize</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">getResponseSize</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="kd">const</span> <span class="nx">reader</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">getReader</span><span class="p">();</span>
     <span class="kd">let</span> <span class="nx">total</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
@@ -955,10 +1015,9 @@
   <span class="p">});</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Nếu bạn không biết closure như những lập trình viên <em>thông minh khác</em>, bạn sẽ khó để <em>nuốt</em> được đoạn code trên.</p>
 <p>Viết lại với hàm <code>async</code></p>
-<div class="codehilite"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">getResponseSize</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">getResponseSize</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
   <span class="kd">const</span> <span class="nx">reader</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">getReader</span><span class="p">();</span>
   <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">reader</span><span class="p">.</span><span class="nx">read</span><span class="p">();</span>
@@ -975,19 +1034,17 @@
   <span class="k">return</span> <span class="nx">total</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Cảm giác là người <em>thông minh nhất quả đất</em> không còn khi viết bằng <code>async</code>, code quá trực quan ngay cả sinh viên mới ra trường cũng hiểu.</p>
 <h2 id="mot-so-cu-phap-viet-ham-async-khac">Một số cú pháp viết hàm async khác</h2>
 <p>Bạn đã biết cách khai báo <code>async function() {}</code>, từ khóa <code>async</code> còn được dùng bằng nhiều cách viết khác</p>
 <p><strong>Arrow function</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="kd">const</span> <span class="nx">jsonPromises</span> <span class="o">=</span> <span class="nx">urls</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="k">async</span> <span class="nx">url</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">jsonPromises</span> <span class="o">=</span> <span class="nx">urls</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="k">async</span> <span class="nx">url</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
   <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
 <span class="p">});</span>
 </code></pre></div>
-
 <p><strong>Phương thức của object</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="kd">const</span> <span class="nx">storage</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">storage</span> <span class="o">=</span> <span class="p">{</span>
   <span class="k">async</span> <span class="nx">getAvatar</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">const</span> <span class="nx">cache</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">caches</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;avatars&#39;</span><span class="p">);</span>
     <span class="k">return</span> <span class="nx">cache</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sb">`/avatars/</span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">.jpg`</span><span class="p">);</span>
@@ -996,9 +1053,8 @@
 
 <span class="nx">storage</span><span class="p">.</span><span class="nx">getAvatar</span><span class="p">(</span><span class="s1">&#39;jaffathecake&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="err">…</span><span class="p">);</span>
 </code></pre></div>
-
 <p><strong>Phương thức của class</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nx">Storage</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nx">Storage</span> <span class="p">{</span>
   <span class="kr">constructor</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">cachePromise</span> <span class="o">=</span> <span class="nx">caches</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;avatars&#39;</span><span class="p">);</span>
   <span class="p">}</span>
@@ -1012,18 +1068,16 @@
 <span class="kd">const</span> <span class="nx">storage</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Storage</span><span class="p">();</span>
 <span class="nx">storage</span><span class="p">.</span><span class="nx">getAvatar</span><span class="p">(</span><span class="s1">&#39;jaffathecake&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="err">…</span><span class="p">);</span>
 </code></pre></div>
-
 <h2 id="can-than">Cẩn thận</h2>
 <p>Code bây giờ sẽ rất <strong>step-by-step</strong>, nhưng bạn có thể bỏ qua cơ hội chạy song song nhiều code cùng lúc</p>
-<div class="codehilite"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">series</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">series</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">await</span> <span class="nx">wait</span><span class="p">(</span><span class="mf">500</span><span class="p">);</span> <span class="c1">// đợi 500ms…</span>
   <span class="k">await</span> <span class="nx">wait</span><span class="p">(</span><span class="mf">500</span><span class="p">);</span> <span class="c1">// …đợi thêm 500ms.</span>
   <span class="k">return</span> <span class="s2">&quot;done!&quot;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Đoạn code bên dưới sẽ đợi mất 500ms để chạy xong.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">parallel</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">parallel</span><span class="p">()</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="nx">wait1</span> <span class="o">=</span> <span class="nx">wait</span><span class="p">(</span><span class="mf">500</span><span class="p">);</span> <span class="c1">// Start a 500ms timer asynchronously…</span>
   <span class="kd">const</span> <span class="nx">wait2</span> <span class="o">=</span> <span class="nx">wait</span><span class="p">(</span><span class="mf">500</span><span class="p">);</span> <span class="c1">// …meaning this timer happens in parallel.</span>
   <span class="k">await</span> <span class="nx">wait1</span><span class="p">;</span> <span class="c1">// Wait 500ms for the first timer…</span>
@@ -1031,10 +1085,9 @@
   <span class="k">return</span> <span class="s2">&quot;done!&quot;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h3 id="vi-du-ket-qua-fetch-theo-thu-tu">Ví dụ, kết quả fetch theo thứ tự</h3>
 <p>Theo kiểu Promise</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">function</span> <span class="nx">logInOrder</span><span class="p">(</span><span class="nx">urls</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">logInOrder</span><span class="p">(</span><span class="nx">urls</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// fetch all the URLs</span>
   <span class="kd">const</span> <span class="nx">textPromises</span> <span class="o">=</span> <span class="nx">urls</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">url</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">());</span>
@@ -1047,20 +1100,18 @@
   <span class="p">},</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">());</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Chúng ta đang dùng <code>reduce</code> để nối một chuỗi các promise với nhau. Chúng ta quá thông minh rồi. Tuy code thông minh quá như vậy rất khó bảo trì.</p>
 <p>Nếu bạn code lại bằng async, bạn sẽ nghĩ liền tới giải pháp</p>
-<p>❌ Không khuyến khích</p>
-<div class="codehilite"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">logInOrder</span><span class="p">(</span><span class="nx">urls</span><span class="p">)</span> <span class="p">{</span>
+<p>❌ Không khuyến khích
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">logInOrder</span><span class="p">(</span><span class="nx">urls</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">url</span> <span class="k">of</span> <span class="nx">urls</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">());</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div>
-
+</code></pre></div></p>
 <p>✅ Chuẩn</p>
-<div class="codehilite"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">logInOrder</span><span class="p">(</span><span class="nx">urls</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">logInOrder</span><span class="p">(</span><span class="nx">urls</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// fetch all the URLs in parallel</span>
   <span class="kd">const</span> <span class="nx">textPromises</span> <span class="o">=</span> <span class="nx">urls</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="k">async</span> <span class="nx">url</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
@@ -1073,7 +1124,6 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Tại sao chuẩn? Với cách một, mỗi câu fetch phải <strong>đợi cho xong</strong> thì cầu thứ tiếp theo mới chạy, với cách 2, chúng ta cho phép nó chạy đồng thời nhiều câu fetch.</p>
 <h2 id="trinh-duyet-nao-ho-tro">Trình duyệt nào hỗ trợ</h2>
 <p>Thời điểm năm 2019, bạn có thể sử dụng trên Chrome, Edge, Firefox và Safari</p>
@@ -1138,6 +1188,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

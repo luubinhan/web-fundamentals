@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -712,6 +714,69 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -864,34 +929,30 @@
 </ul>
 <p>Trước khi truyền dữ liệu vào các function trên, Trusted Types buộc chúng ta phải xử lý dữ liệu, nếu chỉ là một string sẽ không được chấp nhận vì trình duyệt không thể xác định được có nguy hiểm không</p>
 <p>☠️Không được phép</p>
-<div class="codehilite"><pre><span></span><code><span class="nx">anElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">location</span><span class="p">.</span><span class="nx">href</span>
+<div class="highlight"><pre><span></span><code><span class="nx">anElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">location</span><span class="p">.</span><span class="nx">href</span>
 </code></pre></div>
-
 <p>Nó sẽ throw <code>TypeError</code> khi chúng ta viết như vậy</p>
 <p>✅ Nên</p>
-<div class="codehilite"><pre><span></span><code><span class="nx">anElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">aTrustedHTML</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="nx">anElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">aTrustedHTML</span><span class="p">;</span>
 </code></pre></div>
-
 <p>Browser chấp nhận <code>TrustedHTML</code>, <code>TrustedScript</code>, <code>TrustedScriptUrl</code> khi sử dụng với các function kể trên.</p>
 <h2 id="lam-sao-su-dung-trusted-types">Làm sao sử dụng Trusted Types</h2>
 <blockquote>
 <p>Công cụ hỗ trở đánh giá Content Security Policy <a href="https://github.com/jacobbednarz/go-csp-collector">go-csp-collector</a></p>
 </blockquote>
 <p>Có thể debug nhanh bằng trình duyệt</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;securitypolicyviolation&#39;</span><span class="p">,</span>
+<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;securitypolicyviolation&#39;</span><span class="p">,</span>
    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">console</span><span class="p">))</span>
 </code></pre></div>
-
 <p>Thêm vào trong header của HTTP Response muốn migrate sang Trusted Types</p>
-<div class="codehilite"><pre><span></span><code>Content-Security-Policy-Report-Only: require-trusted-types-for <span class="s1">&#39;script&#39;</span><span class="p">;</span> report-uri //my-csp-endpoint.example
+<div class="highlight"><pre><span></span><code>Content-Security-Policy-Report-Only: require-trusted-types-for <span class="s1">&#39;script&#39;</span><span class="p">;</span> report-uri //my-csp-endpoint.example
 </code></pre></div>
-
 <p>Những gì không hợp lệ sẽ được report đến <code>//my-csp-endpoint.example</code></p>
 <blockquote>
 <p>Trusted Types chỉ hoạt động trên HTTPS và localhost</p>
 </blockquote>
 <p>Ví dụ khi đưa một string cho <code>innerHTML</code>, trình duyệt sẽ gửi report như sau</p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="s2">&quot;csp-report&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;document-uri&quot;</span><span class="o">:</span> <span class="s2">&quot;https://my.url.example&quot;</span><span class="p">,</span>
     <span class="s2">&quot;violated-directive&quot;</span><span class="o">:</span> <span class="s2">&quot;require-trusted-types-for&quot;</span><span class="p">,</span>
@@ -908,54 +969,47 @@
 <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Kết quả cho thấy, dòng 39 của file <code>https://my.url.example/script.js</code> được gọi với một string bắt đầu bằng <code>&lt;img src=x</code></p>
 <blockquote>
 <p>Sử dụng plugin của eslint để tự động nhắc chúng ta, <a href="https://github.com/mozilla/eslint-plugin-no-unsanitized">eslint plugin</a></p>
 </blockquote>
 <p>Để fix chúng ta có thể dùng 3 cách</p>
 <h3 id="dompurify">DOMPurify</h3>
-<div class="codehilite"><pre><span></span><code><span class="k">import</span> <span class="nx">DOMPurify</span> <span class="kr">from</span> <span class="s1">&#39;dompurify&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">DOMPurify</span> <span class="kr">from</span> <span class="s1">&#39;dompurify&#39;</span><span class="p">;</span>
 <span class="nx">el</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">sanitize</span><span class="p">(</span><span class="nx">html</span><span class="p">,</span> <span class="p">{</span> <span class="nx">RETURN_TRUSTED_TYPE</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
 </code></pre></div>
-
 <p>DOMPurify sẽ senitize HTML, sau đó wrap trong object <code>TrustedHTML</code></p>
 <p>☠️Không được phép</p>
-<div class="codehilite"><pre><span></span><code><span class="nx">el</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;&lt;img src=xyz.jpg&gt;&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="nx">el</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;&lt;img src=xyz.jpg&gt;&#39;</span><span class="p">;</span>
 </code></pre></div>
-
 <p>✅ Nên</p>
-<div class="codehilite"><pre><span></span><code><span class="nx">el</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="nx">el</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
 <span class="kd">const</span> <span class="nx">img</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;img&#39;</span><span class="p">);</span>
 <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;xyz.jpg&#39;</span><span class="p">;</span>
 <span class="nx">el</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">img</span><span class="p">);</span>
 </code></pre></div>
-
 <h3 id="tu-tao-trusted-type-policy">Tự tạo Trusted Type policy</h3>
 <p>Trong trường hợp không thể xóa tính năng đó, và không thể dùng thư viện, thì chúng ta phải tự viết object Trusted Type</p>
-<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">trustedTypes</span> <span class="o">&amp;&amp;</span> <span class="nx">trustedTypes</span><span class="p">.</span><span class="nx">createPolicy</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Feature testing</span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">trustedTypes</span> <span class="o">&amp;&amp;</span> <span class="nx">trustedTypes</span><span class="p">.</span><span class="nx">createPolicy</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Feature testing</span>
   <span class="kd">const</span> <span class="nx">escapeHTMLPolicy</span> <span class="o">=</span> <span class="nx">trustedTypes</span><span class="p">.</span><span class="nx">createPolicy</span><span class="p">(</span><span class="s1">&#39;myEscapePolicy&#39;</span><span class="p">,</span> <span class="p">{</span>
     <span class="nx">createHTML</span><span class="o">:</span> <span class="nx">string</span> <span class="p">=&gt;</span> <span class="nx">string</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\&lt;/g</span><span class="p">,</span> <span class="s1">&#39;&amp;lt;&#39;</span><span class="p">)</span>
   <span class="p">});</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Đoạn code này tạo ra một policy gọi là <code>myEscapePolicy</code> có thể trả về một object <code>TrustedHTML</code>  thông qua hàm <code>createHTML()</code>, hàm này bản chất sẽ remove hết tất cả ký tự <code>&lt;</code> trong string</p>
 <p>Sử dụng như sau</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">const</span> <span class="nx">escaped</span> <span class="o">=</span> <span class="nx">escapeHTMLPolicy</span><span class="p">.</span><span class="nx">createHTML</span><span class="p">(</span><span class="s1">&#39;&lt;img src=x onerror=alert(1)&gt;&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">escaped</span> <span class="o">=</span> <span class="nx">escapeHTMLPolicy</span><span class="p">.</span><span class="nx">createHTML</span><span class="p">(</span><span class="s1">&#39;&lt;img src=x onerror=alert(1)&gt;&#39;</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">escaped</span> <span class="ow">instanceof</span> <span class="nx">TrustedHTML</span><span class="p">);</span>  <span class="c1">// true</span>
 <span class="nx">el</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">escaped</span><span class="p">;</span>  <span class="c1">// &#39;&amp;lt;img src=x onerror=alert(1)&gt;&#39;</span>
 </code></pre></div>
-
 <h3 id="default-policy">Default Policy</h3>
 <p>Nếu đoạn code không hợp lệ nằm trong thư viện ngoài, load từ CDN, chúng ta không sửa được thì có thể dùng default policy</p>
-<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">trustedTypes</span> <span class="o">&amp;&amp;</span> <span class="nx">trustedTypes</span><span class="p">.</span><span class="nx">createPolicy</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Feature testing</span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">trustedTypes</span> <span class="o">&amp;&amp;</span> <span class="nx">trustedTypes</span><span class="p">.</span><span class="nx">createPolicy</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Feature testing</span>
   <span class="nx">trustedTypes</span><span class="p">.</span><span class="nx">createPolicy</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="p">{</span>
     <span class="nx">createHTML</span><span class="o">:</span> <span class="p">(</span><span class="nx">string</span><span class="p">,</span> <span class="nx">sink</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">sanitize</span><span class="p">(</span><span class="nx">string</span><span class="p">,</span> <span class="p">{</span><span class="nx">RETURN_TRUSTED_TYPE</span><span class="o">:</span> <span class="kc">true</span><span class="p">})</span>
   <span class="p">});</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Bất kỳ khi nào một string được sử dụng cho các function đã liệt kê, nó sẽ sử dụng policy <code>default</code></p>
 <blockquote>
 <p>Hạn chế sử dụng default policy, tốt hơn nên refactor lại codebase</p>
@@ -1034,6 +1088,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>
