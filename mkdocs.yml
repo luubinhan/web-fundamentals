@@ -1,6 +1,7 @@
 site_name: Kiến thức nền tảng của Web
 theme:
   name: 'material'
+  highlightjs: true
 nav:
   - Home: index.md
   - Thuật ngữ: thuat-ngu.md
@@ -40,4 +41,10 @@ nav:
     - Mô hình vỏ ứng dụng: base/app-shell.md
     - Hàm async: base/async.md
 markdown_extensions:
-  - codehilite
+  - pymdownx.highlight
+  - pymdownx.superfences
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css
+

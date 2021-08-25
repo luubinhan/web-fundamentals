@@ -26,74 +26,72 @@ Lưu ý
 
 ### Cài đặt
 
-1. Trên window dùng [[Chocolatey](https://chocolatey.org/)](https://chocolatey.org/)
+- Trên window dùng [Chocolatey](https://chocolatey.org/)
+```bash
+choco install mkcert
+```
 
-   ```bash
-   choco install mkcert
-   ```
+- Thêm vào local root CA
 
-2. Thêm vào local root CA
+```bash
+mkcert -install
+```
 
-   ```bash
-   mkcert -install
-   ```
+- Tạo certificate, sign bằng mkcert, mở thư mục gốc của site
 
-3. Tạo certificate, sign bằng mkcert, mở thư mục gốc của site
+```bash
+mkcert localhost
+```
 
-   ```bash
-   mkcert localhost
-   ```
+Nếu muốn sử dụng tên miền `mysite.example`
 
-   Nếu muốn sử dụng tên miền `mysite.example`
+```bash
+mkcert mysite.example
+```
 
-   ```bash
-   mkcert mysite.example
-   ```
+- Cấu hình server để sử dụng certificate vừa tạo, ví dụ với node
 
-4. Cấu hình server để sử dụng certificate vừa tạo, ví dụ với node
+```js
+const https = require('https');
+const fs = require('fs');
+const options = {
+  key: fs.readFileSync('{PATH/TO/CERTIFICATE-KEY-FILENAME}.pem'),
+  cert: fs.readFileSync('{PATH/TO/CERTIFICATE-FILENAME}.pem'),
+};
+https
+  .createServer(options, function (req, res) {
+    // server code
+  })
+  .listen({PORT});
+```
 
-   ```js
-   const https = require('https');
-   const fs = require('fs');
-   const options = {
-     key: fs.readFileSync('{PATH/TO/CERTIFICATE-KEY-FILENAME}.pem'),
-     cert: fs.readFileSync('{PATH/TO/CERTIFICATE-FILENAME}.pem'),
-   };
-   https
-     .createServer(options, function (req, res) {
-       // server code
-     })
-     .listen({PORT});
-   ```
+với http-server
 
-   với http-server
+```bash
+http-server -S -C {PATH/TO/CERTIFICATE-FILENAME}.pem -K {PATH/TO/CERTIFICATE-KEY-FILENAME}.pem
+```
 
-   ```bash
-   http-server -S -C {PATH/TO/CERTIFICATE-FILENAME}.pem -K {PATH/TO/CERTIFICATE-KEY-FILENAME}.pem
-   ```
+với React, file `package.json`
 
-   với React, file `package.json`
+```json
+"scripts": {
+"start": "HTTPS=true SSL_CRT_FILE={PATH/TO/CERTIFICATE-FILENAME}.pem SSL_KEY_FILE={PATH/TO/CERTIFICATE-KEY-FILENAME}.pem react-scripts start"
+```
 
-   ```json
-   "scripts": {
-   "start": "HTTPS=true SSL_CRT_FILE={PATH/TO/CERTIFICATE-FILENAME}.pem SSL_KEY_FILE={PATH/TO/CERTIFICATE-KEY-FILENAME}.pem react-scripts start"
-   ```
+Ví dụ bạn lưu file CA trong thư mục
 
-   Ví dụ bạn lưu file CA trong thư mục
+```bash
+|-- my-react-app
+    |-- package.json
+    |-- localhost.pem
+    |-- localhost-key.pem
+    |--...
+```
 
-   ```bash
-   |-- my-react-app
-       |-- package.json
-       |-- localhost.pem
-       |-- localhost-key.pem
-       |--...
-   ```
+Script sẽ update như sau
 
-   Script sẽ update như sau
+```json
+"scripts": {
+    "start": "HTTPS=true SSL_CRT_FILE=localhost.pem SSL_KEY_FILE=localhost-key.pem react-scripts start"
+```
 
-   ```json
-   "scripts": {
-       "start": "HTTPS=true SSL_CRT_FILE=localhost.pem SSL_KEY_FILE=localhost-key.pem react-scripts start"
-   ```
-
-   
