@@ -37,6 +37,18 @@ nav:
     - Giới thiệu: audit/overview.md
     - Kiểm tra bảo mật: audit/check-site-security.md
     - Công cụ đánh giá: audit/cong-cu-danh-gia.md
+    - Kiểm tra tốc độ:
+      - Hệ thống đánh giá của Lighthouse: audit/he-thong-danh-gia-lighthouse.md
+      - First Contentful Paint: audit/first-contentful-paint.md
+      - Speed Index: audit/speed-index.md
+      - Time to interactive: audit/time-to-interactive.md
+      - Max Potential First Input Delay: audit/thoi-gian-input-cham-nhat.md
+      - Total Blocking Time: audit/total-blocking-time.md
+      - Largest Contentful Paint: audit/largest-contentful-paint.md
+    - Cải thiện tốc độ:
+      - Xóa resource render blocking: audit/xoa-resource-render-blocking.md
+      - Lazy load third-party resource với facade: audit/lazy-load-third-party-resource-voi-facade.md
+      - Infinite scroll không bị layout shift: audit/infinite-scroll-khong-bi-layout-shift.md
   - Kỹ thuật nền tảng:
     - Mô hình vỏ ứng dụng: base/app-shell.md
     - Hàm async: base/async.md

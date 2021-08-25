@@ -27,7 +27,7 @@ jspm_packages/
 # production
 /build
 /dist
-/site
+site/
 
 # Optional npm cache directory
 .npm
