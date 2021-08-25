@@ -3,6 +3,7 @@ theme:
   name: 'material'
 nav:
   - Home: index.md
+  - Thuật ngữ: thuat-ngu.md
   - UI/UX:
     - Font chữ trên web: ui-ux/font.md
     - Một website tốt trên mobile là như thế nào: ui-ux/mot-website-tot-tren-mobile-la-nhu-the-nao.md
@@ -23,12 +24,14 @@ nav:
     - Web App Manifest: interact/web-app-manifest.md
     - Tương tác với mạng xã hội: interact/mang-xa-hoi.md
   - Security:
+    - Những thuật ngữ bảo mật quan trọng: security/thuat-ngu-bao-mat-quan-trong.md
     - Phân biệt same site và same origin: security/phan-biet-same-site-same-origin.md
     - Content Security Policy: security/content-security-policy.md
     - Phòng tránh XSS bằng CSP: security/bao-ve-xss-bang-content-security-policy.md
+    - Phòng tránh XSS bằng Trusted Type: security/phong-tranh-dom-xss-voi-trusted-type.md
     - Tại sao cần HTTPs: security/tai-sao-can-https.md
-    - Những thuật ngữ bảo mật quan trọng: security/thuat-ngu-bao-mat-quan-trong.md
     - Mixed content là gì: security/mixed-content-la-gi.md
+    - Sử dụng HTTPS ở localhost: security/khi-nao-dung-https-o-localhost.md
   - Audit:
     - Giới thiệu: audit/overview.md
     - Kiểm tra bảo mật: audit/check-site-security.md
