@@ -590,12 +590,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       <label class="md-nav__link" for="__nav_6">
         Audit
@@ -647,12 +649,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" checked>
       
       <label class="md-nav__link" for="__nav_6_4">
         Kiểm tra tốc độ
@@ -696,6 +700,62 @@
     <li class="md-nav__item">
       <a href="../speed-index/" class="md-nav__link">
         Speed Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Time to interactive
+      </a>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thoi-gian-input-cham-nhat/" class="md-nav__link">
+        Max Potential First Input Delay
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../total-blocking-time/" class="md-nav__link">
+        Total Blocking Time
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../largest-contentful-paint/" class="md-nav__link">
+        Largest Contentful Paint
       </a>
     </li>
   
@@ -782,7 +842,47 @@
                 
                   <h1>Time to interactive</h1>
                 
-                
+                <p><img alt="" src="https://web-dev.imgix.net/image/MtjnObpuceYe3ijODN3a79WrxLU2/JtyY7nYUTCt2Q9oFYvEL.png?auto=format&amp;w=964" /></p>
+<blockquote>
+<p>TTI thời gian để một trang có thể tương tác hoàn toàn</p>
+</blockquote>
+<p>Trang được gọi là <strong>tương tác hoàn toàn</strong> khi</p>
+<ul>
+<li>Nội dung được hiển thị</li>
+<li>Tất cả các handler được đăng ký cho gần như tất cả các element hiện thị trên trang</li>
+<li>Trang có thể response đến user trong khoản 50ms</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>TTI</th>
+<th>Màu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0-3.8</td>
+<td>Xanh - nhanh</td>
+</tr>
+<tr>
+<td>3.9-7.3</td>
+<td>Cam - trung bình</td>
+</tr>
+<tr>
+<td>Trên 7.3</td>
+<td>Đỏ - chậm</td>
+</tr>
+</tbody>
+</table>
+<p>Để cải thiện TTI, tham khảo bài viết</p>
+<ul>
+<li><a href="https://web.dev/fast#optimize-your-javascript">optimize your JavaScript</a></li>
+<li><a href="https://web.dev/reduce-javascript-payloads-with-code-splitting">reducing JavaScript payloads with code splitting</a></li>
+<li><a href="https://web.dev/apply-instant-loading-with-prpl">applying the PRPL pattern</a></li>
+<li><a href="https://web.dev/fast/#optimize-your-third-party-resources">Optimizing third-party JavaScript</a></li>
+<li><a href="https://web.dev/mainthread-work-breakdown">Minimize main thread work</a></li>
+<li><a href="https://web.dev/bootup-time">Reduce JavaScript execution time</a></li>
+</ul>
                 
               
               
@@ -798,6 +898,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../speed-index/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Speed Index" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Speed Index
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../thoi-gian-input-cham-nhat/" class="md-footer__link md-footer__link--next" aria-label="Next: Max Potential First Input Delay" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Max Potential First Input Delay
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
