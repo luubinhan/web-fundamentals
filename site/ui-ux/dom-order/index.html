@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -692,6 +694,117 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/time-to-interactive/" class="md-nav__link">
+        Time to interactive
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/thoi-gian-input-cham-nhat/" class="md-nav__link">
+        Max Potential First Input Delay
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/total-blocking-time/" class="md-nav__link">
+        Total Blocking Time
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/largest-contentful-paint/" class="md-nav__link">
+        Largest Contentful Paint
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -807,17 +920,15 @@
                 <h2 id="thu-tu-cua-dom">Thứ tự của DOM</h2>
 <p>Làm việc với các element cơ bản là cách tốt nhất để biết cách hoạt động của focus vì chúng tự động được chèn tab order theo thứ tự của DOM</p>
 <p>Ví dụ, bạn muốn có 3 button, ấn <code>Tab</code> các button sẽ được tuần tự focus theo thứ tự của DOM</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>I Should<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>I Should<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Be Focused<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Last!<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Điều quan trọng nên nhớ là, khi sử dụng CSS, chúng ta có thể thay đổi thứ tự được nhìn thấy của các button này, nghĩa là thứ tự DOM sẽ khác với thứ tự mà user nhìn thấy. Tab sẽ vẫn chạy theo thứ tự DOM. Nếu user ấn <code>Tab</code> lúc này trạng thái focus sẽ đi theo không đúng như user mong muốn</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;float: right&quot;</span><span class="p">&gt;</span>I Should<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;float: right&quot;</span><span class="p">&gt;</span>I Should<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Be Focused<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Last!<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Hết sức lưu ý khi bạn dùng CSS để thay đổi thứ tự hiển thị này, một khi nó không khớp với DOM, luôn kiểm tra Tab xem trạng thái focus có đi đúng như user mong muốn</p>
 <h2 id="noi-dung-an">Nội dung ẩn</h2>
 <p>Khi bạn có một element không hiển thị trên giao diện, nhưng vẫn có mặt trong DOM, ví dụ như thanh navigation responsive, lúc user <code>Tab</code>, trạng thái focus sẽ có lúc không được nhìn thấy, vì nó đang rơi vào các element bị ẩn khỏi màn hình.</p>
@@ -902,6 +1013,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

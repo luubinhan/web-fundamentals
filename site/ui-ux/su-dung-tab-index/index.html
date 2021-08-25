@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -659,6 +661,117 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/time-to-interactive/" class="md-nav__link">
+        Time to interactive
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/thoi-gian-input-cham-nhat/" class="md-nav__link">
+        Max Potential First Input Delay
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/total-blocking-time/" class="md-nav__link">
+        Total Blocking Time
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/largest-contentful-paint/" class="md-nav__link">
+        Largest Contentful Paint
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -752,21 +865,18 @@
                 <h1 id="su-dung-tabindex">Sử dụng tabindex</h1>
 <p><code>tabindex</code> có thể sử dụng trong bất kỳ thẻ html nào</p>
 <p><strong><code>tabindex="0"</code></strong>: element sẽ có thứ tự tab theo mặc định (theo vị trí DOM), nó có thể được focus bằng cách ấn phím <strong>Tab</strong>, hoặc gọi phương thức <code>focus()</code></p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="p">&gt;</span>Press Tab to Focus Me!<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="p">&gt;</span>Press Tab to Focus Me!<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Các element có thể focus như thẻ <code>a</code>, <code>button</code>, <code>select</code>, <code>input</code>, <code>textarea</code> thì đã có sẵn <code>tabindex=0</code>, trừ khi chúng ta dùng một thẻ <code>div</code> như <code>button</code> thì phải đặt <code>tabindex=0</code>, để user có thể tab tới đó mà.</p>
 <p><strong><code>tabindex="-1"</code></strong>: sẽ bỏ qua element này khi nhấn tab, vẫn có thể focus bằng cách gọi <code>focus()</code></p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;foo&quot;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&quot;-1&quot;</span><span class="p">&gt;</span>Chớ bao giờ tab được anh đâu<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;foo&quot;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&quot;-1&quot;</span><span class="p">&gt;</span>Chớ bao giờ tab được anh đâu<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;foo.focus();&quot;</span><span class="p">&gt;</span>Focus vào thằng ở trên<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p><strong><code>tabindex="5"</code></strong>: nếu là giá trị lớn hơn 0, nó sẽ được ưu tiên cao hơn. Nếu có nhiều tabindex lớn hơn 0, nó sẽ đi theo thứ tự <strong>bắt đầu từ giá trị nhỏ nhất (nhưng vẫn lớn hơn 0 nhé) đến giá trị cao hơn.</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Anh trước<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Anh trước<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Chú sau<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">button</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&quot;5&quot;</span><span class="p">&gt;</span>Chị có bầu, phải được ưu tiên em ơi<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Sử dụng đúng nhất cho các trường hợp cần được ưu tiên cao hơn như header, navigation. Khuyến khích tổ chức DOM theo logic như thứ tự tab mong muốn. Nếu bạn muốn dùng <code>tabindex</code></p>
 <h1 id="quan-ly-focus-tren-trang">Quản lý focus trên trang</h1>
 <blockquote>
@@ -776,7 +886,7 @@
 <h1 id="quan-ly-tab-tren-component">Quản lý tab trên component</h1>
 <p>Lấy ví dụ thẻ <code>&lt;select /&gt;</code>, khi được focus, user có thể dùng các phím mũi tên để chọn các option. Nếu đang build một <code>&lt;select /&gt;</code> custom bằng <code>&lt;ul /&gt;</code> chẳng hạn, user phải có kiểu hoạt động tương tự như vậy</p>
 <p>Để tham khảo thêm chi tiết keyboard nào cho element nào, đọc bài <a href="https://www.w3.org/TR/wai-aria-practices/">Accessible Rich Internet Applications (ARIA) Authoring Practices</a></p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">radio-group</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">radio-group</span><span class="p">&gt;</span>
   // Giả dụ user nhấn phím mũi tên đi xuống, chúng ta gọi focus vào đứa tiếp theo
   <span class="p">&lt;</span><span class="nt">radio-button</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&quot;-1&quot;</span><span class="p">&gt;</span>Water<span class="p">&lt;/</span><span class="nt">radio-button</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">radio-button</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="p">&gt;</span>Coffee<span class="p">&lt;/</span><span class="nt">radio-button</span><span class="p">&gt;</span> // call .focus() on this element
@@ -785,7 +895,6 @@
   <span class="p">&lt;</span><span class="nt">radio-button</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&quot;-1&quot;</span><span class="p">&gt;</span>Ginger Ale<span class="p">&lt;/</span><span class="nt">radio-button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">radio-group</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <h1 id="van-e-voi-modal-va-keyboard">Vấn đề với Modal và keyboard</h1>
 <p>Có tình huống focus sẽ lặp mãi mãi, như cái autocomplete nó sẽ bắt sự kiện focus và tab, không cho user ra khỏi element đó nếu dùng phím. Nó được đề cập cụ thể <a href="http://webaim.org/standards/wcag/checklist#sc2.1.2">trong đây</a>.</p>
 <p>Tình huống khác cũng hay gặp là cái modal, khi modal hiển thị, chúng ta không cho user truy cập đến các phần khác bên dưới, nhưng nếu dùng phím vẫn có thể di chuyển qua các phần tử bên dưới.</p>
@@ -875,6 +984,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -710,6 +712,117 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/time-to-interactive/" class="md-nav__link">
+        Time to interactive
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/thoi-gian-input-cham-nhat/" class="md-nav__link">
+        Max Potential First Input Delay
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/total-blocking-time/" class="md-nav__link">
+        Total Blocking Time
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/largest-contentful-paint/" class="md-nav__link">
+        Largest Contentful Paint
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -844,14 +957,13 @@
 <p>Nhiều thông tin bị bỏ sót</p>
 <h2 id="su-dung-schemaorg-va-microdata">Sử dụng schema.org và microdata</h2>
 <p>Sử dụng <a href="http://www.w3.org/TR/microdata/">microdata</a> và <a href="https://schema.org/">schema.org</a> như ví dụ để công cấp thông tin cho các công cụ tìm kiếm</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">itemscope</span> <span class="na">itemtype</span><span class="o">=</span><span class="s">&quot;http://schema.org/Article&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">itemscope</span> <span class="na">itemtype</span><span class="o">=</span><span class="s">&quot;http://schema.org/Article&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="p">&gt;</span>Enjoy fireworks<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">p</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&quot;description&quot;</span><span class="p">&gt;</span>Fireworks are beautiful.
    This article explains how beautiful fireworks are.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">img</span> <span class="na">itemprop</span><span class="o">=</span><span class="s">&quot;image&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;//developers.google.com/web/imgs/fireworks.jpg&quot;</span> <span class="p">/&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <ul>
 <li><code>itemscope</code> để gộp những thông tin liên quan</li>
 <li><code>itemtype</code> đi kèm với <code>itemscope</code>, khai báo thông tin bên dưới thuộc <em>loại</em> nào đã cộng đồng thống nhất</li>
@@ -861,7 +973,7 @@
 <p><img alt="" src="https://developers.google.com/web/fundamentals/discovery/social-discovery/imgs/webmaster-tools.png" /></p>
 <h2 id="su-dung-open-graph-protocol-ogp-cho-facebook">Sử dụng Open Graph Protocol (OGP) cho Facebook</h2>
 <p><a href="http://ogp.me/">Open Graph Protocol (OGP)</a> sẽ cung cấp các thông tin để hiển thị trên Facebook</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:title&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Enjoy Fireworks&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:title&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Enjoy Fireworks&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:description&quot;</span>
       <span class="na">content</span><span class="o">=</span><span class="s">&quot;Fireworks are beautiful. This article explains how beautiful fireworks are.&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:image&quot;</span>
@@ -870,7 +982,6 @@
       <span class="na">content</span><span class="o">=</span><span class="s">&quot;https://example.com/discovery-and-distribution/optimizations-for-crawlers/social-sites.html&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;website&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <ul>
 <li><code>og:title</code> là title của trang web</li>
 <li><code>og:description</code> phần diễn giải</li>
@@ -881,14 +992,13 @@
 <p>Dùng công cụ <a href="https://developers.facebook.com/tools/debug/">Debugger</a> của Facebook để kiểm tra</p>
 <h2 id="twitter-card">Twitter card</h2>
 <p><a href="https://dev.twitter.com/cards/overview">Twitter Cards</a>  là phần mở rộng <a href="https://twitter.com/">Open Graph Protocol</a>, ngoài thông tin meta như cho Facebook, cần bổ sung thêm</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;twitter:card&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;summary_large_image&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;twitter:card&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;summary_large_image&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;twitter:site&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;agektmr&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p><img alt="" src="https://developers.google.com/web/fundamentals/discovery/social-discovery/imgs/twitter-card.png" /></p>
 <p>Dùng <a href="https://cards-dev.twitter.com/validator">công cụ kiểm tra Twitter</a></p>
 <h2 id="best-practice">Best Practice</h2>
-<div class="codehilite"><pre><span></span><code><span class="c">&lt;!-- namespace declaration --&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="c">&lt;!-- namespace declaration --&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">prefix</span><span class="o">=</span><span class="s">&quot;og: http://ogp.me/ns#&quot;</span><span class="p">&gt;</span>
   <span class="c">&lt;!-- define microdata scope and type --&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span> <span class="na">itemscope</span> <span class="na">itemtype</span><span class="o">=</span><span class="s">&quot;http://schema.org/Article&quot;</span><span class="p">&gt;</span>
@@ -928,7 +1038,6 @@
     <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p><a href="https://developers.google.com/web/fundamentals/discovery/social-discovery">https://developers.google.com/web/fundamentals/discovery/social-discovery</a></p>
                 
               
@@ -1004,6 +1113,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

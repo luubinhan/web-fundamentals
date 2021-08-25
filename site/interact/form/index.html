@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -828,6 +830,117 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/time-to-interactive/" class="md-nav__link">
+        Time to interactive
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/thoi-gian-input-cham-nhat/" class="md-nav__link">
+        Max Potential First Input Delay
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/total-blocking-time/" class="md-nav__link">
+        Total Blocking Time
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/largest-contentful-paint/" class="md-nav__link">
+        Largest Contentful Paint
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1083,10 +1196,9 @@
 <p><img alt="Một số gợi ý khi thiết kế form" src="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/imgs/forms-multipart-good.png" /></p>
 <p>Ví dụ trên trang đăng ký nếu chúng ta đã cho user nhập first name và last name, có thể cho generate tự động ra một giá trị cho field nickname để đăng nhập. Hoặc trường hợp trên trang checkout, cho phép lưu lại địa chỉ giao hàng cho lần checkout sau.</p>
 <p>Để tiết kiệm thời gian tiền bạc cho user, khai thác tính năng <strong>autocomplete</strong> có sẵn của trình duyệt.</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="p">/&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="p">/&gt;</span>
 <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&quot;address-line1&quot;</span> <span class="p">/&gt;</span>
 </code></pre></div>
-
 <p>Ta muốn autocomplete giá trị gì thì báo với trình duyệt luôn, hoặc dùng giá trị <code>name='giá trị name chuẩn'</code>, hoặc <code>autocomplete='giá trị autocomplete chuẩn'</code></p>
 <p>Chuẩn này đã được <a href="https://html.spec.whatwg.org/multipage/forms.html#autofill">WHATWG HTML Standard.</a> đặt ra ko phải mình</p>
 <table>
@@ -1173,7 +1285,7 @@
 <p><img alt="Một số gợi ý khi thiết kế form" src="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/imgs/color-android.png" /></p>
 <h2 id="goi-y-thong-qua-truong-datalist">Gợi ý thông qua trường <code>datalist</code></h2>
 <p><code>&lt;datalist /&gt;</code> là element cho phép chúng ta cung cấp các giá trị <strong>gợi ý</strong> với một <code>&lt;input /&gt;</code></p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;frmFavChocolate&quot;</span><span class="p">&gt;</span>Favorite Type of Chocolate<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;frmFavChocolate&quot;</span><span class="p">&gt;</span>Favorite Type of Chocolate<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">input</span>
 <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span>
 <span class="na">name</span><span class="o">=</span><span class="s">&quot;fav-choc&quot;</span>
@@ -1185,15 +1297,13 @@
   <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;dark&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">datalist</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <div class="note">User không bắt buộc phải chọn các giá trị trong datalist, chỉ là gợi ý thích thì chọn</div>
 
 <p><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html">Xem một form đã hiện thực</a></p>
 <h2 id="auto-focus-khi-can-thiet">auto focus khi cần thiết</h2>
 <p>Trên thẻ input, nếu muốn input được focus ngay lập tức khi vừa vào trang, như login, focus vào ô username. Thuộc tính <code>autofocus</code> này sẽ tự động bị ignore trên mobile để tránh xuất hiện bàn phím ko cần thiết.</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">autofocus</span> <span class="err">...</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">autofocus</span> <span class="err">...</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <h2 id="hay-tin-tuong-vao-trinh-duyet">Hãy tin tưởng vào trình duyệt</h2>
 <p>Rất nhiều trường hợp vì customize theo ý design mà tính năng autofill của Chrome không còn chạy đúng, nguyên nhân có thể là</p>
 <p><strong>Không sử dụng input chuẩn</strong></p>
@@ -1281,6 +1391,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

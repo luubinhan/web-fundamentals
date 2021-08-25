@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -713,6 +715,117 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/time-to-interactive/" class="md-nav__link">
+        Time to interactive
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/thoi-gian-input-cham-nhat/" class="md-nav__link">
+        Max Potential First Input Delay
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/total-blocking-time/" class="md-nav__link">
+        Total Blocking Time
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/largest-contentful-paint/" class="md-nav__link">
+        Largest Contentful Paint
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -852,7 +965,7 @@
 <p>Trong cách Fluid layout, chúng ta sử dụng hệ thống grid theo kích thước %, với cách làm này chúng ta chỉ cần một vài breakpoint là có thể đáp ứng được hầu hết kích thước màn hình.</p>
 <p><img alt="" src="https://developers.google.com/web/fundamentals/design-and-ux/responsive/imgs/mostly-fluid.svg" /></p>
 <p>Ở trạng thái nhỏ nhất, tất cả <code>&lt;div/&gt;</code> được xếp chồng lên nhau thành 1 cột và sẽ được gom lại thành từng hàng ở kích thước lớn hơn</p>
-<div class="codehilite"><pre><span></span><code><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
   <span class="k">display</span><span class="p">:</span> <span class="bp">-webkit-</span><span class="kc">flex</span><span class="p">;</span>
   <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
   <span class="kp">-webkit-</span><span class="k">flex-flow</span><span class="p">:</span> <span class="kc">row</span> <span class="kc">wrap</span><span class="p">;</span>
@@ -888,11 +1001,10 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="column-drop">Column drop</h2>
 <p>Là phương pháp tiếp cận từ màn hình lớn xuống mobile, desktop first. Kết quả cuối cùng vẫn là các <code>&lt;div/&gt;</code> nằm xếp chồng lên nhau. Lựa chọn breakpoint sẽ quyết định phụ thuộc vào nội dung và từng thiết kế.</p>
 <p><img alt="" src="https://developers.google.com/web/fundamentals/design-and-ux/responsive/imgs/column-drop.svg" /></p>
-<div class="codehilite"><pre><span></span><code><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
   <span class="k">display</span><span class="p">:</span> <span class="bp">-webkit-</span><span class="kc">flex</span><span class="p">;</span>
   <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
   <span class="kp">-webkit-</span><span class="k">flex-flow</span><span class="p">:</span> <span class="kc">row</span> <span class="kc">wrap</span><span class="p">;</span>
@@ -924,11 +1036,10 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="layout-shifter">Layout shifter</h2>
 <p>Đây là cách làm <strong>chịu khó</strong> nhất, responsive nhất, trên các breakpoint khác nhau, layout sẽ thay đổi theo từng yêu cầu cụ thể, không chỉ đơn thuần là thay đổi dòng hay cột .</p>
 <p><img alt="" src="https://developers.google.com/web/fundamentals/design-and-ux/responsive/imgs/layout-shifter.svg" /></p>
-<div class="codehilite"><pre><span></span><code><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
   <span class="k">display</span><span class="p">:</span> <span class="bp">-webkit-</span><span class="kc">flex</span><span class="p">;</span>
   <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
   <span class="kp">-webkit-</span><span class="k">flex-flow</span><span class="p">:</span> <span class="kc">row</span> <span class="kc">wrap</span><span class="p">;</span>
@@ -952,10 +1063,9 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="tinh-chinh">Tinh chỉnh</h2>
 <p>Trong đa số các trường hợp của responsive, chúng ta cần thay đổi font size, kích thước hình, <code>padding</code>, ...</p>
-<div class="codehilite"><pre><span></span><code><span class="p">.</span><span class="nc">c1</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">c1</span> <span class="p">{</span>
   <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
   <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
 <span class="p">}</span>
@@ -972,7 +1082,6 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="an-element">Ẩn element</h2>
 <p>Thay vì rớt dòng, chúng ta ẩn luôn khi màn hình không đủ kích thước</p>
 <p><img alt="" src="https://developers.google.com/web/fundamentals/design-and-ux/responsive/imgs/off-canvas.svg" /></p>
@@ -1052,6 +1161,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

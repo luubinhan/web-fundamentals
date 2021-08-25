@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -706,6 +708,117 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/time-to-interactive/" class="md-nav__link">
+        Time to interactive
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/thoi-gian-input-cham-nhat/" class="md-nav__link">
+        Max Potential First Input Delay
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/total-blocking-time/" class="md-nav__link">
+        Total Blocking Time
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/largest-contentful-paint/" class="md-nav__link">
+        Largest Contentful Paint
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -838,9 +951,8 @@
 <h2 id="whitelist">Whitelist</h2>
 <p>Ví dụ nút like của Google, khi user click vào nút này code đặt ở nhà bạn, nhưng nó sẽ chạy đưa thông tin tới  <code>api.google.com</code>, câu hỏi là làm sao chúng ta có thể cho phép những đoạn code gửi thông tin tới <code>api.google.com</code> mà không cho tới trang <code>evil.com</code></p>
 <p>Chúng ta cấp <em>giấy chứng nhận an toàn vệ sinh thực phẩm</em> <strong>CSP</strong> (trong HTTP Header), để báo với browser là: "Ê, mấy trang này là tao tin tưởng, mày có thể cho code chạy thoải mái"</p>
-<div class="codehilite"><pre><span></span><code>Content-Security-Policy: script-src &#39;self&#39; https://apis.google.com
+<div class="highlight"><pre><span></span><code>Content-Security-Policy: script-src &#39;self&#39; https://apis.google.com
 </code></pre></div>
-
 <p>Đoạn trên có nghĩa là chúng ta tin tưởng và cho phép thực thi những đoạn script từ nhà chúng ta, và từ nhà google</p>
 <p><code>script-src</code> được gọi là <strong>directive</strong>, có thể hình dung nó như những biển báo giao thông ngoài đường, đây là đường một chiều, chỉ cho phép xe máy, cấm xe ba gác.</p>
 <p>Nếu <em>kẻ xấu</em> muốn load và thực thi một đoạn script ở một nhà không ai quen biết, nó sẽ bị chặn lại ngay lập tức bởi trình duyệt.</p>
@@ -848,31 +960,28 @@
 <p>Danh sách <strong>directive</strong> khá nhiều, đang được khai báo thêm, chi tiết có thể xem tại <a href="https://www.w3.org/TR/CSP3/">https://www.w3.org/TR/CSP3/</a></p>
 <p><strong>Sử dụng thẻ meta để thiết đặt CSP</strong></p>
 <p>CSP được khuyến khích cung cấp thông qua HTTP header, hoặc có thể thông qua thẻ <code>&lt;meta/&gt;</code> với thuộc tính <code>http-equiv</code></p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span>
 <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Security-Policy&quot;</span>
 <span class="na">content</span><span class="o">=</span><span class="s">&quot;default-src https://cdn.example.net; child-src &#39;none&#39;; object-src &#39;none&#39;&quot;</span>
 <span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Không được phép dùng thẻ meta với các thuộc tính <code>frame-ancestors</code>, <code>report-uri</code>, <code>sandbox</code></p>
 <h2 id="inline-code-vo-cung-nguy-hiem">Inline code vô cùng nguy hiểm</h2>
 <p>CSP sử dụng một các khai báo trong whitelist để thông báo với trình duyệt <em>đâu là bạn, đâu là thù</em>, trong khi cơ chế <strong>same-origin</strong> ko giải quyết được con nội gián <strong>XSS</strong>. Ví dụ bên trong source code trả về có đoạn code <code>&lt;script&gt;sendMyDataToEvilDotCom();&lt;/script&gt;</code> trình duyệt không có cơ chế để phân biệt được bạn-thù ở đây.</p>
 <p>Với CSP nó mặc định cấm hết các script inline như vậy. Ko chỉ những đoạn inline code bên trong thẻ <code>script</code>, bạn cũng phải bỏ hết những đoạn code <code>onclick</code></p>
-<div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
   <span class="kd">function</span> <span class="nx">doAmazingThings</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;YOU AM AMAZING!&#39;</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="o">&lt;</span><span class="err">/script&gt;</span>
 <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onclick</span><span class="o">=</span><span class="s1">&#39;doAmazingThings();&#39;</span><span class="o">&gt;</span><span class="nx">Am</span> <span class="nx">I</span> <span class="nx">amazing</span><span class="o">?&lt;</span><span class="err">/button&gt;</span>
 </code></pre></div>
-
 <p>Thay thế nó bằng</p>
-<div class="codehilite"><pre><span></span><code><span class="c">&lt;!-- amazing.html --&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="c">&lt;!-- amazing.html --&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;amazing.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;amazing&#39;</span><span class="p">&gt;</span>Am I amazing?<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="c1">// amazing.js</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// amazing.js</span>
 <span class="kd">function</span> <span class="nx">doAmazingThings</span><span class="p">()</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;YOU AM AMAZING!&#39;</span><span class="p">);</span>
 <span class="p">}</span>
@@ -880,24 +989,21 @@
   <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;amazing&#39;</span><span class="p">)</span>
     <span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">doAmazingThings</span><span class="p">);</span>
 <span class="p">});</span>
-</code></pre></div>
-
+</code></pre></div></p>
 <p>Đoạn code bên dưới sẽ được <strong>CSP</strong> cấp giấy chứng nhận hành nghề, có thể hoạt động kinh doanh bình thường.</p>
 <p>Sau khi bị càm ràm là có nhiều trường hợp buộc dùng inline code, <strong>CSP</strong> phiên bản 2 được đưa ra với bổ sung khả năng cho chạy inline code, nhưng phải thêm 2 bước</p>
 <ol>
 <li>Khai báo id cho đoạn code muốn chạy inline</li>
 </ol>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">nonce</span><span class="o">=</span><span class="s">&quot;EDNnf03nceIOfn39fn3e9h3sdfa&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">nonce</span><span class="o">=</span><span class="s">&quot;EDNnf03nceIOfn39fn3e9h3sdfa&quot;</span><span class="p">&gt;</span>
   <span class="c1">// Some inline code I can&#39;t remove yet, but need to asap.</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <ol>
 <li>Bổ sung id đó vào whitelist</li>
 </ol>
-<div class="codehilite"><pre><span></span><code>Content-Security-Policy: script-src &#39;nonce-EDNnf03nceIOfn39fn3e9h3sdfa&#39;
+<div class="highlight"><pre><span></span><code>Content-Security-Policy: script-src &#39;nonce-EDNnf03nceIOfn39fn3e9h3sdfa&#39;
 </code></pre></div>
-
 <h2 id="eval">Eval</h2>
 <p>Ngay cả khi không thể inject script trực tiếp, bọn <em>ác ôn</em> còn có thể dụ dỗ ứng dụng của chúng ta convert một đoạn text (bị nhúng) thành javascript rồi chạy nó bằng <code>eval()</code>, <code>new Function()</code>, <code>setTimeout([string],...)</code> và <code>setInterval([string],...)</code>. CSP cũng block toàn bộ những dạng này.</p>
 <p>Nó sẽ ảnh hướng cách chúng ta xây dựng ứng dụng:</p>
@@ -906,23 +1012,20 @@
 <li>Viết lại những hàm <code>setTimeout</code> hoặc <code>setInterval</code> bạn đang viết inline. Ví dụ</li>
 </ul>
 <p><em>viết thế này méo cho chạy đâu</em></p>
-<div class="codehilite"><pre><span></span><code><span class="nx">setTimeout</span><span class="p">(</span><span class="s2">&quot;document.querySelector(&#39;a&#39;).style.display = &#39;none&#39;;&quot;</span><span class="p">,</span> <span class="mf">10</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="nx">setTimeout</span><span class="p">(</span><span class="s2">&quot;document.querySelector(&#39;a&#39;).style.display = &#39;none&#39;;&quot;</span><span class="p">,</span> <span class="mf">10</span><span class="p">);</span>
 </code></pre></div>
-
 <p>viết bình thường thôi</p>
-<div class="codehilite"><pre><span></span><code><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span>
 <span class="p">},</span> <span class="mf">10</span><span class="p">);</span>
 </code></pre></div>
-
 <h2 id="to-cao">Tố cáo</h2>
 <p>Ngoài việc chặn không cho thực thi những hành vi nguy hiểm ở client, nếu phát hiện chúng ta hãy <em>tố cáo</em> nó lên server để xác định những thành viên của tổ chức áo đen này và cho luôn vào blacklist</p>
 <p>Config CSP như thế này để nó tố cáo</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">Content-Security-Policy</span><span class="o">:</span> <span class="nt">default-src</span> <span class="s1">&#39;self&#39;</span><span class="o">;</span> <span class="o">...;</span> <span class="nt">report-uri</span> <span class="o">/</span><span class="nt">my_amazing_csp_report_parser</span><span class="o">;</span>
+<div class="highlight"><pre><span></span><code>Content-Security-Policy: default-src &#39;self&#39;; ...; report-uri /my_amazing_csp_report_parser;
 </code></pre></div>
-
 <p>Kết quả report nó sẽ dạng như thế này</p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;csp-report&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;document-uri&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.org/page.html&quot;</span><span class="p">,</span>
     <span class="nt">&quot;referrer&quot;</span><span class="p">:</span> <span class="s2">&quot;http://evil.example.com/&quot;</span><span class="p">,</span>
@@ -932,7 +1035,6 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Chứng chỉ hành nghề <strong>CSP</strong> 1 được sử dụng rộng rãi trong Chrome, Safari, Firefox, chưa hỗ trợ đầy đủ trong IE10. Những ông lớn hiện nay như Twitter và Facebook có đã áp dụng vào thực tiễn, đọc thêm <a href="https://blog.twitter.com/engineering/en_us/a/2011/improving-browser-security-with-csp.html">Case study của Twitter</a></p>
 <p><a href="https://developers.google.com/web/fundamentals/security/csp">https://developers.google.com/web/fundamentals/security/csp</a></p>
                 
@@ -1009,6 +1111,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

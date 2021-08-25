@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -647,6 +649,117 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/time-to-interactive/" class="md-nav__link">
+        Time to interactive
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/thoi-gian-input-cham-nhat/" class="md-nav__link">
+        Max Potential First Input Delay
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/total-blocking-time/" class="md-nav__link">
+        Total Blocking Time
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/largest-contentful-paint/" class="md-nav__link">
+        Largest Contentful Paint
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -825,7 +938,7 @@
 <p>Ví dụ như bên dưới là ứng dụng Wikipedia, bên trái là phần <strong>sườn</strong>, hình giữa là sao khi đã đắp thêm <em>thịt</em></p>
 <p><img alt="Offline Wikipedia app using an application shell with content caching" src="https://developers.google.com/web/fundamentals/architecture/images/wikipedia.jpg" /></p>
 <p>Ví dụ đây là một sườn HTML chưa đắp <em>thịt</em></p>
-<div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
@@ -872,9 +985,8 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Một đoạn code ví dụ sử dụng service worker để cache</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">cacheName</span> <span class="o">=</span> <span class="s1">&#39;shell-content&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">cacheName</span> <span class="o">=</span> <span class="s1">&#39;shell-content&#39;</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">filesToCache</span> <span class="o">=</span> <span class="p">[</span>
   <span class="s1">&#39;/css/styles.css&#39;</span><span class="p">,</span>
   <span class="s1">&#39;/js/scripts.js&#39;</span><span class="p">,</span>
@@ -895,7 +1007,6 @@
   <span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
-
 <p>Xem thêm phần hướng dẫn chi tiết ở <a href="http://vuilaptrinh.com/2018-10-16-huong-dan-progressive-web-app-cho-nguoi-moi-bat-dau/">blog Làm Progressive Web App cho người mới</a></p>
 <p><a href="https://developers.google.com/web/fundamentals/architecture/app-shell">https://developers.google.com/web/fundamentals/architecture/app-shell</a></p>
                 
@@ -917,7 +1028,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../audit/cong-cu-danh-gia/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Công cụ đánh giá" rel="prev">
+        <a href="../../audit/largest-contentful-paint/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Largest Contentful Paint" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -926,7 +1037,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Công cụ đánh giá
+              Largest Contentful Paint
             </div>
           </div>
         </a>
@@ -972,6 +1083,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>

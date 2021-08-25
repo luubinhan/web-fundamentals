@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/hybrid.min.css">
+    
     
       
 
@@ -733,6 +735,117 @@
   
 
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      <label class="md-nav__link" for="__nav_6_4">
+        Kiểm tra tốc độ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kiểm tra tốc độ" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Kiểm tra tốc độ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/he-thong-danh-gia-lighthouse/" class="md-nav__link">
+        Hệ thống đánh giá của Lighthouse
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/first-contentful-paint/" class="md-nav__link">
+        First Contentful Paint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/speed-index/" class="md-nav__link">
+        Speed Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/time-to-interactive/" class="md-nav__link">
+        Time to interactive
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/thoi-gian-input-cham-nhat/" class="md-nav__link">
+        Max Potential First Input Delay
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/total-blocking-time/" class="md-nav__link">
+        Total Blocking Time
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit/largest-contentful-paint/" class="md-nav__link">
+        Largest Contentful Paint
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -892,7 +1005,7 @@
 <blockquote>
 <p>Các trạng thái bắt buộc cho một đối tượng mà user có thể chạm vào để thực hiện một thao tác nào đó gồm:  <code>:hover</code>, <code>:focus</code>, <code>:active</code></p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="p">.</span><span class="nc">btn</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn</span> <span class="p">{</span>
     <span class="k">background-color</span><span class="p">:</span> <span class="mh">#4285f4</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -909,19 +1022,16 @@
     <span class="k">background-color</span><span class="p">:</span> <span class="mh">#0039A8</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p><img alt="Thêm touch cho website" src="https://developers.google.com/web/fundamentals/design-and-ux/input/touch/images/button-states.png" /></p>
 <p>Khi mobile chưa thịnh hành, các website đều bỏ qua trạng thái <code>:active</code>, nên trình duyệt tự bổ sung, chúng ta có thể bỏ đi phần định dạng mặc định của trình duyệt</p>
-<div class="codehilite"><pre><span></span><code><span class="c">/* bỏ phần định dạng của Chrome */</span>
+<div class="highlight"><pre><span></span><code><span class="c">/* bỏ phần định dạng của Chrome */</span>
 <span class="nt">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nt">transparent</span><span class="o">;</span>
 </code></pre></div>
-
 <p>IE thì dùng thẻ meta</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;msapplication-tap-highlight&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;no&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;msapplication-tap-highlight&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;no&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Firefox cũng có cách riêng</p>
-<div class="codehilite"><pre><span></span><code><span class="p">.</span><span class="nc">btn</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn</span> <span class="p">{</span>
   <span class="k">background-image</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -929,14 +1039,12 @@
   <span class="k">border</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <blockquote>
 <p>Nếu bỏ định dạng của trình duyệt, nhớ tự định dạng bằng <code>:active</code></p>
 </blockquote>
 <p>Có nhiều trường hợp chúng ta không muốn user chọn vào một phần nào đó trên UI, để làm việc đó dùng <code>user-select</code>, cũng hết sức cẩn thận khi sử dụng thuộc tính này, vì user dễ nổi cáu vì không chọn được một phần trên UI</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">user-select</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">user-select</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span>
 </code></pre></div>
-
 <h2 id="tuong-tac-tuy-bien">Tương tác tùy biến</h2>
 <p>Với một tương tác tùy biến, như <em>swipe</em> (phổ biến trên ứng dụng mobile), thì có 2 điểm cần ghi nhớ:</p>
 <ol>
@@ -982,7 +1090,7 @@
 </tr>
 </tbody>
 </table>
-<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">PointerEvent</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">PointerEvent</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">swipeFrontElement</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;pointerdown&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleGestureStart</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
     <span class="nx">swipeFrontElement</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;pointermove&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleGestureMove</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
     <span class="nx">swipeFrontElement</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;pointerup&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleGestureEnd</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
@@ -997,7 +1105,6 @@
     <span class="nx">swipeFrontElement</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;mousedown&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleGestureStart</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <blockquote>
 <p><code>window.PointerEvent</code> chỉ cần event <strong>pointerdown</strong> để xử lý cả 2 trường hợp mouse và touch event</p>
 </blockquote>
@@ -1008,7 +1115,7 @@
 <p>Nếu hình dung đang dùng chuột mà làm cách này có thể hơi vô lý, nhưng thử tưởng tượng sử dụng trên điện thoại, user dùng tay để lướt, bạn sẽ thấy không có gì phi lý.</p>
 <p><img alt="Hỗ trợ touch cho website" src="https://developers.google.com/web/fundamentals/design-and-ux/input/touch/images/scroll-bottleneck.gif" /></p>
 <p>Điều đó sẽ được thực hiện bên trong hàm <code>handleGestureStart</code></p>
-<div class="codehilite"><pre><span></span><code><span class="k">this</span><span class="p">.</span><span class="nx">handleGestureStart</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">this</span><span class="p">.</span><span class="nx">handleGestureStart</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
    <span class="nx">evt</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
 
    <span class="k">if</span><span class="p">(</span><span class="nx">evt</span><span class="p">.</span><span class="nx">touches</span> <span class="o">&amp;&amp;</span> <span class="nx">evt</span><span class="p">.</span><span class="nx">touches</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
@@ -1029,13 +1136,12 @@
    <span class="nx">swipeFrontElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">transition</span> <span class="o">=</span> <span class="s1">&#39;initial&#39;</span><span class="p">;</span>
  <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
 </code></pre></div>
-
 <p>Nếu có <code>window.PointerEvent</code> chúng ta dùng hàm <code>evt.target.setPointerCapture(evt.pointerId);</code> để <strong>đưa</strong> event đó lên trên <code>document</code></p>
 <blockquote>
 <p>Mấu chốt là phải đưa event đó lên document</p>
 </blockquote>
 <p>Trong phần callback của <code>handleGestureEnd()</code>, chúng ta xóa listener trên event</p>
-<div class="codehilite"><pre><span></span><code><span class="k">this</span><span class="p">.</span><span class="nx">handleGestureEnd</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">this</span><span class="p">.</span><span class="nx">handleGestureEnd</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">evt</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
 
   <span class="k">if</span><span class="p">(</span><span class="nx">evt</span><span class="p">.</span><span class="nx">touches</span> <span class="o">&amp;&amp;</span> <span class="nx">evt</span><span class="p">.</span><span class="nx">touches</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
@@ -1058,12 +1164,11 @@
   <span class="nx">initialTouchPos</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
 <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
 </code></pre></div>
-
 <p>Những phần xử lý khác để di chuyển element chúng ta không đề cập ở bài viết này, vì đó không phải trọng tâm của bài viết. Các bạn có thể xem source của demo để tìm hiểu thêm.</p>
 <p><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html">Xem Demo</a></p>
 <h3 id="su-dung-requestanimationframe-e-toi-uu-hieu-nang">Sử dụng requestAnimationFrame để tối ưu hiệu năng</h3>
 <p>Bên trong đối tượng <code>event</code> chúng ta có thể lấy được tọa độ <code>x</code>, <code>y</code> nơi xảy ra sự kiện.  Nếu <code>event</code> có giá trị <code>targetTouches</code>, lấy <code>clientX</code> và <code>clientY</code> từ sự kiện touch đầu tiên, ngược lại sẽ lấy trực tiếp từ <code>event</code></p>
-<div class="codehilite"><pre><span></span><code><span class="kd">function</span> <span class="nx">getGesturePointFromEvent</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">getGesturePointFromEvent</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">point</span> <span class="o">=</span> <span class="p">{};</span>
 
     <span class="k">if</span><span class="p">(</span><span class="nx">evt</span><span class="p">.</span><span class="nx">targetTouches</span><span class="p">)</span> <span class="p">{</span>
@@ -1079,12 +1184,11 @@
     <span class="k">return</span> <span class="nx">point</span><span class="p">;</span>
   <span class="p">}</span>
 </code></pre></div>
-
 <p>Vì các event callback được chạy trong <strong>main thread</strong>, nên chúng ta chạy càng ít code càng tốt trong callback để frame rate cao</p>
 <p>Sử dụng <code>requestAnimationFrame()</code> chúng ta có cơ hội cập nhập UI trước khi browser vẽ một frame và tách một số công việc ra khỏi callback</p>
 <p>Nếu bạn chưa quen với <code>requestAnimationFrame()</code>, có thể <a href="https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution#use-requestanimationframe-for-visual-changes">đọc thêm ở đây</a></p>
 <p>Cách hiện thực thông thường là lưu tọa độ <code>x</code> và <code>y</code> khi bắt đầu và gọi <code>requestAnimationFrame()</code> trong callback của move event</p>
-<div class="codehilite"><pre><span></span><code><span class="c1">// Handle the start of gestures</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Handle the start of gestures</span>
 <span class="k">this</span><span class="p">.</span><span class="nx">handleGestureStart</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">evt</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
 
@@ -1106,9 +1210,8 @@
   <span class="nx">swipeFrontElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">transition</span> <span class="o">=</span> <span class="s1">&#39;initial&#39;</span><span class="p">;</span>
 <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
 </code></pre></div>
-
 <p>Phương thức <code>handleGestureMove()</code> lưu vị trí trước hoặc các giá trị mà <code>requestAnimateFrame</code> cần, truyền nó vào <code>onAnimFrame()</code></p>
-<div class="codehilite"><pre><span></span><code><span class="k">this</span><span class="p">.</span><span class="nx">handleGestureMove</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">this</span><span class="p">.</span><span class="nx">handleGestureMove</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">evt</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
 
   <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">initialTouchPos</span><span class="p">)</span> <span class="p">{</span>
@@ -1126,9 +1229,8 @@
   <span class="nb">window</span><span class="p">.</span><span class="nx">requestAnimFrame</span><span class="p">(</span><span class="nx">onAnimFrame</span><span class="p">);</span>
 <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
 </code></pre></div>
-
 <p>Hàm <code>onAnimFrame</code> khi được gọi sẽ thay đổi UI (ví dụ di chuyển UI). Truyền hàm này vào <code>requestAnimationFrame()</code>, chúng ta nói với trình duyệt gọi nó trước khi cập nhập trang</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">function</span> <span class="nx">onAnimFrame</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">onAnimFrame</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">rafPending</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span><span class="p">;</span>
   <span class="p">}</span>
@@ -1145,26 +1247,23 @@
   <span class="nx">rafPending</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-2.html">Xem Demo</a></p>
 <h2 id="touch-action"><code>touch-action</code></h2>
 <p>Thuộc tính CSS <code>touch-action</code> cho phép bạn kiểm soát touch behavior mặc định. Trong ví dụ chúng ta sử dụng <code>touch-action: none</code> để chặn trình duyệt làm bất cứ gì khi user touch, cho phép chúng ta làm gì đó với touch</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">touch-action</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">touch-action</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span>
 </code></pre></div>
-
 <p>Ví dụ IE10+ khi bạn double-tab sẽ bật zoom. Chúng ta dùng <code>touch-action: none</code> sẽ bỏ qua behavior mặc định</p>
 <h2 id="ho-tro-trang-thai-active-tren-ios">Hỗ trợ trạng thái active trên iOS</h2>
 <p>Safari trên iOS mặc định không hỗ trợ trạng thái active, chúng ta phải thêm event listener <code>touchstart</code> trên <code>document</code>, <code>body</code> hoặc từng element một</p>
 <p>Nên kiểm tra user có đang dùng iOS trước khi áp dụng tùy chỉnh</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">if</span><span class="p">(</span><span class="sr">/iP(hone|ad)/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">))</span> <span class="p">{</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;touchstart&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{},</span> <span class="kc">false</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div>
-
 <p>Một cách khác để thêm touch listener trên tất cả các element, sử dụng cẩn thận vì có thể ảnh hưởng tốc độ</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">if</span><span class="p">(</span><span class="sr">/iP(hone|ad)/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">))</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">elements</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">);</span>
     <span class="kd">var</span> <span class="nx">emptyFunction</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{};</span>
@@ -1174,7 +1273,6 @@
   <span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div>
-
 <p><a href="https://developers.google.com/web/fundamentals/design-and-ux/input/touch/">Add Touch to Your Site</a></p>
                 
               
@@ -1250,6 +1348,8 @@
     
     
       <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
       
     
   </body>
