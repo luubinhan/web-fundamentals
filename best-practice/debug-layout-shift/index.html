@@ -14,7 +14,7 @@
     
     
       
-        <title>Cai thien first input delay - Kiến thức nền tảng của Web</title>
+        <title>Debug layout shift - Kiến thức nền tảng của Web</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chia-nho-tac-vu" class="md-skip">
+        <a href="#layout-instability-api" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cai thien first input delay
+              Debug layout shift
             
           </span>
         </div>
@@ -907,8 +907,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#chia-nho-tac-vu" class="md-nav__link">
-    Chia nhỏ tác vụ
+  <a href="#layout-instability-api" class="md-nav__link">
+    Layout Instability API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devtool" class="md-nav__link">
+    DevTool
   </a>
   
 </li>
@@ -926,31 +933,75 @@
               
                 
                 
-                  <h1>Cai thien first input delay</h1>
+                  <h1>Debug layout shift</h1>
                 
-                <p><a href="/audit/thoi-gian-input-cham-nhat/">First Input Delay</a> là thời gian user có thể bắt đầu tương tác được với trang</p>
-<p><img alt="" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/eXyvkqRHQZ5iG38Axh1Z.svg" /></p>
-<p>Nguyên nhân chủ yếu làm FID chậm là do JS đang thực thi trên main thread, chúng ta cần cải thiện quá trình <strong>parse</strong>, <strong>compile</strong>, <strong>execute</strong></p>
-<h2 id="chia-nho-tac-vu">Chia nhỏ tác vụ</h2>
-<p>Code nào chiếm main thread quá 50ms được xem là <strong>tác vụ lớn</strong></p>
-<p><img alt="" src="https://web-dev.imgix.net/image/admin/THLKu0sOPhSghNr0XkP1.png?auto=format&amp;w=845" /></p>
-<p>Xem thêm <a href="https://web.dev/long-tasks-devtools/">Are long JavaScript tasks delaying your Time to Interactive?</a></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Web worker</a> là một giải pháp cho phép chạy JS ở background, tham khảo các thư viện để làm việc với web worker</p>
-<ul>
-<li><a href="https://github.com/GoogleChromeLabs/comlink">Comlink</a></li>
-<li><a href="https://github.com/WebReflection/workway">Workway</a></li>
-<li><a href="https://github.com/developit/workerize">Workerize</a></li>
-</ul>
-<p>Để giảm số lượng JS thực thi </p>
-<ul>
-<li>Defer những JS nào chưa sử dụng</li>
-<li>Hạn chế polyfill ko cần thiết</li>
-</ul>
-<p><img alt="Kiểm tra JS không sử dụng bằng DevTools" src="https://web-dev.imgix.net/image/admin/UNEigFiwsGu48rtXMZM4.png?auto=format&amp;w=845" /></p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">defer</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;…&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;…&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+                <h2 id="layout-instability-api">Layout Instability API</h2>
+<p>Đây là API của trình duyệt nhân Chromium, hỗ trợ xác định layout shift, DevTools cũng sử dụng API này</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">cls</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="ow">new</span> <span class="nx">PerformanceObserver</span><span class="p">((</span><span class="nx">entryList</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">entry</span> <span class="k">of</span> <span class="nx">entryList</span><span class="p">.</span><span class="nx">getEntries</span><span class="p">())</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">entry</span><span class="p">.</span><span class="nx">hadRecentInput</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">cls</span> <span class="o">+=</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Current CLS value:&#39;</span><span class="p">,</span> <span class="nx">cls</span><span class="p">,</span> <span class="nx">entry</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}).</span><span class="nx">observe</span><span class="p">({</span><span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;layout-shift&#39;</span><span class="p">,</span> <span class="nx">buffered</span><span class="o">:</span> <span class="kc">true</span><span class="p">});</span>
 </code></pre></div>
-<p>https://web.dev/optimize-fid/</p>
+<p>Đoạn code trên sẽ log thông tin layout shift trong console. Lưu ý</p>
+<ul>
+<li><code>buffered: true</code> sẽ cho kết quả layout shift cả trước và sau khi khởi tạo</li>
+<li><code>PerformanceObserver</code> chị chạy khi main thread đang trong trạng thái <code>idle</code>, kết quả phụ thuộc vào yếu tố này nên có thể chậm</li>
+<li>Nó sẽ bỏ qua layout shift xuất hiện trong khoảng 500ms</li>
+</ul>
+<p>Kết quả sẽ log ra sẽ như thế này</p>
+<div class="highlight"><pre><span></span><code>duration: <span class="m">0</span>
+entryType: <span class="s2">&quot;layout-shift&quot;</span>
+hadRecentInput: <span class="nb">false</span>
+lastInputTime: <span class="m">0</span>
+name: <span class="s2">&quot;&quot;</span>
+sources: <span class="o">(</span><span class="m">3</span><span class="o">)</span> <span class="o">[</span>LayoutShiftAttribution, LayoutShiftAttribution, LayoutShiftAttribution<span class="o">]</span>
+startTime: <span class="m">11317</span>.934999999125
+value: <span class="m">0</span>.17508567530168798
+</code></pre></div>
+<p>Ví dụ</p>
+<p>Do element thay đổi kích thước, layout shift sẽ xuất hiện trên element, trong kết quả report có thể chỉ nhận B trong phần <code>sources</code></p>
+<p><img alt="" src="https://web-dev.imgix.net/image/j2RDdG43oidUy6AL6LovThjeX9c2/oaM41OYL7mFtGcpIN8KF.png?auto=format&amp;w=964" /></p>
+<p>Layout shift sẽ bao gồm cả A và B</p>
+<p><img alt="" src="https://web-dev.imgix.net/image/j2RDdG43oidUy6AL6LovThjeX9c2/AhaslIEWb5fFMMgiZcI2.png?auto=format&amp;w=964" /></p>
+<p>Layout shift source chỉ gồm element B, do position thay đổi</p>
+<p><img alt="" src="https://web-dev.imgix.net/image/j2RDdG43oidUy6AL6LovThjeX9c2/6zKjd4Ua6YJ94LMlqiMR.png?auto=format&amp;w=964" /></p>
+<p>Không có layout shift trong tình huống này, mặc dù kích thước element B đã thay đổi</p>
+<p><img alt="" src="https://web-dev.imgix.net/image/j2RDdG43oidUy6AL6LovThjeX9c2/ZujHWxsXI3C7tupe42oD.png?auto=format&amp;w=964" /></p>
+<h2 id="devtool">DevTool</h2>
+<p><img alt="" src="https://web-dev.imgix.net/image/j2RDdG43oidUy6AL6LovThjeX9c2/Uug2fnJT8mOc2YQmxo2l.png?auto=format&amp;w=964" /></p>
+<p>Click vào ô đánh dấu layout shift, bên dưới sẽ xuất hiện cửa sổ <strong>Summary</strong></p>
+<p><img alt="" src="https://web-dev.imgix.net/image/j2RDdG43oidUy6AL6LovThjeX9c2/AfVjsH9Nl9w0lJwQZEjR.png?auto=format&amp;w=741" /></p>
+<p>Thông tin được liệt kê ở đây theo format <code>[width, height]</code>, <code>[x,y]</code></p>
+<p>Trên cửa sổ Event Log có thể có các thông tin về thời gian xuất hiện Layout Shift</p>
+<p><img alt="" src="https://web-dev.imgix.net/image/j2RDdG43oidUy6AL6LovThjeX9c2/124Dm7vV3EGM7M9fiugs.png?auto=format&amp;w=741" /></p>
+<p>Có thể bật tính năng highlight khu vực có layout shift, <strong>Settings &gt; More Tools &gt; Rendering &gt; Layout Shift Region</strong>, F5 lại để thấy kết quả</p>
+<p>Layout shift có thể do một trong các nguyên nhân</p>
+<ul>
+<li>Thay đổi vị trí của DOM element</li>
+<li>Thay đổi kích thước của DOM element</li>
+<li>Thêm hoặc xóa DOM element</li>
+<li>Animation</li>
+</ul>
+<blockquote>
+<p>Tip không nên làm animation bằng cách thay đổi top, left, dùng transform của CSS để đạt hiệu năng cao nhất</p>
+</blockquote>
+<p>Nếu chưa thể xác định element gây layout shift, có thể thêm debugger để đi từng bước</p>
+<div class="highlight"><pre><span></span><code><span class="ow">new</span> <span class="nx">PerformanceObserver</span><span class="p">((</span><span class="nx">entryList</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">entry</span> <span class="k">of</span> <span class="nx">entryList</span><span class="p">.</span><span class="nx">getEntries</span><span class="p">())</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">entry</span><span class="p">.</span><span class="nx">hadRecentInput</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">cls</span> <span class="o">+=</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+      <span class="k">debugger</span><span class="p">;</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Current CLS value:&#39;</span><span class="p">,</span> <span class="nx">cls</span><span class="p">,</span> <span class="nx">entry</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}).</span><span class="nx">observe</span><span class="p">({</span><span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;layout-shift&#39;</span><span class="p">,</span> <span class="nx">buffered</span><span class="o">:</span> <span class="kc">true</span><span class="p">});</span>
+</code></pre></div>
+<p>Xem thêm <a href="https://github.com/GoogleChromeLabs/web-vitals-report/blob/71b0879334798c732f460945ded5267cab5a36bf/src/js/analytics.js#L104-L118">code sample</a></p>
                 
               
               
