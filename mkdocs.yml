@@ -33,6 +33,7 @@ nav:
     - Tại sao cần HTTPs: security/tai-sao-can-https.md
     - Mixed content là gì: security/mixed-content-la-gi.md
     - Sử dụng HTTPS ở localhost: security/khi-nao-dung-https-o-localhost.md
+    - Same site cookie: security/same-site-cookie.md
   - Audit:
     - Giới thiệu: audit/overview.md
     - Kiểm tra bảo mật: audit/check-site-security.md
