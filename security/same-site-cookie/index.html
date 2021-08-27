@@ -14,7 +14,7 @@
     
     
       
-        <title>Phòng tránh XSS bằng CSP - Kiến thức nền tảng của Web</title>
+        <title>Same site cookie - Kiến thức nền tảng của Web</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#strict-content-security-policy-la-gi" class="md-skip">
+        <a href="#giai-thich-same-site-cookie" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Phòng tránh XSS bằng CSP
+              Same site cookie
             
           </span>
         </div>
@@ -528,74 +528,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Phòng tránh XSS bằng CSP
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../bao-ve-xss-bang-content-security-policy/" class="md-nav__link">
         Phòng tránh XSS bằng CSP
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#strict-content-security-policy-la-gi" class="md-nav__link">
-    Strict Content Security Policy là gì?
-  </a>
-  
-    <nav class="md-nav" aria-label="Strict Content Security Policy là gì?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dung-nonce" class="md-nav__link">
-    Dùng Nonce
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dung-hash" class="md-nav__link">
-    Dùng Hash
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#han-che" class="md-nav__link">
-    Hạn chế
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -651,11 +588,61 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../same-site-cookie/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Same site cookie
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Same site cookie
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#giai-thich-same-site-cookie" class="md-nav__link">
+    Giải thích Same-Site cookie
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-party-third-party-cookie" class="md-nav__link">
+    first-party, third-party cookie
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#khac-scheme" class="md-nav__link">
+    Khác Scheme
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1110,35 +1097,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#strict-content-security-policy-la-gi" class="md-nav__link">
-    Strict Content Security Policy là gì?
+  <a href="#giai-thich-same-site-cookie" class="md-nav__link">
+    Giải thích Same-Site cookie
   </a>
-  
-    <nav class="md-nav" aria-label="Strict Content Security Policy là gì?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dung-nonce" class="md-nav__link">
-    Dùng Nonce
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dung-hash" class="md-nav__link">
-    Dùng Hash
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#han-che" class="md-nav__link">
-    Hạn chế
+  <a href="#first-party-third-party-cookie" class="md-nav__link">
+    first-party, third-party cookie
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#khac-scheme" class="md-nav__link">
+    Khác Scheme
   </a>
   
 </li>
@@ -1156,46 +1130,147 @@
               
                 
                 
-                  <h1>Phòng tránh XSS bằng CSP</h1>
+                  <h1>Same site cookie</h1>
                 
-                <p>Content Security Policy (CSP) là một cơ chế bảo mật để bảo vệ khỏi XSS, Thiết đặt thông qua HTTP header</p>
+                <h2 id="giai-thich-same-site-cookie">Giải thích Same-Site cookie</h2>
+<p>Cookie là một trong những phương pháp để có được persistent trên web</p>
+<p>Mỗi cookie là một cặp <code>key-value</code>, và một số attribute khác, như thời gian expire, xác định cookie chỉ được gửi qua HTTPS. Server set cookie bằng cách trả về response với header <code>Set-Cookie</code></p>
+<p>Ví dụ chúng ta muốn xuất hiện một thông báo quảng cáo lên user, user có thể tắt quảng cáo này và nó sẽ không xuất hiện nữa. Chúng ta có thể lưu trữ nó trong cookie, thời gian expire là 1 tháng (2,600,000 giây), chỉ được gửi qua HTTPS, response Header sẽ như sau</p>
+<div class="highlight"><pre><span></span><code>Set-Cookie: <span class="nv">promo_shown</span><span class="o">=</span><span class="m">1</span><span class="p">;</span> Max-Age<span class="o">=</span><span class="m">2600000</span><span class="p">;</span> Secure
+</code></pre></div>
+<p><img alt="" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/jJ1fqcsAk9Ig3hManFBO.png?auto=format&amp;w=964" /></p>
+<p>Browser sẽ send lại request header</p>
+<div class="highlight"><pre><span></span><code>Cookie: <span class="nv">promo_shown</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div>
+<p><img alt="" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/Rq21WQpOZFvfgS9bbjmc.png?auto=format&amp;w=964" /></p>
+<p>Để đọc và thêm cookie, chúng ta có thể dùng JS <code>document.cookie</code></p>
+<div class="highlight"><pre><span></span><code><span class="c1">// tạo</span>
+<span class="o">&gt;</span> <span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&quot;promo_shown=1; Max-Age=2600000; Secure&quot;</span>
+<span class="o">&lt;</span> <span class="s2">&quot;promo_shown=1; Max-Age=2600000; Secure&quot;</span>
+
+<span class="c1">// đọc</span>
+<span class="o">&gt;</span> <span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">;</span>
+<span class="o">&lt;</span> <span class="s2">&quot;promo_shown=1; color_theme=peachpuff; sidebar_loc=left&quot;</span>
+</code></pre></div>
+<p><img alt="" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/mbV00Gy5VAPTUls0i7cM.png?auto=format&amp;w=741" /></p>
+<h2 id="first-party-third-party-cookie">first-party, third-party cookie</h2>
+<p>Khi truy cập vào một tên miền, không chỉ cookie của tên miền đang truy cập (gọi là first-cookie), mà chúng ta còn có thể có các cookie từ những tên miền khác (third-party cookie). Vì trên một trang chúng ta có thể truy xuất đến nhiều hơn một domain (qua iframe, hoặc hình ảnh được load từ một domain khác)</p>
+<p><img alt="" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/zjXpDz2jAdXMT83Nm3IT.png?auto=format&amp;w=964" /></p>
+<p>Nó dẫn đến vấn đề <strong>cross-site request forgery</strong> (CSRF). Ví dụ chúng ta truy cập <code>evil.example</code>, nó trigger request đến <code>your-blog.example</code> trình duyệt sẽ vẫn gửi đi cookie đình kèm. Nếu không được xử lý tốt, hacker có thể lợi dụng để thực hiện những tao thác trên <code>your-blog.example</code></p>
+<p>Để xử lý vấn đề này, attribute <code>SameSite</code> cho phép khai báo cookie chỉ được giới hạn cho first-party và same-site</p>
 <blockquote>
-<p>nonce là một con số ngẫu nhiên, chỉ dùng một lần, sử dụng để đánh dấu thẻ <code>&lt;script/&gt;</code> hợp lệ</p>
-<p>hash function là một hàm toán học, chuyển một giá trị thành một giá trị ở dạng hash. Giá trị hash này được dùng để đánh dấu thẻ script inline hợp lệ</p>
+<p>Đọc lại bài Phân biệt <a href="https://vuilaptrinh.com/2021-08-22-phan-biet-same-site-same-origin/">Same-site và same-origin</a></p>
 </blockquote>
-<h2 id="strict-content-security-policy-la-gi">Strict Content Security Policy là gì?</h2>
-<p>Là một thiết đặt trên HTTP response header, khai báo bằng một trong những cách sau</p>
-<h3 id="dung-nonce">Dùng Nonce</h3>
-<div class="highlight"><pre><span></span><code>Content-Security-Policy:
-  script-src <span class="s1">&#39;nonce-{RANDOM}&#39;</span> <span class="s1">&#39;strict-dynamic&#39;</span><span class="p">;</span>
-  object-src <span class="s1">&#39;none&#39;</span><span class="p">;</span>
-  base-uri <span class="s1">&#39;none&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code>Set-Cookie: <span class="nv">promo_shown</span><span class="o">=</span><span class="m">1</span><span class="p">;</span> <span class="nv">SameSite</span><span class="o">=</span>Strict
 </code></pre></div>
-<p><img alt="" src="https://web-dev.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/er4BaGCJzBwDaESFKfZd.jpg?auto=format&amp;w=964" /></p>
-<h3 id="dung-hash">Dùng Hash</h3>
-<div class="highlight"><pre><span></span><code>Content-Security-Policy:
-  script-src <span class="s1">&#39;sha256-{HASHED_INLINE_SCRIPT}&#39;</span> <span class="s1">&#39;strict-dynamic&#39;</span><span class="p">;</span>
-  object-src <span class="s1">&#39;none&#39;</span><span class="p">;</span>
-  base-uri <span class="s1">&#39;none&#39;</span><span class="p">;</span>
+<p><strong>Strict</strong> chỉ cho phép cookie gửi cho first-party (cùng url), ví dụ nếu bạn mở một email, nội dung có request đến <code>your-blog.example</code>, cookie của <code>your-blog.example</code> sẽ không được gửi đi</p>
+<p><code>SameSite=Lax</code>, cho phép gửi cookie khi ở top-level, ví dụ nếu có một trang tin tức hiển thị hình ảnh trực tiếp từ <code>your-blog.example</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Look at this amazing cat!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://your-blog.example/blog/img/amazing-cat.png&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Read the <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://your-blog.example/blog/cat.html&quot;</span><span class="p">&gt;</span>article<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
-<p><em>Lưu ý đây chỉ là phiên bản rút gọn, cần tùy chỉnh để phù hợp với nhiều trình duyệt</em></p>
-<p>Khai báo trên có nghĩa là</p>
+<p>Cookie đang set</p>
+<div class="highlight"><pre><span></span><code>Set-Cookie: <span class="nv">promo_shown</span><span class="o">=</span><span class="m">1</span><span class="p">;</span> <span class="nv">SameSite</span><span class="o">=</span>Lax
+</code></pre></div>
+<p>Cookie sẽ không được gửi đi khi request <code>&lt;img /&gt;</code>, tuy nhiên nếu click vào đường link <code>&lt;a/&gt;</code> như trong ví dụ, cookie sẽ được gửi đi</p>
+<blockquote>
+<p>Không nên dùng <code>SameSite=None</code></p>
+</blockquote>
+<p>Trình duyệt Chrome thì <code>SameSite=Lax</code> là giá trị mặc định, với FireFox có thể thay đổi bằng cách vào <code>about:config</code> tìm <code>network.cookie.sameSite.laxByDefault</code></p>
+<p>Nếu sử dụng <code>SameSite=None</code>, thêm <code>Secure</code></p>
+<div class="highlight"><pre><span></span><code>Set-Cookie: <span class="nv">widget_session</span><span class="o">=</span>abc123<span class="p">;</span> <span class="nv">SameSite</span><span class="o">=</span>None<span class="p">;</span> Secure
+</code></pre></div>
+<h2 id="khac-scheme">Khác Scheme</h2>
+<p>Scheme tức là HTTP hay HTTPS, nếu chuyển từ <code>http://site.example</code> sang <code>https://site.example</code></p>
+<p><img alt="" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/yDViqKg9eeEeAEiCNqe4.png?auto=format&amp;w=845" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>HTTP -&gt; HTTPS</th>
+<th>HTTPS -&gt; HTTP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SameSite=Strict</td>
+<td>⛔</td>
+<td>⛔</td>
+</tr>
+<tr>
+<td>SameSite=Lax</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>SameSite=None;Secure</td>
+<td>✓</td>
+<td>⛔</td>
+</tr>
+</tbody>
+</table>
+<p>Nếu không <em>navigate</em> mà load ở dạng subresource như image, iframe, network request dùng XHR hay Fetch</p>
+<p><img alt="" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/GgR6Yln1f9JGkt04exRC.png?auto=format&amp;w=845" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>HTTP -&gt; HTTPS</th>
+<th>HTTPS -&gt; HTTP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SameSite=Strict</td>
+<td>⛔</td>
+<td>⛔</td>
+</tr>
+<tr>
+<td>SameSite=Lax</td>
+<td>⛔</td>
+<td>⛔</td>
+</tr>
+<tr>
+<td>SameSite=None;Secure</td>
+<td>✓</td>
+<td>⛔</td>
+</tr>
+</tbody>
+</table>
+<p>Nếu thực hiện form submit</p>
+<p><img alt="" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/ud9LkDeGJUWHObifD718.png?auto=format&amp;w=845" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>HTTP -&gt; HTTPS</th>
+<th>HTTPS -&gt; HTTP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SameSite=Strict</td>
+<td>⛔</td>
+<td>⛔</td>
+</tr>
+<tr>
+<td>SameSite=Lax</td>
+<td>⛔</td>
+<td>⛔</td>
+</tr>
+<tr>
+<td>SameSite=None;Secure</td>
+<td>✓</td>
+<td>⛔</td>
+</tr>
+</tbody>
+</table>
+<p>Tham khảo</p>
 <ul>
-<li>Dùng nonce <code>nonce-{RANDOM}</code> hoặc hash <code>sha256-{HASHED_INLINE_SCRIPT}</code> để xác định một tag <code>&lt;script /&gt;</code> có an toàn và cho phép thực thi hay không</li>
-<li><a href="https://www.w3.org/TR/CSP3/#strict-dynamic-usage">'strict-dynamic'</a> để cho phép thực thi script từ những nguồn đã biết, ví dụ như các third-party đã biết</li>
-<li>Khóa inline script</li>
-<li>Chặn <code>object-src</code>, thường gặp trên các plugin Flash</li>
-<li>Chặn <code>base-uri</code>, khóa inject vào thẻ <code>&lt;base /&gt;</code>, hacker có thể sử dụng để thay đổi đường dẫn của script bằng cách dùng <code>&lt;base /&gt;</code></li>
+<li>https://web.dev/schemeful-samesite/</li>
+<li>https://web.dev/samesite-cookies-explained/</li>
+<li>https://web.dev/samesite-cookie-recipes/</li>
 </ul>
-<p>Có thể dùng <a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a> để kiểm tra xem trang có đang khai báo CSP không</p>
-<p><img alt="Lighthouse report warning that no CSP is found in enforcement mode." src="https://web-dev.imgix.net/image/9B7J9oWjgsWbuE84mmxDaY37Wpw2/42a4iEEKsD4T3yU47vNQ.png?auto=format" /></p>
-<p>Các bước cụ thể xem thêm tại <a href="https://web.dev/strict-csp/#adopting-a-strict-csp">Strict CSP</a></p>
-<h2 id="han-che">Hạn chế</h2>
-<ul>
-<li>Nếu đang sử dụng <code>nonce</code>, nhưng bị inject vào trong nội dung hoặc trong <code>src</code> của thẻ <code>&lt;script /&gt;</code> thì không còn được bảo vệ</li>
-<li>Nếu bị hack bằng cách tạo script động <code>document.createElement('script')</code>, cách này không bảo vệ được</li>
-</ul>
-<p>Tham khảo thêm Trusted Type</p>
                 
               
               
@@ -1215,7 +1290,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../content-security-policy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Content Security Policy" rel="prev">
+        <a href="../khi-nao-dung-https-o-localhost/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sử dụng HTTPS ở localhost" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1224,20 +1299,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Content Security Policy
+              Sử dụng HTTPS ở localhost
             </div>
           </div>
         </a>
       
       
         
-        <a href="../phong-tranh-dom-xss-voi-trusted-type/" class="md-footer__link md-footer__link--next" aria-label="Next: Phòng tránh XSS bằng Trusted Type" rel="next">
+        <a href="../../audit/overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Giới thiệu" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Phòng tránh XSS bằng Trusted Type
+              Giới thiệu
             </div>
           </div>
           <div class="md-footer__button md-icon">
