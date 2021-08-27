@@ -56,6 +56,7 @@ nav:
     - HTML không có doctype: base/html-khong-co-doctype.md
     - Largest Contentful Paint: base/largest-contentful-paint.md
     - Sử dụng passive listener: base/su-dung-passive-listener-de-cai-thien-hieu-nang-khi-scroll.md
+    - Font: base/font.md
   - Kỹ thuật nền tảng:
     - Mô hình vỏ ứng dụng: base/app-shell.md
     - Hàm async: base/async.md
