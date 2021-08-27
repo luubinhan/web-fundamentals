@@ -52,12 +52,13 @@ nav:
       - Infinite scroll không bị layout shift: audit/infinite-scroll-khong-bi-layout-shift.md
       - Sử dụng preconnect origin: audit/su-dung-preconnect-origin.md
   - Best practice:
-    - Cải thiện first input delay: base/cai-thien-first-input-delay.md
-    - Debug layout shift: base/debug-layout-shift.md
-    - HTML không có doctype: base/html-khong-co-doctype.md
-    - Largest Contentful Paint: base/largest-contentful-paint.md
-    - Sử dụng passive listener: base/su-dung-passive-listener-de-cai-thien-hieu-nang-khi-scroll.md
-    - Font: base/font.md
+    - Cải thiện first input delay: best-practice/cai-thien-first-input-delay.md
+    - Debug layout shift: best-practice/debug-layout-shift.md
+    - HTML không có doctype: best-practice/html-khong-co-doctype.md
+    - Largest Contentful Paint: best-practice/largest-contentful-paint.md
+    - Sử dụng passive listener: best-practice/su-dung-passive-listener-de-cai-thien-hieu-nang-khi-scroll.md
+    - Font: best-practice/font.md
+    - CSS: best-practice/css.md
   - Kỹ thuật nền tảng:
     - Mô hình vỏ ứng dụng: base/app-shell.md
     - Hàm async: base/async.md
