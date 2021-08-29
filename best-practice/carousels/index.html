@@ -14,7 +14,7 @@
     
     
       
-        <title>Sử dụng passive listener - Kiến thức nền tảng của Web</title>
+        <title>Carousels - Kiến thức nền tảng của Web</title>
       
     
     
@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#load-anh-bang-html" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -88,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sử dụng passive listener
+              Carousels
             
           </span>
         </div>
@@ -854,14 +859,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       <label class="md-nav__link" for="__nav_7">
         Best practice
@@ -925,19 +928,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../su-dung-passive-listener-de-cai-thien-hieu-nang-khi-scroll/" class="md-nav__link">
         Sử dụng passive listener
       </a>
-      
     </li>
   
 
@@ -1045,25 +1040,84 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#load-anh-bang-html" class="md-nav__link">
+    Load ảnh bằng HTML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chuyen-slide" class="md-nav__link">
+    Chuyển slide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thu-vien" class="md-nav__link">
+    Thư viện
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Sử dụng passive listener</h1>
+                  <h1>Carousels</h1>
                 
-                <p>Lighthouse sẽ thông báo khi có listener event làm chậm việc scrolling</p>
-<p><img alt="" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/a59Rk7aCUDvyKNqqoYRJ.png?auto=format&amp;w=845" /></p>
-<p>Với các listener event bị Lighthouse đánh dấu, truyền thêm option <code>passive</code></p>
-<div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;touchstart&#39;</span><span class="p">,</span> <span class="nx">onTouchStart</span><span class="p">,</span> <span class="p">{</span><span class="nx">passive</span><span class="o">:</span> <span class="kc">true</span><span class="p">});</span>
+                <p><img alt="" src="https://web-dev.imgix.net/image/admin/u2FlXalClwBeDOBBiwxu.png?auto=format&amp;w=741" /></p>
+<h2 id="load-anh-bang-html">Load ảnh bằng HTML</h2>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;slides&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://example.com/cat1.jpg&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://example.com/cat2.jpg&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://example.com/cat3.jpg&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>Xem thêm</p>
+<p>Không dùng JS thuần để tạo element</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">slides</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.slides&quot;</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">newSlide</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;img&quot;</span><span class="p">);</span>
+<span class="nx">newSlide</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s2">&quot;htttp://example.com/cat1.jpg&quot;</span><span class="p">;</span>
+<span class="nx">slides</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">newSlide</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="chuyen-slide">Chuyển slide</h2>
+<p>Đuyển chuyển slide, không nên dùng các thuộc tính <code>left</code> <code>top</code> <code>width</code> và <code>marginTop</code>, hãy luôn dùng css <code>transform</code> để nâng cao hiệu năng</p>
+<p>Ngoài ra nếu các slide không có kích thước bằng nhau, dễ dẫn đến tình trạng layout shift</p>
+<p>Đừng cho chạy tự động cũng là điều nên cân nhắc</p>
+<h2 id="thu-vien">Thư viện</h2>
+<p>Đa phần chúng ta sẽ sử dụng third-party đề làm, thư viện cũ không cập nhập các API mới, là đôi khi còn phụ thuộc vào jQuery</p>
+<p>Tùy vào loại carousel đang làm, có thể không cần đến JS, chúng ta có thể làm chỉ cần HTML, CSS với API scroll snap, tham khảo thêm các bài hướng dẫn sử dụng</p>
 <ul>
-<li><a href="https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/uses-passive-event-listeners.js">Source code for <strong>Does not use passive listeners to improve scrolling performance</strong> audit</a></li>
-<li><a href="https://developers.google.com/web/updates/2016/06/passive-event-listeners">Improving Scrolling Performance with Passive Event Listeners</a></li>
-<li><a href="https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md">Passive event listeners explainer</a></li>
-<li><a href="https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener">EventTarget.addEventListener()</a></li>
+<li><a href="https://web.dev/building-a-stories-component/">Building a Stories component (web.dev)</a></li>
+<li><a href="https://web.dev/next-gen-css-2019/#scroll-snap">Next-generation web styling: scroll snap (web.dev)</a></li>
+<li><a href="https://css-tricks.com/css-only-carousel/">CSS-Only Carousel (CSS Tricks)</a></li>
+<li><a href="https://css-tricks.com/how-to-make-a-css-only-carousel/">How to Make a CSS-Only Carousel (CSS Tricks)</a></li>
 </ul>
                 
               
@@ -1080,41 +1134,6 @@
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../largest-contentful-paint/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Largest Contentful Paint" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Largest Contentful Paint
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../font/" class="md-footer__link md-footer__link--next" aria-label="Next: Font" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Font
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

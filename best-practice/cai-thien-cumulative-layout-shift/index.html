@@ -14,7 +14,7 @@
     
     
       
-        <title>Sử dụng passive listener - Kiến thức nền tảng của Web</title>
+        <title>Cải thiện Cumulative Layout Shift - Kiến thức nền tảng của Web</title>
       
     
     
@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#hinh" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -88,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sử dụng passive listener
+              Cải thiện Cumulative Layout Shift
             
           </span>
         </div>
@@ -925,19 +930,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../su-dung-passive-listener-de-cai-thien-hieu-nang-khi-scroll/" class="md-nav__link">
         Sử dụng passive listener
       </a>
-      
     </li>
   
 
@@ -969,11 +966,54 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../cai-thien-cumulative-layout-shift/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cải thiện Cumulative Layout Shift
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Cải thiện Cumulative Layout Shift
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hinh" class="md-nav__link">
+    Hình
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ads-embed-iframe" class="md-nav__link">
+    Ads, embed, iframe
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1045,25 +1085,102 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hinh" class="md-nav__link">
+    Hình
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ads-embed-iframe" class="md-nav__link">
+    Ads, embed, iframe
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Sử dụng passive listener</h1>
+                  <h1>Cải thiện Cumulative Layout Shift</h1>
                 
-                <p>Lighthouse sẽ thông báo khi có listener event làm chậm việc scrolling</p>
-<p><img alt="" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/a59Rk7aCUDvyKNqqoYRJ.png?auto=format&amp;w=845" /></p>
-<p>Với các listener event bị Lighthouse đánh dấu, truyền thêm option <code>passive</code></p>
-<div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;touchstart&#39;</span><span class="p">,</span> <span class="nx">onTouchStart</span><span class="p">,</span> <span class="p">{</span><span class="nx">passive</span><span class="o">:</span> <span class="kc">true</span><span class="p">});</span>
-</code></pre></div>
-<p>Xem thêm</p>
+                <p><img alt="" src="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/9mWVASbWDLzdBUpVcjE1.svg" /></p>
+<p>Những nguyên nhân chủ yếu dẫn đến layout shift</p>
 <ul>
-<li><a href="https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/uses-passive-event-listeners.js">Source code for <strong>Does not use passive listeners to improve scrolling performance</strong> audit</a></li>
-<li><a href="https://developers.google.com/web/updates/2016/06/passive-event-listeners">Improving Scrolling Performance with Passive Event Listeners</a></li>
-<li><a href="https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md">Passive event listeners explainer</a></li>
-<li><a href="https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener">EventTarget.addEventListener()</a></li>
+<li>Hình không có kích thước</li>
+<li>Ads, embed, iframe không có kích thước</li>
+<li>Thêm nội dung động</li>
+<li>Web font</li>
+</ul>
+<h2 id="hinh">Hình</h2>
+<p>Ngày xưa chúng ta lúc nào cũng có thói quen thêm <code>width</code> và <code>height</code> cho thẻ img</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;puppy.jpg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;640&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;360&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Puppy with balloons&quot;</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p>Nhưng khi làm responsive, chúng ta dàn bỏ luôn <code>width</code> và <code>height</code> để tiện xử lý bằng CSS</p>
+<div class="highlight"><pre><span></span><code><span class="nt">img</span> <span class="p">{</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span> <span class="c">/* or max-width: 100%; */</span>
+  <span class="k">height</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Để xử lý, chúng ta khai báo thêm aspect ratio để giúp trình duyệt biết <em>chừa chổ</em></p>
+<p>Nếu thẻ image có kích thước <code>width</code>, <code>height</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;puppy.jpg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;640&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;360&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Puppy with balloons&quot;</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nt">img</span> <span class="p">{</span>
+  <span class="k">height</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+  <span class="n">aspect-ratio</span><span class="p">:</span> <span class="nb">attr</span><span class="p">(</span><span class="n">width</span><span class="p">)</span> <span class="o">/</span> <span class="nb">attr</span><span class="p">(</span><span class="n">height</span><span class="p">);</span>
+  <span class="c">/* trường hợp này là 16/9 */</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Nếu toán học là điểm yếu, dùng <a href="https://aspectratiocalculator.com/16-9.html">công cụ hỗ trợ</a> để tính aspect ratio</p>
+<p>Để giúp trình duyệt load đúng hình theo từng kích thước, sử dụng <code>srcset</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span>
+  <span class="na">width</span><span class="o">=</span><span class="s">&quot;1000&quot;</span>
+  <span class="na">height</span><span class="o">=</span><span class="s">&quot;1000&quot;</span>
+  <span class="na">src</span><span class="o">=</span><span class="s">&quot;puppy-1000.jpg&quot;</span>
+  <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;puppy-1000.jpg 1000w, puppy-2000.jpg 2000w, puppy-3000.jpg 3000w&quot;</span>
+  <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Puppy with balloons&quot;</span>
+<span class="p">/&gt;</span>
+</code></pre></div>
+<p>Trên từng viewport cụ thể, chúng ta cũng có thể xác định từng hình cho phù hợp, nếu không có thể nó crop lại không như ý, crop thủ công từng hình sẽ chuẩn hơn</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">picture</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">source</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;(max-width: 799px)&quot;</span> <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;puppy-480w-cropped.jpg&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">source</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;(min-width: 800px)&quot;</span> <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;puppy-800w.jpg&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;puppy-800w.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Puppy with balloons&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">picture</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="ads-embed-iframe">Ads, embed, iframe</h2>
+<ul>
+<li><strong>Chừa chổ</strong> với kích thước phù hợp với ads, embed, iframe sau khi load thành công</li>
+<li>Tránh đặt ads ở những nơi có thể gây layout shift như đầu trang</li>
+<li>Với nội dung động, skeleton là lựa chọn tốt</li>
 </ul>
                 
               
@@ -1084,7 +1201,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../largest-contentful-paint/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Largest Contentful Paint" rel="prev">
+        <a href="../css/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CSS" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1093,20 +1210,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Largest Contentful Paint
+              CSS
             </div>
           </div>
         </a>
       
       
         
-        <a href="../font/" class="md-footer__link md-footer__link--next" aria-label="Next: Font" rel="next">
+        <a href="../../base/app-shell/" class="md-footer__link md-footer__link--next" aria-label="Next: Mô hình vỏ ứng dụng" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Font
+              Mô hình vỏ ứng dụng
             </div>
           </div>
           <div class="md-footer__button md-icon">
