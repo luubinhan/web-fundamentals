@@ -60,6 +60,7 @@ nav:
     - Font: best-practice/font.md
     - CSS: best-practice/css.md
     - Cải thiện Cumulative Layout Shift: best-practice/cai-thien-cumulative-layout-shift.md
+    - Carousels: best-practice/carousels.md
   - Kỹ thuật nền tảng:
     - Mô hình vỏ ứng dụng: base/app-shell.md
     - Hàm async: base/async.md
