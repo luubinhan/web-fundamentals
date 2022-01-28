@@ -51,6 +51,11 @@ nav:
       - Lazy load third-party resource với facade: audit/lazy-load-third-party-resource-voi-facade.md
       - Infinite scroll không bị layout shift: audit/infinite-scroll-khong-bi-layout-shift.md
       - Sử dụng preconnect origin: audit/su-dung-preconnect-origin.md
+  - Network:
+    - Tổng quát về worker: network-reliability/worker-overview.md
+    - Hướng dẫn cache: network-reliability/caching-guide.md
+    - Broadcast: network-reliability/broadcast-update.md
+    - Giao tiếp hai chiều: network-reliability/two-way-communication-worker.md
   - Best practice:
     - Cải thiện first input delay: best-practice/cai-thien-first-input-delay.md
     - Debug layout shift: best-practice/debug-layout-shift.md
