@@ -1,4 +1,4 @@
-Tổng quan về Worker
+# Tổng quan về Worker
 
 Web Worker và Service worker có thể cải thiện tốc độ trang bằng cách nào và khi nào thì sử dụng web worker, khi nào dùng service worker
 
@@ -23,7 +23,7 @@ Một vài điểm chung giữa service worker và web worker
 - Một trang có thể có nhiều web worker, nhưng chỉ có một service worker để điều khiển tất cả các tab đã đăng ký
 - Web worker sẽ gắn liền với một tab đã khởi tạo nó, trong khi service worker độc lập hơn, khi đóng một tab service worker vẫn tiếp tục chạy nền (thậm chí nếu không có tab nào đang mở nó vẫn chạy), trong khi web worker sẽ terminate
 
-# Tính huống sử dụng
+## Tình huống sử dụng
 
 Web worker được dùng để đưa các tác vụ tính toán cồng kềnh ra khỏi main thread, để tránh việc block UI
 
@@ -41,7 +41,7 @@ Ví dụ [podcast PWS](https://bgfetch-http203.glitch.me/) cho phép user downlo
 
 ![](https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/oUH6K2JvcmfdAynTMjxQ.png?auto=format&w=650)
 
-# Công cụ và thư viện
+## Công cụ và thư viện
 
 Tất nhiên vẫn có thể tự xử lý mọi thứ ở mức low level. Các thư viện hỗ trợ sẽ giúp xử lý các tình huống sử dụng hay thấy. Có thể tham khảo qua 2 thư viện [Comlink](https://github.com/GoogleChromeLabs/comlink) và [Workbox](https://developers.google.com/web/tools/workbox)
 
